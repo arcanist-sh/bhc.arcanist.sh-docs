@@ -243,7 +243,7 @@ text = "Team"
 url = "https://arcanist.sh/team/"
 [[extra.footer.links.links]]
 text = "Contribute"
-url = "https://github.com/arcanist-sh"
+url = "https://arcanist.sh/support/#free-ways-to-help"
 external = true
 [[extra.footer.links.links]]
 text = "Discussions"
@@ -260,7 +260,7 @@ external = true
 icon = "github"
 [[extra.footer.links.links]]
 text = "X"
-url = "https://x.com/raskell_io"
+url = "https://x.com/raskelll"
 external = true
 icon = "x"
 [[extra.footer.links.links]]
