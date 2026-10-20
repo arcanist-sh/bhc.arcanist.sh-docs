@@ -136,7 +136,7 @@ external = true
 here = "bhc"
 note = "hx is MIT-licensed, bhc is BSD-3-Clause"
 about = """
-arcanist.sh builds Haskell tooling for the age of AI-authored code. [hx](https://arcanist.sh/hx/) is a fast package and project manager written in Rust: build, test, run, format, lint and publish from one tool, with managed GHC and bhc toolchains and deterministic lockfiles. [bhc](https://arcanist.sh/bhc/), the Basel Haskell Compiler, is a clean-slate compiler written in Rust that already compiles all of Pandoc to a binary that runs.
+arcanist.sh builds Haskell tooling for the age of AI-authored code. [hx](https://arcanist.sh/hx/) is a fast package and project manager written in Rust: build, test, run, format, lint and publish from one tool, with managed GHC and bhc toolchains and deterministic lockfiles. [bhc](https://arcanist.sh/bhc/), the Basel Haskell Compiler, is a clean-slate compiler written in Rust: it compiles all of Pandoc, and Pandoc's Markdown reader and HTML writer run end to end.
 """
 
 [[extra.footer.links]]
