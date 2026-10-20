@@ -4,7 +4,7 @@ description = "General-purpose compilation profile"
 weight = 1
 +++
 
-The **default** profile is the standard compilation mode for BHC. It uses ordinary lazy Haskell semantics and is the profile the test suites and the GHC differential harness run against.
+The **default** profile is the standard compilation mode for bhc. It uses ordinary lazy Haskell semantics and is the profile the test suites and the GHC differential harness run against.
 
 ## When to Use
 

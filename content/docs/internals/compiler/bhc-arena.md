@@ -1,6 +1,6 @@
 +++
 title = "bhc-arena"
-description = "Arena memory allocation for BHC"
+description = "Arena memory allocation for bhc"
 weight = 2
 +++
 

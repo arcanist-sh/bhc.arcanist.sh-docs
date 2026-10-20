@@ -1,6 +1,6 @@
 +++
 title = "bhc-index"
-description = "Type-safe indices for BHC"
+description = "Type-safe indices for bhc"
 weight = 4
 +++
 

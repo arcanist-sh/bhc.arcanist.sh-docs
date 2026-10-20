@@ -1,9 +1,9 @@
 +++
 title = "Compiler Architecture"
-description = "How BHC is put together: the pipeline from source to binary, the intermediate representations, the optimizer, the backends and the runtime."
+description = "How bhc is put together: the pipeline from source to binary, the intermediate representations, the optimizer, the backends and the runtime."
 weight = 0
 +++
-BHC is a multi-stage optimizing compiler written in Rust. This page documents the internal architecture, intermediate representations, and compilation pipeline as they exist in the source today, and marks the places where a part of the design is implemented but not yet on the compiled-code path.
+bhc is a multi-stage optimizing compiler written in Rust. This page documents the internal architecture, intermediate representations, and compilation pipeline as they exist in the source today, and marks the places where a part of the design is implemented but not yet on the compiled-code path.
 
 > Most of the pipeline below runs on every build. Three parts are built and tested but not yet wired into compiled programs: the garbage collector (compiled programs allocate without freeing), the numeric profile's Tensor IR and Loop IR fusion (native code generation compiles Core directly), and the work-stealing scheduler (no compiled Haskell code reaches it). Each is marked where it appears. The [status page](https://arcanist.sh/bhc/status/) tracks what is wired today. The crate pages in this section document each part in detail.
 
@@ -13,7 +13,7 @@ A module goes through the same frontend and Core optimizer whatever the profile 
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                         BHC COMPILATION PIPELINE                            │
+│                         bhc COMPILATION PIPELINE                            │
 └─────────────────────────────────────────────────────────────────────────────┘
 
   Source Files (.hs)        (CPP preprocessing when the module asks for it)
@@ -73,7 +73,7 @@ The lexer converts source text into a token stream. Haskell's layout rule is han
 
 The parser is a hand-written recursive descent parser. Infix expressions are parsed by precedence climbing, so operator fixity is resolved during parsing: before parsing a module, the parser scans its tokens for `infixl`/`infixr`/`infix` declarations, and those take priority over a built-in table that covers the Prelude, `base` and other common operators. Fixity declarations do not yet travel across modules through interface files, so an operator declared in one module and used in another gets its fixity from the built-in table (or the `infixl 9` default). The parser builds the AST directly; there is no separate concrete syntax tree. Parse errors are reported as diagnostics with source spans.
 
-When a module enables `{-# LANGUAGE CPP #-}` (or `-XCPP` is passed), the driver runs it through BHC's own C preprocessor first, honouring `-D` defines.
+When a module enables `{-# LANGUAGE CPP #-}` (or `-XCPP` is passed), the driver runs it through bhc's own C preprocessor first, honouring `-D` defines.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -224,7 +224,7 @@ The output is a `TypedModule`: a type scheme per definition plus the inferred ty
 
 ## Core IR
 
-Core is BHC's primary intermediate representation: a small, typed functional language defined in `bhc-core`. There are only a handful of expression forms, which is what makes the optimizer tractable.
+Core is bhc's primary intermediate representation: a small, typed functional language defined in `bhc-core`. There are only a handful of expression forms, which is what makes the optimizer tractable.
 
 ### Core Language
 
@@ -325,7 +325,7 @@ In order, the passes are:
 
 **The simplifier** is the workhorse. It iterates to a fixed point (10 iterations at `-O2`): beta reduction, case-of-known-constructor and case-of-literal, case-of-case within a size budget, constant folding, inlining of single-use bindings and small multi-use ones, and elimination of dead bindings. An occurrence analysis feeds the inliner and the dead-code pass.
 
-**Demand analysis and worker/wrapper** run for the lazy profiles (default, server, realtime). Demand analysis is a backward, per-argument strict/lazy analysis in the style of HBC's strictness analyser. Worker/wrapper then wraps the body of a function in `case` expressions that force its strict arguments on entry. BHC represents `Int` and `Int#` the same way at the LLVM level, so it does not split a separate unboxed worker the way GHC does; the forcing `case` is the whole transformation. A short simplifier run cleans up afterwards.
+**Demand analysis and worker/wrapper** run for the lazy profiles (default, server, realtime). Demand analysis is a backward, per-argument strict/lazy analysis in the style of HBC's strictness analyser. Worker/wrapper then wraps the body of a function in `case` expressions that force its strict arguments on entry. bhc represents `Int` and `Int#` the same way at the LLVM level, so it does not split a separate unboxed worker the way GHC does; the forcing `case` is the whole transformation. A short simplifier run cleans up afterwards.
 
 **Dictionary specialization** runs for all profiles. Where a method selection `$sel_N d` is applied to a dictionary that is a known tuple, it is replaced by the method itself, removing both the selection and, once the simplifier has run again, the dictionary allocation.
 
@@ -417,7 +417,7 @@ Two more analyses live in `bhc-core`. Escape analysis is a backward dataflow pas
 
 ### Fusion
 
-Fusion removes intermediate data structures from pipelines such as `sum (map f xs)`. BHC does this with direct Core-to-Core rewrites rather than GHC-style stream fusion; there is no `Stream`/`Step` representation in the compiler. In the numeric profile, the simplifier enables these rewrites (`fuse_lists`):
+Fusion removes intermediate data structures from pipelines such as `sum (map f xs)`. bhc does this with direct Core-to-Core rewrites rather than GHC-style stream fusion; there is no `Stream`/`Step` representation in the compiler. In the numeric profile, the simplifier enables these rewrites (`fuse_lists`):
 
 - `map f (map g xs)` → `map (\v -> f (g v)) xs`, one traversal; the composed lambda is beta-reduced on the next round.
 - `sum (map f xs)` → `foldl' (\acc x -> acc + f x) 0 xs`. This one needs to know `f` returns `Int`, so it fires for named functions with known types (`sum (map dbl xs)`) and not yet for lambdas, whose types are not yet populated in Core.
@@ -478,7 +478,7 @@ Native code generation (`bhc-codegen`) lowers Core directly to LLVM IR through `
 Evaluation is mostly strict, with laziness where Haskell programs depend on it:
 
 - A non-recursive `let` whose right-hand side does real work is compiled as a thunk and forced where the variable is used; literals, variables and lambdas are bound eagerly.
-- A function argument or constructor field that can diverge (`error`, `undefined`, or a top-level binding whose body is one) is passed as a thunk, so `const 1 (error "boom")` and `fst (2, undefined)` behave as in GHC. This is what makes parsec's `many` work unmodified. Other arguments are evaluated before the call; full call-by-need for every argument is not implemented (see the lazy-arguments brief in the BHC source tree).
+- A function argument or constructor field that can diverge (`error`, `undefined`, or a top-level binding whose body is one) is passed as a thunk, so `const 1 (error "boom")` and `fst (2, undefined)` behave as in GHC. This is what makes parsec's `many` work unmodified. Other arguments are evaluated before the call; full call-by-need for every argument is not implemented (see the lazy-arguments brief in the bhc source tree).
 - Top-level values that refer to each other in a cycle (mutually recursive parser values, for example) are referenced through thunks; other top-level values are evaluated on first use.
 - `Expr::Lazy` gives strict-profile code an explicit thunk.
 - IO actions passed to combinators such as `catch`, `bracket` or `mask` are wrapped as thunks so they run only when the combinator runs them.
@@ -595,7 +595,7 @@ The **WASM backend** (`bhc-wasm`) lowers Core straight to a WebAssembly module a
 
 The **GPU backends** (`bhc-gpu`) compile Tensor IR kernels. Metal is the path that runs on real hardware: it generates Metal Shading Language, compiles it at run time, and executes on the GPU of an Apple-silicon Mac, with the kernel offload tested end to end on the device. The driver's GPU output today is PTX text for NVIDIA (`--emit ptx` or a CUDA target); the crate also has AMDGCN, SPIR-V and WGSL generators. CUDA and ROCm are validated in mock mode pending hardware.
 
-The **linker** (`bhc-linker`) calls the system linker driver (`cc` on Linux and macOS) with the object file and BHC's static libraries: the RTS (`libbhc_rts`) and the stdlib's native parts (`libbhc_text`, `libbhc_base`, `libbhc_containers`).
+The **linker** (`bhc-linker`) calls the system linker driver (`cc` on Linux and macOS) with the object file and bhc's static libraries: the RTS (`libbhc_rts`) and the stdlib's native parts (`libbhc_text`, `libbhc_base`, `libbhc_containers`).
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -646,7 +646,7 @@ The **linker** (`bhc-linker`) calls the system linker driver (`cc` on Linux and 
 
 ## Runtime System
 
-The BHC runtime system (RTS) is a set of Rust crates under `rts/`: `bhc-rts` (the C-ABI entry points compiled code calls), `bhc-rts-alloc`, `bhc-rts-arena`, `bhc-rts-gc` and `bhc-rts-scheduler`. Compiled programs call into `bhc-rts` for allocation, thunk forcing, `Integer` arithmetic, text and container primitives, I/O, and exceptions (`exitWith`, a top-level handler for uncaught exceptions, and `catch`/`bracket`/`mask`).
+The bhc runtime system (RTS) is a set of Rust crates under `rts/`: `bhc-rts` (the C-ABI entry points compiled code calls), `bhc-rts-alloc`, `bhc-rts-arena`, `bhc-rts-gc` and `bhc-rts-scheduler`. Compiled programs call into `bhc-rts` for allocation, thunk forcing, `Integer` arithmetic, text and container primitives, I/O, and exceptions (`exitWith`, a top-level handler for uncaught exceptions, and `catch`/`bracket`/`mask`).
 
 ### Memory Management
 
@@ -772,7 +772,7 @@ Each profile picks a scheduler configuration: work stealing for server and numer
 
 ## Module System
 
-BHC compiles modules separately or as a whole program, and the two meet at the interface file.
+bhc compiles modules separately or as a whole program, and the two meet at the interface file.
 
 With `-c`, each source module compiles to an **object file (`.o`)**, written under `--odir`, and an **interface file (`.bhi`)**, written under `--hidir` at the module's path (`Data/Split.bhi`). The interface is a versioned binary file (magic `BHCI`) holding what an importer needs to type-check and lower against the module: a header with the module name and format version, the module's dependencies, exported values with their type schemes (type synonyms expanded so the interface stands alone), exported types and their constructors, classes, instances, instance method and class default implementations, pattern synonyms, and re-exports. Next to it the driver writes a **`.bhc` sidecar** with the module's lowered Core bodies and newtype definitions, which importing modules use for cross-module monad monomorphization.
 
@@ -873,7 +873,7 @@ Building a Cabal project with Hackage dependencies is hx's job: hx resolves and 
 
 ## Diagnostic System
 
-BHC's diagnostics (`bhc-diagnostics`) follow the style of Rust's compiler: a coloured header with severity and code, the source location, a snippet with the offending span underlined, and notes and help lines.
+bhc's diagnostics (`bhc-diagnostics`) follow the style of Rust's compiler: a coloured header with severity and code, the source location, a snippet with the offending span underlined, and notes and help lines.
 
 A **diagnostic** has a severity (`Bug` for internal compiler errors, `Error`, `Warning`, `Note`, `Help`), an optional code, a message, labelled spans (one marked primary, any number of secondary ones), notes, and suggested fixes. Codes follow a scheme: `E00xx` for type mismatches and related errors, `E002x`/`E003x` for shape and tensor errors, `E004x` for pattern matching, `E005x` for modules and imports, and `W0xxx` for warnings; `bhc-diagnostics` holds a longer explanation for each code. Diagnostics can also be rendered as JSON or converted to LSP diagnostics for editors.
 
@@ -918,7 +918,7 @@ A type mismatch, for example, carries code `E0001`, labels the expression with t
 
 ## Further Reading
 
-- [Quick Start](@/docs/quickstart.md) - Install BHC and write your first program
+- [Quick Start](@/docs/quickstart.md) - Install bhc and write your first program
 - [GHC Compatibility](@/docs/compatibility.md) - Supported Haskell features
 - [Runtime Profiles](@/docs/profiles/_index.md) - Runtime profile details
 - [Numeric performance](https://arcanist.sh/bhc/numeric/) - Tensor IR and the fusion contract

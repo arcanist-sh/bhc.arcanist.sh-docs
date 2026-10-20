@@ -1,12 +1,12 @@
 # bhc.arcanist.sh-docs
 
-Documentation site for [BHC](https://github.com/arcanist-sh/bhc) — the Basel Haskell Compiler.
+Documentation site for [bhc](https://github.com/arcanist-sh/bhc) — the Basel Haskell Compiler.
 
 **Live site:** https://bhc.arcanist.sh/docs
 
 ## Overview
 
-This repository contains the documentation for BHC. Built with [Zola](https://www.getzola.org/) using the `brutalist-blueprint` theme.
+This repository contains the documentation for bhc. Built with [Zola](https://www.getzola.org/) using the `brutalist-blueprint` theme.
 
 ## Development
 
@@ -51,8 +51,8 @@ The development server runs at `http://127.0.0.1:1111` by default.
 
 ## Content Structure
 
-- **Installation** - Getting BHC installed
-- **Quick Start** - First steps with BHC
+- **Installation** - Getting bhc installed
+- **Quick Start** - First steps with bhc
 - **Compatibility** - GHC compatibility information
 - **Profiles** - Runtime profiles (default, server, numeric, edge)
 - **Targets** - Compilation targets (native, WASM)

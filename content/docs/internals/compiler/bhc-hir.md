@@ -1,6 +1,6 @@
 +++
 title = "bhc-hir"
-description = "High-level IR for BHC"
+description = "High-level IR for bhc"
 weight = 30
 +++
 

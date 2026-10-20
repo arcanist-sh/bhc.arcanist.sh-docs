@@ -1,10 +1,10 @@
 +++
 title = "GHC Compatibility"
-description = "BHC compatibility with GHC and Haskell standards"
+description = "bhc compatibility with GHC and Haskell standards"
 weight = 3
 +++
 
-BHC aims to compile ordinary Haskell source unchanged. Its largest test is Pandoc: all 221 Pandoc library modules pass `bhc check` and compile, and `readMarkdown` and `writeHtml5String` run end to end. This page lists what that coverage looks like extension by extension, and where results still differ from GHC.
+bhc aims to compile ordinary Haskell source unchanged. Its largest test is Pandoc: all 221 Pandoc library modules pass `bhc check` and compile, and `readMarkdown` and `writeHtml5String` run end to end. This page lists what that coverage looks like extension by extension, and where results still differ from GHC.
 
 ## Language Standards
 
@@ -17,7 +17,7 @@ BHC aims to compile ordinary Haskell source unchanged. Its largest test is Pando
 
 ## GHC Extensions
 
-BHC reads every `LANGUAGE` pragma and sorts each name into one of three groups (`crates/bhc-ast/src/lib.rs`, `Extension::status`). Most extensions are always on in BHC's parser and type checker, so the pragma does not switch anything; it is accepted so that GHC code compiles unchanged.
+bhc reads every `LANGUAGE` pragma and sorts each name into one of three groups (`crates/bhc-ast/src/lib.rs`, `Extension::status`). Most extensions are always on in bhc's parser and type checker, so the pragma does not switch anything; it is accepted so that GHC code compiles unchanged.
 
 ### Accepted and implemented
 
@@ -35,7 +35,7 @@ Other: `ForeignFunctionInterface`, `CPP`, `EmptyDataDecls`, `EmptyCase`, `Instan
 
 ### Accepted without being enforced
 
-These are accepted silently for compatibility. Their syntax parses, but BHC does not implement the extra checking or representation they imply:
+These are accepted silently for compatibility. Their syntax parses, but bhc does not implement the extra checking or representation they imply:
 
 `MonoLocalBinds`, `PolyKinds`, `TypeInType`, `StarIsType`, `StandaloneKindSignatures`, `RoleAnnotations`, `AllowAmbiguousTypes`, `TypeSynonymInstances`, `ImpredicativeTypes`, `TypeFamilyDependencies`, `QuantifiedConstraints`, `DeriveAnyClass`, `NoImplicitPrelude`, `NoMonomorphismRestriction`, `DisambiguateRecordFields`, `DuplicateRecordFields`, `NoFieldSelectors`, `ApplicativeDo`, `NumDecimals`, `PackageImports`, `ImportQualifiedPost`, `UnicodeSyntax`, `ParallelListComp`, `TransformListComp`, `MonadComprehensions`, `ExtendedDefaultRules`, `PostfixOperators`, `Arrows`.
 
@@ -43,7 +43,7 @@ These are accepted silently for compatibility. Their syntax parses, but BHC does
 
 ### Recognised, not yet implemented
 
-BHC prints `extension ... is not yet implemented and will be ignored` for:
+bhc prints `extension ... is not yet implemented and will be ignored` for:
 
 - `TemplateHaskell`, `TemplateHaskellQuotes`: there is no compile-time `Q` evaluator. A small set of well-known declaration splices is expanded directly by the compiler: `$(makeLenses ''T)` (and `makeLensesFor`) generate van Laarhoven lenses for the record fields of `T` (`crates/bhc-lower/src/th_expand.rs`). Other splices are dropped.
 - `QuasiQuotes`
@@ -66,7 +66,7 @@ These programs compile but give a different result from GHC with the current bui
 
 ## Base Library
 
-BHC ships its own `Prelude` and standard library (`stdlib/` in the compiler repository) covering the commonly used parts of `base`, `containers`, `text`, `mtl`/`transformers` and file IO. It is not a complete copy of GHC's `base`: names that BHC does not provide are reported as unbound or replaced by a stub that warns at compile time.
+bhc ships its own `Prelude` and standard library (`stdlib/` in the compiler repository) covering the commonly used parts of `base`, `containers`, `text`, `mtl`/`transformers` and file IO. It is not a complete copy of GHC's `base`: names that bhc does not provide are reported as unbound or replaced by a stub that warns at compile time.
 
 ## Hackage Packages
 
@@ -81,5 +81,5 @@ BHC ships its own `Prelude` and standard library (`stdlib/` in the compiler repo
 If you encounter compatibility issues, please report them on [GitHub](https://github.com/arcanist-sh/bhc/issues) with:
 
 1. The code that fails to compile
-2. The error message from BHC
+2. The error message from bhc
 3. Whether the code compiles with GHC

@@ -1,6 +1,6 @@
 +++
 title = "bhc-ast"
-description = "Abstract syntax tree for BHC"
+description = "Abstract syntax tree for bhc"
 weight = 11
 +++
 

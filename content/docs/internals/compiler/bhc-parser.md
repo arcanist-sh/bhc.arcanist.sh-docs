@@ -1,6 +1,6 @@
 +++
 title = "bhc-parser"
-description = "Parsing for BHC"
+description = "Parsing for bhc"
 weight = 12
 +++
 

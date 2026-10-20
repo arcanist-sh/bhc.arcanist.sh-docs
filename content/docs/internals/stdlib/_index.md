@@ -1,6 +1,6 @@
 +++
 title = "Standard Library"
-description = "BHC standard library crates"
+description = "bhc standard library crates"
 weight = 3
 sort_by = "weight"
 +++
@@ -55,7 +55,7 @@ Every crate builds as a `staticlib`, `cdylib` and `rlib`, so the unlinked ones a
 
 ## The `hs/` sources
 
-The `hs/` directories contain Haskell modules under a `BHC.` prefix (`BHC.Prelude`, `BHC.Data.Map`, `BHC.Numeric.Tensor`, ...) that describe the intended library and the FFI calls it would make. The compiler does not load them when building ordinary programs. The one exception is `stdlib/bhc-transformers/hs`, which also carries modules under the standard names (`Control.Monad.State`, ...): with the experimental `BHC_IO_MODEL=closure` setting, the driver adds that directory to the module search path and compiles the transformers from source.
+The `hs/` directories contain Haskell modules under a `bhc.` prefix (`BHC.Prelude`, `BHC.Data.Map`, `BHC.Numeric.Tensor`, ...) that describe the intended library and the FFI calls it would make. The compiler does not load them when building ordinary programs. The one exception is `stdlib/bhc-transformers/hs`, which also carries modules under the standard names (`Control.Monad.State`, ...): with the experimental `BHC_IO_MODEL=closure` setting, the driver adds that directory to the module search path and compiles the transformers from source.
 
 `stdlib/H26/` holds further draft `H26.*` modules (`H26.Prelude`, `H26.Tensor`, `H26.Concurrency`, ...), which the compiler also does not use yet.
 

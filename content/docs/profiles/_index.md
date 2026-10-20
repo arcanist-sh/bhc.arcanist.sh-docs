@@ -1,10 +1,10 @@
 +++
 title = "Runtime Profiles"
-description = "BHC runtime profiles for different use cases"
+description = "bhc runtime profiles for different use cases"
 sort_by = "weight"
 +++
 
-A profile is chosen per build with `--profile`, and it selects which optimisation passes and runtime settings BHC uses. The same source compiles under every profile. Four profiles are available on the command line:
+A profile is chosen per build with `--profile`, and it selects which optimisation passes and runtime settings bhc uses. The same source compiles under every profile. Four profiles are available on the command line:
 
 - **Default** - General-purpose, lazy evaluation, the profile everything is tested against
 - **Server** - Reserved for structured concurrency and observability; today it compiles like the default profile

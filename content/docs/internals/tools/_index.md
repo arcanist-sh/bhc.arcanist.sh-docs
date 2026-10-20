@@ -1,13 +1,13 @@
 +++
 title = "Tools"
-description = "BHC command-line tools"
+description = "bhc command-line tools"
 weight = 4
 sort_by = "weight"
 +++
 
 # Tools
 
-BHC provides several command-line tools for compilation, interactive exploration, and inspecting compiler output.
+bhc provides several command-line tools for compilation, interactive exploration, and inspecting compiler output.
 
 ## Tool Reference
 

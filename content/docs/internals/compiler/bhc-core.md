@@ -1,6 +1,6 @@
 +++
 title = "bhc-core"
-description = "Core IR for BHC"
+description = "Core IR for bhc"
 weight = 31
 +++
 

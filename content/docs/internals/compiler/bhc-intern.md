@@ -1,6 +1,6 @@
 +++
 title = "bhc-intern"
-description = "String interning for BHC"
+description = "String interning for bhc"
 weight = 3
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = "bhc-types"
-description = "Type representation for BHC"
+description = "Type representation for bhc"
 weight = 20
 +++
 

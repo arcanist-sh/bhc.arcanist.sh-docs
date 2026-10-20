@@ -1,6 +1,6 @@
 +++
 title = "bhc-data-structures"
-description = "Shared data structures for BHC"
+description = "Shared data structures for bhc"
 weight = 5
 +++
 

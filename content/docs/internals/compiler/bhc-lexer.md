@@ -1,6 +1,6 @@
 +++
 title = "bhc-lexer"
-description = "Tokenization for BHC"
+description = "Tokenization for bhc"
 weight = 10
 +++
 

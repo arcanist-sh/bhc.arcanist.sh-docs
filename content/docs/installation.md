@@ -1,10 +1,10 @@
 +++
 title = "Installation"
-description = "Install BHC, the Basel Haskell Compiler, with the install script, from a release archive, or through hx."
+description = "Install bhc, the Basel Haskell Compiler, with the install script, from a release archive, or through hx."
 weight = 1
 +++
 
-BHC is one compiler binary plus the runtime and standard libraries it links into your programs. Releases are built for two platforms:
+bhc is one compiler binary plus the runtime and standard libraries it links into your programs. Releases are built for two platforms:
 
 | Platform | Release archive |
 |---|---|
@@ -34,13 +34,13 @@ Every [GitHub release](https://github.com/arcanist-sh/bhc/releases) carries the 
 
 ## With hx
 
-[hx](https://arcanist.sh/hx/) installs and manages BHC toolchains next to GHC:
+[hx](https://arcanist.sh/hx/) installs and manages bhc toolchains next to GHC:
 
 ```bash
 hx toolchain install --bhc 0.2.22    # or --bhc latest
 ```
 
-Then build a project with BHC, once or for good:
+Then build a project with bhc, once or for good:
 
 ```bash
 hx build --backend bhc
@@ -52,7 +52,7 @@ hx build --backend bhc
 backend = "bhc"
 ```
 
-See [Using BHC with hx](@/docs/quickstart.md#build-a-project-with-hx) for the BHC settings hx understands.
+See [Using bhc with hx](@/docs/quickstart.md#build-a-project-with-hx) for the bhc settings hx understands.
 
 ## Check the installation
 
@@ -68,7 +68,7 @@ prints the installed version, for example `bhc 0.2.22`.
 
 **`library 'bhc_rts' not found`, or other link errors.** The linker cannot find the runtime libraries. Add the `export LIBRARY_PATH=…` line above.
 
-**Unsupported platform.** Intel Macs, Linux on arm64 and Windows have no release archive yet. On those machines you can build BHC from [source](https://github.com/arcanist-sh/bhc) with a Rust toolchain and LLVM.
+**Unsupported platform.** Intel Macs, Linux on arm64 and Windows have no release archive yet. On those machines you can build bhc from [source](https://github.com/arcanist-sh/bhc) with a Rust toolchain and LLVM.
 
 ## Uninstall
 

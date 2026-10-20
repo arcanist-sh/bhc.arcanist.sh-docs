@@ -1,13 +1,13 @@
 +++
 title = "Compiler Crates"
-description = "BHC compiler implementation crates"
+description = "bhc compiler implementation crates"
 weight = 1
 sort_by = "weight"
 +++
 
 # Compiler Crates
 
-The BHC compiler is implemented as a collection of Rust crates under `crates/` in the workspace, each handling a specific stage of compilation. The `bhc` binary crate itself is documented under [Tools](@/docs/internals/tools/bhc.md).
+The bhc compiler is implemented as a collection of Rust crates under `crates/` in the workspace, each handling a specific stage of compilation. The `bhc` binary crate itself is documented under [Tools](@/docs/internals/tools/bhc.md).
 
 ## Foundation Crates
 

@@ -1,13 +1,13 @@
 +++
 title = "Runtime Crates"
-description = "BHC Runtime System crates"
+description = "bhc Runtime System crates"
 weight = 2
 sort_by = "weight"
 +++
 
 # Runtime Crates
 
-The BHC Runtime System (RTS) is the Rust code that compiled Haskell programs link against. It lives under `rts/` in the compiler repository as five crates. One of them, `bhc-rts`, is built as a static library (`libbhc_rts.a`) and is what the native backend links into every executable; the other four are libraries that `bhc-rts` depends on.
+The bhc Runtime System (RTS) is the Rust code that compiled Haskell programs link against. It lives under `rts/` in the compiler repository as five crates. One of them, `bhc-rts`, is built as a static library (`libbhc_rts.a`) and is what the native backend links into every executable; the other four are libraries that `bhc-rts` depends on.
 
 ## What a compiled program uses today
 
@@ -30,7 +30,7 @@ The memory-management and scheduling crates are real, unit-tested Rust code, but
 
 ```
 ┌──────────────────────────────────────────────────────┐
-│        Compiled BHC program (LLVM object code)       │
+│        Compiled bhc program (LLVM object code)       │
 └──────────────────────────┬───────────────────────────┘
                            │ calls bhc_* C functions
 ┌──────────────────────────▼───────────────────────────┐

@@ -6,13 +6,13 @@ weight = 3
 
 # bhi
 
-The Basel Haskell Inspector: a diagnostic viewer for BHC's intermediate representations and compiler reports.
+The Basel Haskell Inspector: a diagnostic viewer for bhc's intermediate representations and compiler reports.
 
 ## Overview
 
 `bhi` shows what the compiler does with a program. Given a Haskell source file, it runs the front end itself and prints the requested IR stage or per-phase statistics. Its other subcommands read JSON reports (kernel fusion, memory, call graph, compile statistics).
 
-`bhi` is not a bytecode interpreter; BHC has no bytecode format. To evaluate code without compiling it, use [bhci](@/docs/internals/tools/bhci.md) or `bhc run`.
+`bhi` is not a bytecode interpreter; bhc has no bytecode format. To evaluate code without compiling it, use [bhci](@/docs/internals/tools/bhci.md) or `bhc run`.
 
 ## Usage
 

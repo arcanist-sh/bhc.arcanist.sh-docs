@@ -4,7 +4,7 @@ description = "Compiling to native executables"
 weight = 1
 +++
 
-BHC compiles Haskell to native executables through LLVM, then links them with the system C toolchain (`cc`) against the BHC runtime libraries.
+bhc compiles Haskell to native executables through LLVM, then links them with the system C toolchain (`cc`) against the bhc runtime libraries.
 
 ## Supported Platforms
 
@@ -12,13 +12,13 @@ BHC compiles Haskell to native executables through LLVM, then links them with th
 |----------|--------------|--------|
 | macOS | aarch64 (Apple silicon) | Release binaries, tested in CI |
 | Linux | x86_64 | Release binaries, tested in CI |
-| Other host platforms | - | No release binaries; building BHC from source may work but is untested |
+| Other host platforms | - | No release binaries; building bhc from source may work but is untested |
 
 Windows is not supported.
 
 ## Usage
 
-By default, BHC compiles for the machine it runs on:
+By default, bhc compiles for the machine it runs on:
 
 ```bash
 bhc Main.hs -o main
@@ -72,9 +72,9 @@ Interfaces in a directory can then be consumed by later builds with `--package-d
 
 ## Linking
 
-BHC links each program against its runtime libraries (`bhc_rts`, `bhc_base`, `bhc_text`, `bhc_containers`) plus the platform's system libraries. There are no `--static` or `--dynamic` flags: a release installation ships the runtime as static archives, so the resulting executable has no dependency on BHC at run time.
+bhc links each program against its runtime libraries (`bhc_rts`, `bhc_base`, `bhc_text`, `bhc_containers`) plus the platform's system libraries. There are no `--static` or `--dynamic` flags: a release installation ships the runtime as static archives, so the resulting executable has no dependency on bhc at run time.
 
-When running a development build of BHC from a source checkout, point `LIBRARY_PATH` at the build directory so the linker finds the runtime libraries:
+When running a development build of bhc from a source checkout, point `LIBRARY_PATH` at the build directory so the linker finds the runtime libraries:
 
 ```bash
 LIBRARY_PATH=/path/to/bhc/target/release bhc Main.hs -o main

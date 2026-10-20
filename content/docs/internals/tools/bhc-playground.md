@@ -10,7 +10,7 @@ Browser-based playground for experimenting with the Basel Haskell Compiler.
 
 ## Overview
 
-`bhc-playground` is a crate (`crates/bhc-playground`) that packages BHC's front end and Core interpreter for the browser. It is compiled to WebAssembly (`wasm32-unknown-unknown`) with `wasm-bindgen`, and the [online playground](https://arcanist.sh/bhc/playground/) loads it to parse, type check and evaluate code locally, with no server round-trips. It does not run native code generation; programs are evaluated by the same Core interpreter as [bhci](@/docs/internals/tools/bhci.md).
+`bhc-playground` is a crate (`crates/bhc-playground`) that packages bhc's front end and Core interpreter for the browser. It is compiled to WebAssembly (`wasm32-unknown-unknown`) with `wasm-bindgen`, and the [online playground](https://arcanist.sh/bhc/playground/) loads it to parse, type check and evaluate code locally, with no server round-trips. It does not run native code generation; programs are evaluated by the same Core interpreter as [bhci](@/docs/internals/tools/bhci.md).
 
 ## Features
 
@@ -81,4 +81,4 @@ wasm-bindgen --out-dir playground-out --target web \
   target/wasm32-unknown-unknown/release/bhc_playground.wasm
 ```
 
-The `playground.yml` workflow in the BHC repository runs these steps when the playground or any crate it depends on changes, and copies the two output files to `static/bhc/playground/` in the arcanist.sh website.
+The `playground.yml` workflow in the bhc repository runs these steps when the playground or any crate it depends on changes, and copies the two output files to `static/bhc/playground/` in the arcanist.sh website.

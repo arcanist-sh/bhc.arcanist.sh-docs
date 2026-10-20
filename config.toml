@@ -1,9 +1,9 @@
-# Zola configuration for BHC documentation
+# Zola configuration for bhc documentation
 # https://www.getzola.org/documentation/getting-started/configuration/
 
 base_url = "https://docs.arcanist.sh/bhc"
-title = "BHC docs"
-description = "Documentation for BHC, the Basel Haskell Compiler: installation, the quick start, runtime profiles, targets, compatibility, compiler internals and the API reference."
+title = "bhc docs"
+description = "Documentation for bhc, the Basel Haskell Compiler: installation, the quick start, runtime profiles, targets, compatibility, compiler internals and the API reference."
 default_language = "en"
 theme = "purple-haze"
 
@@ -44,7 +44,7 @@ index_format = "elasticlunr_javascript"
 [extra]
 # Theme mode
 mode = "docs"
-# Header lockup: the BHC mark and wordmark with an outlined "docs" key; also sets data-product="bhc" (mauve accent)
+# Header lockup: the bhc mark and wordmark with an outlined "docs" key; also sets data-product="bhc" (mauve accent)
 lockup = "bhc"
 # The colour-scheme switch lives in the footer, not the header (as on arcanist.sh)
 show_theme_toggle = false
@@ -79,7 +79,7 @@ name = "hx"
 url = "https://arcanist.sh/hx/"
 external = true
 [[extra.nav_links.children]]
-name = "BHC"
+name = "bhc"
 url = "https://arcanist.sh/bhc/"
 external = true
 [[extra.nav_links.children]]
@@ -91,7 +91,7 @@ name = "hx vs Cabal & Stack"
 url = "https://arcanist.sh/hx-vs-cabal-and-stack/"
 external = true
 [[extra.nav_links.children]]
-name = "BHC vs GHC"
+name = "bhc vs GHC"
 url = "https://arcanist.sh/bhc-vs-ghc/"
 external = true
 
@@ -133,10 +133,10 @@ external = true
 # Same about text and link groups as www.arcanist.sh/config.toml, with absolute URLs.
 # ---------------------------------------------------------------------------
 [extra.footer]
-here = "BHC"
-note = "hx is MIT-licensed, BHC is BSD-3-Clause"
+here = "bhc"
+note = "hx is MIT-licensed, bhc is BSD-3-Clause"
 about = """
-arcanist.sh builds Haskell tooling for the age of AI-authored code. [hx](https://arcanist.sh/hx/) is a fast package and project manager written in Rust: build, test, run, format, lint and publish from one tool, with managed GHC and BHC toolchains and deterministic lockfiles. [BHC](https://arcanist.sh/bhc/), the Basel Haskell Compiler, is a clean-slate compiler written in Rust that already compiles all of Pandoc to a binary that runs.
+arcanist.sh builds Haskell tooling for the age of AI-authored code. [hx](https://arcanist.sh/hx/) is a fast package and project manager written in Rust: build, test, run, format, lint and publish from one tool, with managed GHC and bhc toolchains and deterministic lockfiles. [bhc](https://arcanist.sh/bhc/), the Basel Haskell Compiler, is a clean-slate compiler written in Rust that already compiles all of Pandoc to a binary that runs.
 """
 
 [[extra.footer.links]]
@@ -145,7 +145,7 @@ title = "Products"
 text = "hx"
 url = "https://arcanist.sh/hx/"
 [[extra.footer.links.links]]
-text = "BHC"
+text = "bhc"
 url = "https://arcanist.sh/bhc/"
 [[extra.footer.links.links]]
 text = "Registry"
@@ -156,7 +156,7 @@ text = "hx docs"
 url = "https://docs.arcanist.sh/hx/"
 external = true
 [[extra.footer.links.links]]
-text = "BHC docs"
+text = "bhc docs"
 url = "https://docs.arcanist.sh/bhc/"
 external = true
 [[extra.footer.links.links]]
@@ -188,13 +188,13 @@ title = "Compare"
 text = "hx vs Cabal & Stack"
 url = "https://arcanist.sh/hx-vs-cabal-and-stack/"
 [[extra.footer.links.links]]
-text = "BHC vs GHC"
+text = "bhc vs GHC"
 url = "https://arcanist.sh/bhc-vs-ghc/"
 [[extra.footer.links.links]]
 text = "hx benchmarks"
 url = "https://arcanist.sh/hx/benchmarks/"
 [[extra.footer.links.links]]
-text = "BHC status"
+text = "bhc status"
 url = "https://arcanist.sh/bhc/status/"
 
 [[extra.footer.links]]
@@ -209,7 +209,7 @@ url = "https://arcanist.sh/blog/#essays"
 text = "hx blog"
 url = "https://arcanist.sh/hx/blog/"
 [[extra.footer.links.links]]
-text = "BHC blog"
+text = "bhc blog"
 url = "https://arcanist.sh/bhc/blog/"
 [[extra.footer.links.links]]
 text = "Atom feed"
@@ -226,11 +226,11 @@ text = "hx changelog"
 url = "https://github.com/arcanist-sh/hx/blob/main/CHANGELOG.md"
 external = true
 [[extra.footer.links.links]]
-text = "BHC releases"
+text = "bhc releases"
 url = "https://github.com/arcanist-sh/bhc/releases"
 external = true
 [[extra.footer.links.links]]
-text = "BHC roadmap"
+text = "bhc roadmap"
 url = "https://arcanist.sh/bhc/roadmap/"
 
 [[extra.footer.links]]

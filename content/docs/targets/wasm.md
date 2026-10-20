@@ -4,7 +4,7 @@ description = "Compiling to WebAssembly with WASI"
 weight = 2
 +++
 
-BHC compiles Haskell to WebAssembly modules that use the WASI interface (`wasi_snapshot_preview1`). On BHC's differential suite, 236 of 243 programs produce output byte-identical to the native backend.
+bhc compiles Haskell to WebAssembly modules that use the WASI interface (`wasi_snapshot_preview1`). On bhc's differential suite, 236 of 243 programs produce output byte-identical to the native backend.
 
 ## Target
 
@@ -30,7 +30,7 @@ bhc --profile=edge --target wasm32-wasi Main.hs -o main.wasm
 wasmtime main.wasm
 ```
 
-Any runtime that implements `wasi_snapshot_preview1` should work; wasmtime is the one BHC is tested against.
+Any runtime that implements `wasi_snapshot_preview1` should work; wasmtime is the one bhc is tested against.
 
 ### File access
 
@@ -44,9 +44,9 @@ Without a preopen, the program cannot see host files. `writeFile` and `appendFil
 
 ### In the browser
 
-The module imports WASI functions, so a browser host needs a WASI shim (any library that implements `wasi_snapshot_preview1`) passed in as the `wasi_snapshot_preview1` import object. BHC does not ship such a shim.
+The module imports WASI functions, so a browser host needs a WASI shim (any library that implements `wasi_snapshot_preview1`) passed in as the `wasi_snapshot_preview1` import object. bhc does not ship such a shim.
 
-The [online playground](https://arcanist.sh/bhc/playground/) is a separate build: it runs BHC's interpreter compiled to WebAssembly, not a module produced by `--target wasm32-wasi`.
+The [online playground](https://arcanist.sh/bhc/playground/) is a separate build: it runs bhc's interpreter compiled to WebAssembly, not a module produced by `--target wasm32-wasi`.
 
 ## Exports
 

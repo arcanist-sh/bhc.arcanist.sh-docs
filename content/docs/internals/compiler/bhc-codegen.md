@@ -42,7 +42,7 @@ Object file (LlvmModule::write_to_file)
 | `CodegenOutputType` | `Object`, `Assembly`, `LlvmIr`, `LlvmBitcode` |
 | `llvm::LlvmBackend`, `LlvmContext`, `LlvmModule` | inkwell-backed implementation |
 | `llvm::Lowering`, `ConstructorMeta`, `CompiledSymbol` | Core lowering state, constructor layouts, exported symbols for other modules |
-| `llvm::TypeMapper` | Maps BHC types to LLVM types |
+| `llvm::TypeMapper` | Maps bhc types to LLVM types |
 | `set_io_primitives`, `is_io_primitive` | Registry of IO primitives used by the IO closure mode |
 
 ## Usage

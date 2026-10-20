@@ -10,7 +10,7 @@ Interactive Read-Eval-Print Loop for the Basel Haskell Compiler.
 
 ## Overview
 
-`bhci` evaluates Haskell expressions interactively. Each input is parsed, type checked, lowered to Core and run by BHC's Core interpreter, the same evaluator behind `bhc run` and the [playground](@/docs/internals/tools/bhc-playground.md). It does not use the native code generator, so its coverage of the standard library is narrower than compiled code.
+`bhci` evaluates Haskell expressions interactively. Each input is parsed, type checked, lowered to Core and run by bhc's Core interpreter, the same evaluator behind `bhc run` and the [playground](@/docs/internals/tools/bhc-playground.md). It does not use the native code generator, so its coverage of the standard library is narrower than compiled code.
 
 ## Starting the REPL
 

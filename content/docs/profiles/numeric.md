@@ -4,7 +4,7 @@ description = "Optimized for computational and numeric workloads"
 weight = 3
 +++
 
-The **numeric** profile turns on BHC's list-fusion rewrites and its Tensor IR pipeline. Today the rewrites remove intermediate lists for a set of common fold patterns over `Int`. The wider design (unboxed numerics, SIMD, tensor kernels in native code) is described at the end of this page and is not yet realised in native binaries.
+The **numeric** profile turns on bhc's list-fusion rewrites and its Tensor IR pipeline. Today the rewrites remove intermediate lists for a set of common fold patterns over `Int`. The wider design (unboxed numerics, SIMD, tensor kernels in native code) is described at the end of this page and is not yet realised in native binaries.
 
 ## When to Use
 
@@ -12,7 +12,7 @@ Use the numeric profile when:
 
 - Your hot loops are folds over `Int` ranges or chains of `map`
 - You want to inspect the Tensor IR and kernel report for a program
-- You are working on BHC's numeric pipeline itself
+- You are working on bhc's numeric pipeline itself
 
 ## Usage
 

@@ -1,6 +1,6 @@
 +++
 title = "bhc-typeck"
-description = "Type checking for BHC"
+description = "Type checking for bhc"
 weight = 21
 +++
 

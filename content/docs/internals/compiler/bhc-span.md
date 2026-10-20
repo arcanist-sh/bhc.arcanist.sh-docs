@@ -1,6 +1,6 @@
 +++
 title = "bhc-span"
-description = "Source location tracking for BHC"
+description = "Source location tracking for bhc"
 weight = 1
 +++
 

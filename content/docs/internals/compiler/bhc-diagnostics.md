@@ -1,6 +1,6 @@
 +++
 title = "bhc-diagnostics"
-description = "Error reporting for BHC"
+description = "Error reporting for bhc"
 weight = 6
 +++
 
