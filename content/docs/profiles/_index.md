@@ -4,11 +4,13 @@ description = "BHC runtime profiles for different use cases"
 sort_by = "weight"
 +++
 
-BHC supports multiple runtime profiles, each optimized for different use cases. Profiles affect code generation, runtime behavior, and available features.
+A profile is chosen per build with `--profile`, and it selects which optimisation passes and runtime settings BHC uses. The same source compiles under every profile. Four profiles are available on the command line:
 
-Choose a profile based on your application's requirements:
+- **Default** - General-purpose, lazy evaluation, the profile everything is tested against
+- **Server** - Reserved for structured concurrency and observability; today it compiles like the default profile
+- **Numeric** - Enables the numeric list-fusion rewrites, the Tensor IR pipeline and `--kernel-report`
+- **Edge** - Smaller memory limits for WebAssembly modules
 
-- **Default** - General-purpose, compatibility-focused
-- **Server** - Structured concurrency, observability hooks
-- **Numeric** - Optimized for computational workloads
-- **Edge** - Minimal footprint for WASM and embedded
+Each page below describes what the profile does in compiled programs today and which parts of its design are still runtime-only. Two further profiles, realtime and embedded, exist in the runtime crates but cannot be selected from the command line.
+
+Profiles are selected only with the `--profile` flag. Per-module selection (an `OPTIONS_BHC` pragma) and per-package selection are part of the design but are not read by the compiler yet.

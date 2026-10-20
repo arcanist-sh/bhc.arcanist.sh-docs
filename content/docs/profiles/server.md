@@ -4,16 +4,7 @@ description = "Structured concurrency and observability for services"
 weight = 2
 +++
 
-The **server** profile adds structured concurrency primitives, cancellation support, and observability hooks for building production services.
-
-## When to Use
-
-Use the server profile when:
-
-- Building web services or APIs
-- You need structured concurrency with cancellation
-- Observability (tracing, metrics) is important
-- Building long-running services
+The **server** profile is reserved for long-running services: structured concurrency, cancellation, deadlines and tracing hooks. The runtime pieces for that exist and are tested in Rust. They are not yet reachable from compiled Haskell, so today a server build compiles and behaves exactly like a [default](@/docs/profiles/default.md) build.
 
 ## Usage
 
@@ -21,52 +12,41 @@ Use the server profile when:
 bhc --profile=server Server.hs -o server
 ```
 
-## Features
+## What it does today
 
-### Structured Concurrency
+- Same pipeline as the default profile: lazy evaluation, the Core simplifier, demand analysis and worker/wrapper, dictionary specialisation
+- Programs are single-threaded; `forkIO` is not implemented in native code yet
+- The runtime's server settings (a 500 µs GC pause target, a work-stealing scheduler) are defined in `rts/bhc-rts`, but compiled programs start the runtime with its default configuration, so they do not apply yet
 
-The server profile provides scoped concurrency primitives:
+## What exists in the runtime
 
-```haskell
-{-# LANGUAGE BHC.StructuredConcurrency #-}
-module Server where
+The Rust runtime already contains the parts this profile is designed around, each with its own tests:
 
-import Control.Concurrent.Scoped
+- A work-stealing task scheduler with scopes, cancellation, `await` with timeout, and a trace callback for observing task events (`rts/bhc-rts-scheduler`)
+- Software transactional memory, implemented in Rust (`stdlib/bhc-concurrent/src/stm.rs`)
+- An incremental garbage collector with a configurable pause target (`rts/bhc-rts-gc`)
 
-handler :: Request -> Scoped Response
-handler req = withScope $ do
-    -- Tasks are automatically cancelled if scope exits
-    userData  <- async $ fetchUser req.userId
-    orderData <- async $ fetchOrders req.userId
+## Planned Haskell API
 
-    user   <- await userData
-    orders <- await orderData
-
-    return $ Response user orders
-```
-
-### Deadlines and Timeouts
+The Haskell-facing API is drafted in `stdlib/bhc-concurrent/hs/BHC/Control/Concurrent/Scope.hs`. It is shown here to illustrate the design; these names do not resolve in today's build:
 
 ```haskell
-import Control.Concurrent.Deadline
-
-handler :: Request -> Scoped Response
-handler req = withTimeout 5000 $ do  -- 5 second timeout
-    result <- performWork
-    return result
+withScope    :: (Scope -> IO a) -> IO a
+spawn        :: Scope -> IO a -> IO (Task a)
+await        :: Task a -> IO a
+cancel       :: Task a -> IO ()
+withDeadline :: Duration -> IO a -> IO (Maybe a)
 ```
 
-### Observability Hooks
+A request handler would fetch two things concurrently and cancel both if the scope exits early:
 
-The server profile automatically instruments your code for:
+```haskell
+-- Design sketch: does not compile with the current release.
+handleRequest :: Request -> IO Response
+handleRequest req = withScope $ \scope -> do
+    user   <- spawn scope (fetchUser (reqUserId req))
+    orders <- spawn scope (fetchOrders (reqUserId req))
+    Response <$> await user <*> await orders
+```
 
-- Distributed tracing (OpenTelemetry compatible)
-- Metrics collection
-- Structured logging
-
-## Runtime Characteristics
-
-- **Concurrency**: Structured scopes with automatic cancellation
-- **GC**: Optimized for low-latency workloads
-- **Scheduling**: Preemptive with deadline awareness
-- **Memory**: Higher baseline, optimized for throughput
+The server profile becomes meaningful once compiled code is connected to the scheduler and the garbage collector. Progress is tracked on the [status page](https://arcanist.sh/bhc/status/).

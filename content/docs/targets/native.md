@@ -4,79 +4,88 @@ description = "Compiling to native executables"
 weight = 1
 +++
 
-BHC can compile Haskell code to native executables for multiple platforms.
+BHC compiles Haskell to native executables through LLVM, then links them with the system C toolchain (`cc`) against the BHC runtime libraries.
 
 ## Supported Platforms
 
 | Platform | Architecture | Status |
 |----------|--------------|--------|
-| Linux | x86_64 | Stable |
-| Linux | aarch64 | Stable |
-| macOS | x86_64 | Stable |
-| macOS | aarch64 (Apple Silicon) | Stable |
-| Windows | x86_64 | Beta |
+| macOS | aarch64 (Apple silicon) | Release binaries, tested in CI |
+| Linux | x86_64 | Release binaries, tested in CI |
+| Other host platforms | - | No release binaries; building BHC from source may work but is untested |
+
+Windows is not supported.
 
 ## Usage
 
-By default, BHC compiles for your current platform:
+By default, BHC compiles for the machine it runs on:
 
 ```bash
 bhc Main.hs -o main
+./main
 ```
+
+Without `-o`, the executable is named after the source file (`Main.hs` becomes `Main`).
 
 ### Cross-Compilation
 
-To cross-compile for a different target:
+Linking an executable for another platform is not supported yet. What works today is emitting an object file for another architecture with `-c` and a full target triple:
 
 ```bash
-# Compile for Linux x86_64
-bhc --target=x86_64-linux Main.hs -o main-linux
+# x86_64 Linux object file, produced on any host
+bhc --target x86_64-unknown-linux-gnu -c Main.hs --odir build
 
-# Compile for macOS ARM
-bhc --target=aarch64-darwin Main.hs -o main-macos-arm
+# RISC-V 64 object file
+bhc --target riscv64-unknown-linux-gnu -c Main.hs --odir build
 ```
+
+The triple must have at least three parts (`arch-vendor-os`). A shorter or unrecognized triple such as `x86_64-linux` currently falls back to the host target without an error, so always spell the triple out.
 
 ## Optimization Levels
 
+`-O` takes a level from 0 to 3. The default is `-O2`.
+
 ```bash
-# Debug build (fast compilation, no optimizations)
+# No optimization
 bhc -O0 Main.hs -o main
 
-# Default (balanced)
+# Light optimization
 bhc -O1 Main.hs -o main
 
-# Optimized (slower compilation, faster runtime)
+# Default
 bhc -O2 Main.hs -o main
+
+# Aggressive
+bhc -O3 Main.hs -o main
 ```
+
+## Separate Compilation
+
+`-c` compiles a module to an object file without linking. `--odir` sets where the object goes; adding `--hidir` also writes the module's interface (`.bhi`):
+
+```bash
+bhc -c Main.hs --odir build --hidir build
+# build/Main.o, build/Main.bhi
+```
+
+Interfaces in a directory can then be consumed by later builds with `--package-db <dir>`.
 
 ## Linking
 
-### Static Linking
+BHC links each program against its runtime libraries (`bhc_rts`, `bhc_base`, `bhc_text`, `bhc_containers`) plus the platform's system libraries. There are no `--static` or `--dynamic` flags: a release installation ships the runtime as static archives, so the resulting executable has no dependency on BHC at run time.
+
+When running a development build of BHC from a source checkout, point `LIBRARY_PATH` at the build directory so the linker finds the runtime libraries:
 
 ```bash
-bhc --static Main.hs -o main
-```
-
-### Dynamic Linking
-
-```bash
-bhc --dynamic Main.hs -o main
+LIBRARY_PATH=/path/to/bhc/target/release bhc Main.hs -o main
 ```
 
 ## Platform-Specific Notes
 
-### Linux
-
-BHC uses musl libc for static linking by default on Linux.
-
 ### macOS
 
-Universal binaries (x86_64 + aarch64) can be created:
+Executables link against `libSystem`. Universal (x86_64 + aarch64) binaries are not supported.
 
-```bash
-bhc --target=universal-darwin Main.hs -o main
-```
+### Linux
 
-### Windows
-
-Windows builds require the MSVC toolchain to be installed.
+Executables link against glibc together with `pthread`, `dl` and `m`.

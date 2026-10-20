@@ -6,72 +6,55 @@ weight = 8
 
 # bhc-system
 
-System interfaces for the Basel Haskell Compiler.
+Operating-system interfaces for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate provides interfaces to the operating system including file system, processes, and networking.
+`System.IO`, `System.Environment`, `System.Exit`, `System.Directory` and `System.FilePath` work in compiled programs today. They are built into the compiler, and the C functions behind them (`bhc_open_file`, handle operations, `bhc_get_args`, `bhc_get_env`, `bhc_create_directory`, `bhc_list_directory`, `bhc_take_extension`, `bhc_exit`, ...) are implemented in [bhc-rts](@/docs/internals/runtime/bhc-rts.md) (`rts/bhc-rts/src/ffi.rs`), which every program links.
 
-## File System
+The `bhc-system` crate is a separate, more structured Rust implementation of the same areas, plus process spawning, with the intended Haskell API in `hs/BHC/System/{IO, Environment, Exit, Directory, FilePath, Process}.hs`. It is not linked into programs yet, and generated code does not call it.
 
-```haskell
--- Path operations
-import System.FilePath
-(</>) :: FilePath -> FilePath -> FilePath
-takeDirectory :: FilePath -> FilePath
-takeFileName :: FilePath -> FilePath
-takeExtension :: FilePath -> String
+## Rust modules (`bhc-system`)
 
--- Directory operations
-import System.Directory
-createDirectory :: FilePath -> IO ()
-removeDirectory :: FilePath -> IO ()
-listDirectory :: FilePath -> IO [FilePath]
-doesFileExist :: FilePath -> IO Bool
-doesDirectoryExist :: FilePath -> IO Bool
-```
+| Module | Contents |
+|--------|----------|
+| `io` | File handles and buffered IO |
+| `environment` | Environment variables and program arguments |
+| `filepath` | Path manipulation |
+| `directory` | Directory operations |
+| `exit` | Exit codes |
+| `process` | Process spawning and waiting |
 
-## Process Management
+## What works today
+
+Checked against GHC 9.8.2 on 2026-10-20, one expression per program:
 
 ```haskell
-import System.Process
+-- System.IO
+openFile, hPutStrLn, hGetLine, hClose, hSetBuffering
+readFile, writeFile, appendFile
+stdin, stdout, stderr, isEOF
 
--- Run command
-callCommand :: String -> IO ()
-callProcess :: FilePath -> [String] -> IO ()
+-- System.Environment
+getArgs, getProgName
 
--- With handles
-createProcess :: CreateProcess -> IO (...)
-readProcess :: FilePath -> [String] -> String -> IO String
-readProcessWithExitCode :: ... -> IO (ExitCode, String, String)
+-- System.Exit
+exitWith (ExitFailure n)   -- process exit status is n
+exitSuccess
+
+-- System.Directory
+doesFileExist, doesDirectoryExist, createDirectory, removeDirectory,
+listDirectory, removeFile, renameFile, copyFile, getCurrentDirectory
+
+-- System.FilePath
+(</>), takeFileName, takeDirectory, takeExtension, takeBaseName,
+replaceExtension, dropExtension, splitExtension, splitPath, isAbsolute
 ```
 
-## Environment
+## Known gaps
 
-```haskell
-import System.Environment
-
-getArgs :: IO [String]
-getEnv :: String -> IO String
-lookupEnv :: String -> IO (Maybe String)
-setEnv :: String -> String -> IO ()
-```
-
-## Networking
-
-```haskell
-import Network.Socket
-
--- Create socket
-socket :: Family -> SocketType -> Protocol -> IO Socket
-
--- TCP client
-connect :: Socket -> SockAddr -> IO ()
-send :: Socket -> ByteString -> IO Int
-recv :: Socket -> Int -> IO ByteString
-
--- TCP server
-bind :: Socket -> SockAddr -> IO ()
-listen :: Socket -> Int -> IO ()
-accept :: Socket -> IO (Socket, SockAddr)
-```
+- `getEnv` crashes (segmentation fault), and `lookupEnv` results print nothing. `setEnv` is a stub that aborts.
+- `withFile` and `createDirectoryIfMissing` are stubs that abort.
+- `System.Process` (`callCommand`, `readProcess`, ...) is not implemented in compiled programs; its functions are stubs that abort.
+- `doesFileExist p >>= print` prints a pointer; `do { b <- doesFileExist p; print b }` prints `True`.
+- There is no networking module.

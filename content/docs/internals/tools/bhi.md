@@ -1,78 +1,62 @@
 +++
 title = "bhi"
-description = "Bytecode interpreter"
+description = "IR and report inspector"
 weight = 3
 +++
 
 # bhi
 
-Bytecode interpreter for the Basel Haskell Compiler.
+The Basel Haskell Inspector: a diagnostic viewer for BHC's intermediate representations and compiler reports.
 
 ## Overview
 
-`bhi` executes compiled bytecode files (`.bhb`) for rapid development and testing without full native compilation.
+`bhi` shows what the compiler does with a program. Given a Haskell source file, it runs the front end itself and prints the requested IR stage or per-phase statistics. Its other subcommands read JSON reports (kernel fusion, memory, call graph, compile statistics).
+
+`bhi` is not a bytecode interpreter; BHC has no bytecode format. To evaluate code without compiling it, use [bhci](@/docs/internals/tools/bhci.md) or `bhc run`.
 
 ## Usage
 
 ```bash
-# Run bytecode file
-bhi program.bhb
+# Core IR of a source file (default stage)
+bhi ir Main.hs
 
-# With arguments
-bhi program.bhb arg1 arg2
+# Another stage: ast, hir, core, tensor, loop
+bhi ir --stage hir Main.hs
 
-# Verbose mode
-bhi -v program.bhb
+# Only lines that mention a name
+bhi ir --function square Main.hs
+
+# Lines, declarations, Core bindings and time per phase
+bhi stats Main.hs
 ```
 
-## Bytecode Generation
+```
+$ bhi ir Square.hs
+IR Inspection (from source)
+File: Square.hs
+Stage: Core
 
-```bash
-# Compile to bytecode
-bhc --emit-bytecode Main.hs -o program.bhb
+Core IR
+────────────────────────────────────────────────────────────
+module Main where
 
-# Compile and run
-bhc --run Main.hs
+square = \arg0_200028 -> * arg0_200028 arg0_200028
+main = print (square 7)
 ```
 
-## Interpreter Features
+## Subcommands
 
-| Feature | Description |
-|---------|-------------|
-| Stack-based VM | Efficient execution |
-| Lazy evaluation | Standard Haskell semantics |
-| GC integration | Proper memory management |
-| FFI support | Call C functions |
+| Subcommand | Input | Description |
+|------------|-------|-------------|
+| `ir` | `.hs` source, or an IR dump | Show an IR stage (`--stage`, `--function`) |
+| `stats` | `.hs` source, or stats JSON | Per-phase compile statistics (`--timing`, `--compare`) |
+| `kernel` | kernel report JSON | Fusion report (`--failures-only`, `--timing`, `--simd`, `--format text\|json\|dot`) |
+| `memory` | allocation report JSON | Allocation summary (`--heap-only`, `--arena`, `--by-site`) |
+| `callgraph` | call graph JSON | Call graph (`--filter`, `--depth`, `--cycles`, `--format`) |
+| `diff` | two IR dumps | Compare two dumps (`--changes-only`, `--context N`) |
+| `pretty` | IR dump | Re-indent an IR file (`--width`, `--indent`) |
+| `validate` | IR dump | Check an IR file (`--types`, `--invariants`) |
 
-## Bytecode Format
+## Current Status
 
-```
-.bhb file structure:
-┌─────────────────┐
-│ Header          │
-│ - Magic: "BHB"  │
-│ - Version       │
-│ - Entry point   │
-├─────────────────┤
-│ Constant Pool   │
-│ - Strings       │
-│ - Numbers       │
-│ - Names         │
-├─────────────────┤
-│ Code Sections   │
-│ - Instructions  │
-│ - Debug info    │
-├─────────────────┤
-│ Metadata        │
-│ - Types         │
-│ - Dependencies  │
-└─────────────────┘
-```
-
-## Performance
-
-Bytecode is slower than native code but offers:
-- Fast compilation
-- Portable execution
-- Easy debugging
-- Smaller file size
+The source-file paths of `ir` and `stats` run the real front end. The report-reading subcommands are ahead of the compiler: `bhc` does not write these JSON files yet (`--dump-ir` is accepted but unused, and `--kernel-report` prints a text report to stderr). When `kernel`, `memory`, `callgraph` or `stats` are given a file that is not in their JSON format, they display built-in sample data rather than an error, so treat their output as a demonstration of the format until the compiler produces the files. `bhi` has unit tests but no integration tests yet.

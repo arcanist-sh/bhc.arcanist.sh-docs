@@ -1,0 +1,71 @@
+// =============================================================================
+// Brand Typography - Consistent "hx" styling across the site
+// =============================================================================
+
+// Shared brand gradient
+$brand-gradient: linear-gradient(
+  135deg,
+  #cba6f7 0%,
+  #f5c2e7 25%,
+  #b4befe 50%,
+  #89b4fa 75%,
+  #cba6f7 100%
+);
+
+// Mixin for brand text styling
+@mixin brand-text-style {
+  font-family: "Clash Display", var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  background: $brand-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Base brand text class - use anywhere the brand name appears
+.brand-text {
+  @include brand-text-style;
+}
+
+// Size variants
+.brand-text--sm {
+  @include brand-text-style;
+  font-size: 1.25rem;
+}
+
+.brand-text--md {
+  @include brand-text-style;
+  font-size: 1.5rem;
+}
+
+.brand-text--lg {
+  @include brand-text-style;
+  font-size: 1.75rem;
+}
+
+.brand-text--xl {
+  @include brand-text-style;
+  font-size: 2rem;
+}
+
+// Hero-sized brand (for landing pages) - MASSIVE, in-your-face
+.brand-text--hero {
+  @include brand-text-style;
+  letter-spacing: -0.04em;
+  line-height: 0.75;
+  font-size: 20rem;
+
+  @media screen and (min-width: 640px) {
+    font-size: 32rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 42rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 48rem;
+  }
+}

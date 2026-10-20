@@ -10,58 +10,50 @@ Parser for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate parses Haskell source code into an abstract syntax tree. It implements a recursive descent parser with operator precedence parsing for expressions.
+This crate parses Haskell source code into a `bhc_ast::Module`. It is a hand-written recursive descent parser with precedence climbing for infix expressions. `Parser::new` runs the lexer (`bhc-lexer`, which applies the layout rule) and parses the resulting token stream. CPP is handled before parsing, by the preprocessor in `bhc-driver`.
+
+Dependencies: `bhc-span`, `bhc-intern`, `bhc-lexer`, `bhc-ast`, `bhc-diagnostics`.
 
 ## Key Types
 
 | Type | Description |
 |------|-------------|
-| `Parser` | The parser state |
-| `ParseError` | Parse error with recovery |
-| `ParseResult<T>` | Result of parsing |
+| `Parser<'src>` | Token stream, position, diagnostics, recursion depth, declared fixities |
+| `ParseError` | `Unexpected`, `UnexpectedEof`, `InvalidLiteral`, `RecursionLimit`; `to_diagnostic(file)` |
+| `ParseResult<T>` | `Result<T, ParseError>` |
 
-## Supported Syntax
-
-- Full Haskell 2010 syntax
-- GHC2021/GHC2024 extensions
-- H26 (Haskell 2026) features
+The parser is split into `decl` (module header, imports, declarations), `expr`, `pattern` and `types`.
 
 ## Usage
 
 ```rust
 use bhc_parser::{parse_module, parse_expr};
 
-// Parse a module
-let module = parse_module(source)?;
-
-// Parse a single expression
-let expr = parse_expr(source)?;
+// Each returns the result (if any) plus all diagnostics collected
+let (module, diags) = parse_module(source, file_id);
+let (expr, diags) = parse_expr(source, file_id);
 ```
+
+`parse_import_decl` parses a single `import` line; the REPL uses it.
 
 ## Error Recovery
 
-The parser continues after errors to report multiple issues:
+When a top-level declaration fails to parse, the parser records a diagnostic and skips to the next declaration (`recover_to_next_decl`), so one run can report several errors. Nesting of expressions, types and patterns is capped at a depth of 64 (`RecursionLimit`) so that deeply nested input produces a diagnostic instead of a stack overflow.
 
-```
-error: unexpected token
-  --> src/Main.hs:5:10
-   |
- 5 |     let x =
-   |           ^ expected expression
+## Template Haskell Syntax
 
-error: unexpected token
-  --> src/Main.hs:8:3
-   |
- 8 |     in y +
-   |        ^ expected expression
-```
+A prefix `$(...)` in expression position parses as an application of the builtin `$splice`. Declaration splices become `Decl::Splice` and are expanded later by [bhc-lower](@/docs/internals/compiler/bhc-lower.md). Name quotes `''T` and `'x` parse as ordinary constructor and variable references.
 
 ## Operator Precedence
 
-Operators are parsed with correct precedence and associativity:
+Infix expressions use precedence climbing. Fixities come from two sources:
+
+- Fixity declarations in the module being parsed (`infixl 1 \`op\``, `infix 0 ~~>`). A pre-scan of the token stream collects them, so they apply wherever they appear relative to the operator's uses.
+- A built-in table for Prelude and common library operators (`.`, `$`, `>>=`, `<$>`, `<|>`, `:|`, Arrow combinators). Anything else defaults to `infixl 9`.
+
+Fixity declarations are not propagated across modules yet.
 
 ```haskell
--- Parsed correctly
 1 + 2 * 3      -- 1 + (2 * 3)
 a >>= b >>= c  -- (a >>= b) >>= c
 ```

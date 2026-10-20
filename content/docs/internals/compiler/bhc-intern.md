@@ -10,47 +10,51 @@ String interning for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate provides string interning, which stores each unique string only once. Interned strings can be compared by pointer equality, making comparisons O(1).
+This crate stores each unique string once in a single process-wide interner and hands out `Symbol`s, which are `u32` indices into it. Symbol equality and hashing are integer operations. Interned strings are leaked, so `Symbol::as_str` returns `&'static str`.
+
+The interner itself is private: there is no `Interner` value to create or pass around. All interning goes through `Symbol::intern`.
 
 ## Key Types
 
 | Type | Description |
 |------|-------------|
-| `Symbol` | An interned string |
-| `Interner` | The interning table |
-| `kw` | Pre-interned keywords |
+| `Symbol` | An interned string (`#[repr(transparent)]` over `u32`) |
+| `Ident` | An identifier wrapping a `name: Symbol` |
+| `kw` | Module of pre-interned keyword and common-name symbols |
 
 ## Usage
 
 ```rust
-use bhc_intern::{Symbol, Interner};
+use bhc_intern::{Ident, Symbol};
 
-let mut interner = Interner::new();
+let a = Symbol::intern("hello");
+let b: Symbol = "hello".into();     // From<&str> / From<String>
 
-// Intern strings
-let sym1 = interner.intern("hello");
-let sym2 = interner.intern("hello");
+assert_eq!(a, b);                   // u32 comparison
+assert_eq!(a.as_str(), "hello");    // &'static str
+assert!(a == "hello");              // PartialEq<&str>
 
-// Same symbol (pointer equality)
-assert!(sym1 == sym2);
-
-// Get string back
-let s: &str = interner.resolve(sym1);
+let x = Ident::from_str("x");       // or Ident::new(sym)
 ```
 
+`Ord` on `Symbol` compares the underlying strings, not the indices, so sorted output is stable across runs.
+
 ## Pre-interned Keywords
+
+The `kw` entries are `LazyLock<Symbol>` statics, so they are dereferenced to get a `Symbol`:
 
 ```rust
 use bhc_intern::kw;
 
-// Common keywords are pre-interned
-let if_kw = kw::IF;
-let let_kw = kw::LET;
-let where_kw = kw::WHERE;
+kw::intern_all();          // optional: intern every keyword up front
+
+let if_kw: Symbol = *kw::IF;
+let where_kw = *kw::WHERE;
+let just = *kw::JUST;
 ```
 
-## Benefits
+The set covers Haskell keywords, the H26 keywords `lazy`, `strict`, `profile` and `edition`, common type names (`Int`, `Double`, `String`, ...) and common constructors (`True`, `Just`, `Left`, ...).
 
-- O(1) string comparison
-- Reduced memory usage
-- Cache-friendly for repeated lookups
+## Serialization
+
+A symbol's index is only meaningful within one process. `Symbol` therefore serializes as its string and re-interns on deserialization, which lets serialized Core (the `.bhc` cross-module body sidecars) and interface files round-trip between separate compiler invocations.

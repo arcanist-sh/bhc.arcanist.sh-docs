@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLAS - BHC Documentation</title>
-    <link rel="stylesheet" href="&#x2F;docs&#x2F;api/css/style.css">
-    <script defer src="&#x2F;docs&#x2F;api/js/main.js"></script>
+    <link rel="stylesheet" href="&#x2F;bhc&#x2F;api/css/style.css">
+    <script defer src="&#x2F;bhc&#x2F;api/js/main.js"></script>
 </head>
 <body>
     <nav class="sidebar">
         <div class="sidebar-header">
-            <a href="&#x2F;docs&#x2F;api/" class="logo">BHC</a>
+            <a href="&#x2F;bhc&#x2F;api/" class="logo">BHC</a>
             <div class="header-controls">
                 
                 <div class="version-select">
@@ -35,283 +35,383 @@
     <ul>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Process.html">Process</a>
+            <a href="&#x2F;bhc&#x2F;api/Text.html">Text</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/FilePath.html">FilePath</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Exit.html">Exit</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Environment.html">Environment</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Directory.html">Directory</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Prelude.html">Prelude</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Tensor.html">Tensor</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Einsum.html">Einsum</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Shaped.html">Shaped</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Matrix.html">Matrix</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Sparse.html">Sparse</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Vector.html">Vector</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/SIMD.html">SIMD</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Grad.html">Grad</a>
+            <a href="&#x2F;bhc&#x2F;api/Numeric.html">Numeric</a>
         </li>
         
         <li class="active">
-            <a href="&#x2F;docs&#x2F;api/BLAS.html">BLAS</a>
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Tensor.html">Tensor</a>
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Prelude.html">Prelude</a>
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Numeric.html">Numeric</a>
+            <a href="&#x2F;bhc&#x2F;api/FFI.html">FFI</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/JSON.html">JSON</a>
+            <a href="&#x2F;bhc&#x2F;api/JSON.html">JSON</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Random.html">Random</a>
+            <a href="&#x2F;bhc&#x2F;api/Bytes.html">Bytes</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Vector.html">Vector</a>
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Time.html">Time</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Random.html">Random</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Concurrency.html">Concurrency</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Writer.html">BHC.Control.Monad.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Trans.html">BHC.Control.Monad.Trans</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Reader.html">BHC.Control.Monad.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-State.html">BHC.Control.Monad.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Except.html">BHC.Control.Monad.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Identity.html">BHC.Control.Monad.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-RWS.html">BHC.Control.Monad.RWS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Cont.html">BHC.Control.Monad.Cont</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Maybe.html">BHC.Control.Monad.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Data-Functor-Identity.html">Data.Functor.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader-Class.html">Control.Monad.Reader.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer.html">Control.Monad.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans.html">Control.Monad.Trans</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS-Strict.html">Control.Monad.RWS.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader.html">Control.Monad.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State.html">Control.Monad.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Except.html">Control.Monad.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Identity.html">Control.Monad.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-IO-Class.html">Control.Monad.IO.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Class.html">Control.Monad.State.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Strict.html">Control.Monad.State.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Class.html">Control.Monad.Writer.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Strict.html">Control.Monad.Writer.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS.html">Control.Monad.RWS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer.html">Control.Monad.Trans.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Class.html">Control.Monad.Trans.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-RWS-Strict.html">Control.Monad.Trans.RWS.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Reader.html">Control.Monad.Trans.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State.html">Control.Monad.Trans.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Except.html">Control.Monad.Trans.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State-Strict.html">Control.Monad.Trans.State.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer-Strict.html">Control.Monad.Trans.Writer.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Maybe.html">Control.Monad.Trans.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Error-Class.html">Control.Monad.Error.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-JSON.html">BHC.Data.JSON</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Time.html">BHC.Data.Time</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Random.html">BHC.Data.Random</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Sparse.html">Sparse</a>
         </li>
         
         <li class="active">
-            <a href="&#x2F;docs&#x2F;api/BLAS.html">BLAS</a>
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Concurrency.html">Concurrency</a>
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/FFI.html">FFI</a>
+            <a href="&#x2F;bhc&#x2F;api/Grad.html">Grad</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Time.html">Time</a>
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Bytes.html">Bytes</a>
+            <a href="&#x2F;bhc&#x2F;api/Matrix.html">Matrix</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Text.html">Text</a>
+            <a href="&#x2F;bhc&#x2F;api/Shaped.html">Shaped</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/STM.html">STM</a>
+            <a href="&#x2F;bhc&#x2F;api/Einsum.html">Einsum</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Scope.html">Scope</a>
+            <a href="&#x2F;bhc&#x2F;api/SIMD.html">SIMD</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Applicative.html">Applicative</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Map.html">BHC.Data.Map</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Arrow.html">Arrow</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Set.html">BHC.Data.Set</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Monad.html">Monad</a>
+            <a href="&#x2F;bhc&#x2F;api/IntSet.html">IntSet</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Exception.html">Exception</a>
+            <a href="&#x2F;bhc&#x2F;api/IntMap.html">IntMap</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Category.html">Category</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Sequence.html">BHC.Data.Sequence</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Either.html">Either</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Process.html">BHC.System.Process</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Function.html">Function</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Environment.html">BHC.System.Environment</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Ord.html">Ord</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Exit.html">BHC.System.Exit</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/String.html">String</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Directory.html">BHC.System.Directory</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Char.html">Char</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-FilePath.html">BHC.System.FilePath</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Tuple.html">Tuple</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-IO.html">BHC.System.IO</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/List.html">List</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text.html">BHC.Data.Text</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Maybe.html">Maybe</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Char8.html">BHC.Data.ByteString.Char8</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/JSON.html">JSON</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Builder.html">BHC.Data.ByteString.Builder</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Random.html">Random</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Lazy.html">BHC.Data.ByteString.Lazy</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Time.html">Time</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString.html">BHC.Data.ByteString</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Identity.html">Identity</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy.html">BHC.Data.Text.Lazy</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Except.html">Except</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Encoding.html">BHC.Data.Text.Encoding</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Writer.html">Writer</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-Encoding.html">BHC.Data.Text.Lazy.Encoding</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/RWS.html">RWS</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-IO.html">BHC.Data.Text.Lazy.IO</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Cont.html">Cont</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-IO.html">BHC.Data.Text.IO</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Reader.html">Reader</a>
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/State.html">State</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-Scope.html">BHC.Control.Concurrent.Scope</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Trans.html">Trans</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-STM.html">BHC.Control.Concurrent.STM</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Maybe.html">Maybe</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Ord.html">BHC.Data.Ord</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Map.html">Map</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Function.html">BHC.Data.Function</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IntSet.html">IntSet</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-String.html">BHC.Data.String</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Set.html">Set</a>
+            <a href="&#x2F;bhc&#x2F;api/List.html">List</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Sequence.html">Sequence</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Either.html">BHC.Data.Either</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IntMap.html">IntMap</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Tuple.html">BHC.Data.Tuple</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Maybe.html">BHC.Data.Maybe</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Char.html">BHC.Data.Char</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+            <a href="&#x2F;bhc&#x2F;api/Category.html">Category</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Exception.html">BHC.Control.Exception</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Applicative.html">BHC.Control.Applicative</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/ByteString.html">ByteString</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad.html">BHC.Control.Monad</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Builder.html">Builder</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Char8.html">Char8</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Text.html">Text</a>
+            <a href="&#x2F;bhc&#x2F;api/Arrow.html">Arrow</a>
         </li>
         
     </ul>
@@ -327,9 +427,9 @@
         <div class="page-header__bar">
             <span class="page-header__label">Module</span>
             
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs" class="source-link" title="View source">
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs" class="source-link" title="View source">
                 <span class="source-icon">{ }</span>
-                <span class="source-path">stdlib&#x2F;H26&#x2F;BLAS.hs</span>
+                <span class="source-path">stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs</span>
             </a>
             
             
@@ -348,137 +448,50 @@
         </div>
         <div class="decl-section__content">
             
-            <div id="t:BLASBackend" class="decl">
+            <div id="t:OpenBLAS" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data BLASBackend</code>
+                    <code class="decl-name">data OpenBLAS</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L278" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L128" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:BLASBackend" class="anchor">#</a>
+                    <a href="#t:OpenBLAS" class="anchor">#</a>
                 </div>
                 
                 <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>PureHaskell</code>
-                        
-                        <p class="con-doc">Pure Haskell implementation</p>
-                        
-                    </div>
                     
                     <div class="constructor">
                         <code>OpenBLAS</code>
                         
-                        <p class="con-doc">OpenBLAS library</p>
-                        
                     </div>
                     
-                    <div class="constructor">
-                        <code>MKL</code>
-                        
-                        <p class="con-doc">Intel Math Kernel Library</p>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>BLIS</code>
-                        
-                        <p class="con-doc">BLAS-like Library Instantiation Software</p>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>AppleAccelerate</code>
-                        
-                        <p class="con-doc">Apple Accelerate framework</p>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>CUDA</code>
-                        
-                        <p class="con-doc">NVIDIA cuBLAS</p>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>ROCm</code>
-                        
-                        <p class="con-doc">AMD rocBLAS</p>
-                        
-                    </div>
-                    
-                </div>
-                
-                
-            </div>
-            
-            <div id="t:Matrix" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">data Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L301" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:Matrix" class="anchor">#</a>
                 </div>
                 
                 
                 <div class="decl-doc">
-                    Dense matrix type.
+                    OpenBLAS provider.
                 </div>
                 
             </div>
             
-            <div id="t:MMatrix" class="decl">
+            <div id="t:MKL" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data MMatrix s a</code>
+                    <code class="decl-name">data MKL</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L304" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L141" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:MMatrix" class="anchor">#</a>
-                </div>
-                
-                
-                <div class="decl-doc">
-                    Mutable matrix for in-place operations.
-                </div>
-                
-            </div>
-            
-            <div id="t:MatrixOrder" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">data MatrixOrder</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L307" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:MatrixOrder" class="anchor">#</a>
+                    <a href="#t:MKL" class="anchor">#</a>
                 </div>
                 
                 <div class="constructors">
                     
                     <div class="constructor">
-                        <code>RowMajor</code>
-                        
-                        <p class="con-doc">C-style row-major (default)</p>
-                        
-                    </div>
-                    
-                    <div class="constructor">
-                        <code>ColMajor</code>
-                        
-                        <p class="con-doc">Fortran-style column-major</p>
+                        <code>MKL</code>
                         
                     </div>
                     
@@ -486,7 +499,63 @@
                 
                 
                 <div class="decl-doc">
-                    Matrix storage order.
+                    Intel MKL provider.
+                </div>
+                
+            </div>
+            
+            <div id="t:Accelerate" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data Accelerate</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L154" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Accelerate" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Accelerate</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Apple Accelerate provider (macOS only).
+                </div>
+                
+            </div>
+            
+            <div id="t:PureBHC" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data PureBHC</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L167" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:PureBHC" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>PureBHC</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Pure BHC fallback (no external dependencies).
                 </div>
                 
             </div>
@@ -496,7 +565,7 @@
                     <code class="decl-name">data Transpose</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L313" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L192" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -508,21 +577,21 @@
                     <div class="constructor">
                         <code>NoTrans</code>
                         
-                        <p class="con-doc">No transpose</p>
+                        <p class="con-doc">No transpose (A)</p>
                         
                     </div>
                     
                     <div class="constructor">
                         <code>Trans</code>
                         
-                        <p class="con-doc">Transpose</p>
+                        <p class="con-doc">Transpose (A^T)</p>
                         
                     </div>
                     
                     <div class="constructor">
                         <code>ConjTrans</code>
                         
-                        <p class="con-doc">Conjugate transpose</p>
+                        <p class="con-doc">Conjugate transpose (A^H)</p>
                         
                     </div>
                     
@@ -530,7 +599,44 @@
                 
                 
                 <div class="decl-doc">
-                    Transpose operation specification.
+                    Matrix transpose operation.
+                </div>
+                
+            </div>
+            
+            <div id="t:Layout" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data Layout</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L199" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Layout" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>RowMajor</code>
+                        
+                        <p class="con-doc">Row-major (C-style)</p>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>ColMajor</code>
+                        
+                        <p class="con-doc">Column-major (Fortran-style)</p>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Matrix storage layout.
                 </div>
                 
             </div>
@@ -540,7 +646,7 @@
                     <code class="decl-name">data UpLo</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L320" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L205" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -552,14 +658,10 @@
                     <div class="constructor">
                         <code>Upper</code>
                         
-                        <p class="con-doc">Upper triangular</p>
-                        
                     </div>
                     
                     <div class="constructor">
                         <code>Lower</code>
-                        
-                        <p class="con-doc">Lower triangular</p>
                         
                     </div>
                     
@@ -567,7 +669,7 @@
                 
                 
                 <div class="decl-doc">
-                    Upper/lower triangular specification.
+                    Upper or lower triangular.
                 </div>
                 
             </div>
@@ -577,7 +679,7 @@
                     <code class="decl-name">data Diag</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L326" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L211" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -589,14 +691,14 @@
                     <div class="constructor">
                         <code>NonUnit</code>
                         
-                        <p class="con-doc">Non-unit diagonal</p>
+                        <p class="con-doc">General diagonal</p>
                         
                     </div>
                     
                     <div class="constructor">
                         <code>Unit</code>
                         
-                        <p class="con-doc">Unit diagonal (implicit 1s)</p>
+                        <p class="con-doc">Unit diagonal (all 1s)</p>
                         
                     </div>
                     
@@ -604,7 +706,7 @@
                 
                 
                 <div class="decl-doc">
-                    Diagonal specification.
+                    Diagonal type.
                 </div>
                 
             </div>
@@ -614,7 +716,7 @@
                     <code class="decl-name">data Side</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L332" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L217" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -624,16 +726,16 @@
                 <div class="constructors">
                     
                     <div class="constructor">
-                        <code>LeftSide</code>
+                        <code>Left_</code>
                         
-                        <p class="con-doc">Operation from left</p>
+                        <p class="con-doc">Multiply from left</p>
                         
                     </div>
                     
                     <div class="constructor">
-                        <code>RightSide</code>
+                        <code>Right_</code>
                         
-                        <p class="con-doc">Operation from right</p>
+                        <p class="con-doc">Multiply from right</p>
                         
                     </div>
                     
@@ -641,23 +743,8 @@
                 
                 
                 <div class="decl-doc">
-                    Side specification for matrix operations.
+                    Side for matrix multiplication.
                 </div>
-                
-            </div>
-            
-            <div id="t:ST" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">data ST s a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L786" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:ST" class="anchor">#</a>
-                </div>
-                
                 
             </div>
             
@@ -673,92 +760,62 @@
         </div>
         <div class="decl-section__content">
             
-            <div id="c:BLASNum" class="decl">
+            <div id="c:BLASProvider" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">class Eq a, Num a => BLASNum a</code>
+                    <code class="decl-name">class BLASProvider p</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L766" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L101" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#c:BLASNum" class="anchor">#</a>
+                    <a href="#c:BLASProvider" class="anchor">#</a>
                 </div>
                 
                 <div class="class-methods">
                     <h4>Methods</h4>
                     
                     <div class="method">
-                        <code>blasZero :: a</code>
+                        <code>providerName :: p -&gt; String</code>
                         
                     </div>
                     
                     <div class="method">
-                        <code>blasOne :: a</code>
-                        
-                    </div>
-                    
-                </div>
-                
-                
-                <div class="decl-doc">
-                    Types supporting BLAS operations.
-                </div>
-                
-            </div>
-            
-            <div id="c:BLASReal" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">class BLASNum a => BLASReal a</code>
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L771" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#c:BLASReal" class="anchor">#</a>
-                </div>
-                
-                
-                <div class="decl-doc">
-                    Real BLAS types (Float, Double).
-                </div>
-                
-            </div>
-            
-            <div id="c:BLASComplex" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">class BLASNum a => BLASComplex a</code>
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L774" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#c:BLASComplex" class="anchor">#</a>
-                </div>
-                
-                <div class="class-methods">
-                    <h4>Methods</h4>
-                    
-                    <div class="method">
-                        <code>conjg :: a -&gt; a</code>
+                        <code>isAvailable :: p -&gt; IO Bool</code>
                         
                     </div>
                     
                     <div class="method">
-                        <code>realPart :: a -&gt; a</code>
+                        <code>blasDdot :: p -&gt; Int -&gt; (Ptr Double) -&gt; Int -&gt; (Ptr Double) -&gt; Int -&gt; IO Double</code>
                         
                     </div>
                     
                     <div class="method">
-                        <code>imagPart :: a -&gt; a</code>
+                        <code>blasDnrm2 :: p -&gt; Int -&gt; (Ptr Double) -&gt; Int -&gt; IO Double</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>blasDaxpy :: p -&gt; Int -&gt; Double -&gt; (Ptr Double) -&gt; Int -&gt; (Ptr Double) -&gt; Int -&gt; IO ()</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>blasDscal :: p -&gt; Int -&gt; Double -&gt; (Ptr Double) -&gt; Int -&gt; IO ()</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>blasDgemv :: p -&gt; Layout -&gt; Transpose -&gt; Int -&gt; Int -&gt; Double -&gt; (Ptr Double) -&gt; Int -&gt; (Ptr Double) -&gt; Int -&gt; Double -&gt; (Ptr Double) -&gt; Int -&gt; IO ()</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>blasDgemm :: p -&gt; Layout -&gt; Transpose -&gt; Transpose -&gt; Int -&gt; Int -&gt; Int -&gt; Double -&gt; (Ptr Double) -&gt; Int -&gt; (Ptr Double) -&gt; Int -&gt; Double -&gt; (Ptr Double) -&gt; Int -&gt; IO ()</code>
                         
                     </div>
                     
                 </div>
                 
-                
-                <div class="decl-doc">
-                    Complex BLAS types.
-                </div>
                 
             </div>
             
@@ -766,2311 +823,6 @@
     </div>
     
 
-    
-    <!-- Functions Section Frame -->
-    <div id="functions" class="decl-section">
-        <div class="decl-section__header">
-            <span class="decl-section__label">Functions</span>
-        </div>
-        <div class="decl-section__content">
-            
-            <div id="v:setBackend" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">setBackend :: BLASBackend -&gt; IO ()</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L289" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:setBackend" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Set active BLAS backend.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:getBackend" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">getBackend :: IO BLASBackend</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L292" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:getBackend" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Get current BLAS backend.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:availableBackends" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">availableBackends :: IO [BLASBackend]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L295" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:availableBackends" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    List available backends on this system.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:matrix" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">matrix :: (BLASNum a) =&gt; Int -&gt; Int -&gt; ((Int, Int) -&gt; a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L340" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:matrix" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Create matrix from dimensions and function.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:fromRows" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">fromRows :: (BLASNum a) =&gt; [[a]] -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L343" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:fromRows" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Create matrix from list of rows.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:fromCols" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">fromCols :: (BLASNum a) =&gt; [[a]] -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L346" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:fromCols" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Create matrix from list of columns.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:fromList" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">fromList :: (BLASNum a) =&gt; Int -&gt; Int -&gt; [a] -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L349" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:fromList" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Create matrix from flat list with dimensions.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:zeros" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">zeros :: (BLASNum a) =&gt; Int -&gt; Int -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L352" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:zeros" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Zero matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:ones" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">ones :: (BLASNum a) =&gt; Int -&gt; Int -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L355" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:ones" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix of ones.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:identity" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">identity :: (BLASNum a) =&gt; Int -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L358" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:identity" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Identity matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:diagonal" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">diagonal :: (BLASNum a) =&gt; [a] -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L361" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:diagonal" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Diagonal matrix from vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:fill" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">fill :: (BLASNum a) =&gt; Int -&gt; Int -&gt; a -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L364" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:fill" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Fill matrix with constant.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:rows" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">rows :: (Matrix a) -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L369" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:rows" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Number of rows.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:cols" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">cols :: (Matrix a) -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L372" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:cols" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Number of columns.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:shape" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">shape :: (Matrix a) -&gt; (Int, Int)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L375" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:shape" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Shape as (rows, cols).
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:size" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">size :: (Matrix a) -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L378" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:size" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Total number of elements.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:order" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">order :: (Matrix a) -&gt; MatrixOrder</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L381" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:order" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Storage order.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:isSquare" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">isSquare :: (Matrix a) -&gt; Bool</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L384" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:isSquare" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Check if square.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:isSymmetric" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">isSymmetric :: (BLASNum a) =&gt; (Matrix a) -&gt; Bool</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L387" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:isSymmetric" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Check if symmetric.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:isHermitian" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">isHermitian :: (BLASComplex a) =&gt; (Matrix a) -&gt; Bool</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L390" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:isHermitian" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Check if Hermitian.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:isUpperTriangular" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">isUpperTriangular :: (BLASNum a) =&gt; (Matrix a) -&gt; Bool</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L393" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:isUpperTriangular" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Check if upper triangular.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:isLowerTriangular" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">isLowerTriangular :: (BLASNum a) =&gt; (Matrix a) -&gt; Bool</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L396" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:isLowerTriangular" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Check if lower triangular.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:row" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">row :: (BLASNum a) =&gt; Int -&gt; (Matrix a) -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L407" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:row" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:col" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">col :: (BLASNum a) =&gt; Int -&gt; (Matrix a) -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L410" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:col" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Extract column as vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:diag" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">diag :: (BLASNum a) =&gt; (Matrix a) -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L413" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:diag" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Extract diagonal.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:slice" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">slice :: (BLASNum a) =&gt; (Int, Int) -&gt; (Int, Int) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L416" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:slice" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Slice submatrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:submatrix" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">submatrix :: (BLASNum a) =&gt; Int -&gt; Int -&gt; Int -&gt; Int -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L419" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:submatrix" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Extract submatrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:transpose" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">transpose :: (BLASNum a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L424" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:transpose" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Transpose matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:conjugateTranspose" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">conjugateTranspose :: (BLASComplex a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L427" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:conjugateTranspose" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Conjugate transpose.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:reshape" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">reshape :: (BLASNum a) =&gt; Int -&gt; Int -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L430" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:reshape" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Reshape matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:flatten" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">flatten :: (BLASNum a) =&gt; (Matrix a) -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L433" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:flatten" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Flatten to vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:asContiguous" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">asContiguous :: (BLASNum a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L436" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:asContiguous" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Force contiguous storage.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:asRowMajor" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">asRowMajor :: (BLASNum a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L439" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:asRowMajor" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Convert to row-major order.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:asColMajor" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">asColMajor :: (BLASNum a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L442" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:asColMajor" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Convert to column-major order.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:rotg" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">rotg :: (BLASReal a) =&gt; a -&gt; a -&gt; (a, a, a, a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L447" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:rotg" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Generate Givens rotation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:rotmg" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">rotmg :: (BLASReal a) =&gt; a -&gt; a -&gt; a -&gt; a -&gt; (a, [a])</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L450" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:rotmg" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Generate modified Givens rotation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:rot" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">rot :: (BLASReal a) =&gt; [a] -&gt; [a] -&gt; a -&gt; a -&gt; ([a], [a])</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L453" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:rot" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Apply Givens rotation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:rotm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">rotm :: (BLASReal a) =&gt; [a] -&gt; [a] -&gt; [a] -&gt; ([a], [a])</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L456" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:rotm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Apply modified Givens rotation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:swap" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">swap :: (BLASNum a) =&gt; [a] -&gt; [a] -&gt; ([a], [a])</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L459" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:swap" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Swap two vectors.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:scal" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">scal :: (BLASNum a) =&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L462" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:scal" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Scale vector: x = α·x
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:copy" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">copy :: (BLASNum a) =&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L465" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:copy" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Copy vector: y = x
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:axpy" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">axpy :: (BLASNum a) =&gt; a -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L468" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:axpy" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector update: y = α·x + y
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:dot" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">dot :: (BLASReal a) =&gt; [a] -&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L471" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:dot" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Dot product: x·y
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:dotu" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">dotu :: (BLASComplex a) =&gt; [a] -&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L474" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:dotu" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Unconjugated complex dot product.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:dotc" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">dotc :: (BLASComplex a) =&gt; [a] -&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L477" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:dotc" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Conjugated complex dot product.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:sdot" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">sdot :: [Float] -&gt; [Float] -&gt; Double</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L480" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:sdot" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Single precision dot with double accumulation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:nrm2" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">nrm2 :: (BLASNum a) =&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L483" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:nrm2" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Euclidean norm: ||x||₂
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:asum" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">asum :: (BLASNum a) =&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L486" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:asum" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Sum of absolute values.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:iamax" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">iamax :: (BLASNum a) =&gt; [a] -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L489" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:iamax" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Index of maximum absolute value.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:gemv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">gemv :: (BLASNum a) =&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L494" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:gemv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    General matrix-vector: y = α·op(A)·x + β·y
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:gbmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">gbmv :: (BLASNum a) =&gt; Transpose -&gt; Int -&gt; Int -&gt; a -&gt; (Matrix a) -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L498" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:gbmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    General banded matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:hemv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">hemv :: (BLASComplex a) =&gt; UpLo -&gt; a -&gt; (Matrix a) -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L502" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:hemv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian matrix-vector: y = α·A·x + β·y
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:hbmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">hbmv :: (BLASComplex a) =&gt; UpLo -&gt; Int -&gt; a -&gt; (Matrix a) -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L506" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:hbmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian banded matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:hpmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">hpmv :: (BLASComplex a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L510" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:hpmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian packed matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:symv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">symv :: (BLASReal a) =&gt; UpLo -&gt; a -&gt; (Matrix a) -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L514" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:symv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric matrix-vector: y = α·A·x + β·y
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:sbmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">sbmv :: (BLASReal a) =&gt; UpLo -&gt; Int -&gt; a -&gt; (Matrix a) -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L518" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:sbmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric banded matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:spmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">spmv :: (BLASReal a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L522" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:spmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric packed matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:trmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">trmv :: (BLASNum a) =&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; (Matrix a) -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L526" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:trmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular matrix-vector: x = op(A)·x
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:tbmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">tbmv :: (BLASNum a) =&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; Int -&gt; (Matrix a) -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L530" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:tbmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular banded matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:tpmv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">tpmv :: (BLASNum a) =&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L534" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:tpmv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular packed matrix-vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:trsv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">trsv :: (BLASNum a) =&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; (Matrix a) -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L538" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:trsv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular solve: x = op(A)⁻¹·x
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:tbsv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">tbsv :: (BLASNum a) =&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; Int -&gt; (Matrix a) -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L542" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:tbsv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular banded solve.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:tpsv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">tpsv :: (BLASNum a) =&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L546" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:tpsv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular packed solve.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:ger" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">ger :: (BLASReal a) =&gt; a -&gt; [a] -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L550" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:ger" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Rank-1 update: A = α·x·yᵀ + A
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:geru" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">geru :: (BLASComplex a) =&gt; a -&gt; [a] -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L553" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:geru" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Unconjugated rank-1 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:gerc" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">gerc :: (BLASComplex a) =&gt; a -&gt; [a] -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L556" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:gerc" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Conjugated rank-1 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:her" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">her :: (BLASComplex a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L559" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:her" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian rank-1 update: A = α·x·x^H + A
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:hpr" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">hpr :: (BLASComplex a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L562" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:hpr" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian packed rank-1 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:her2" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">her2 :: (BLASComplex a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L565" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:her2" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian rank-2 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:hpr2" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">hpr2 :: (BLASComplex a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L568" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:hpr2" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian packed rank-2 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:syr" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">syr :: (BLASReal a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L571" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:syr" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric rank-1 update: A = α·x·xᵀ + A
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:spr" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">spr :: (BLASReal a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L574" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:spr" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric packed rank-1 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:syr2" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">syr2 :: (BLASReal a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L577" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:syr2" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric rank-2 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:spr2" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">spr2 :: (BLASReal a) =&gt; UpLo -&gt; a -&gt; [a] -&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L580" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:spr2" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric packed rank-2 update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:gemm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">gemm :: (BLASNum a) =&gt; Transpose -&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L585" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:gemm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    General matrix-matrix: C = α·op(A)·op(B) + β·C
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:gemmBatched" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">gemmBatched :: (BLASNum a) =&gt; Transpose -&gt; Transpose -&gt; a -&gt; [Matrix a] -&gt; [Matrix a] -&gt; a -&gt; [Matrix a] -&gt; [Matrix a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L590" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:gemmBatched" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Batched matrix multiply.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:symm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">symm :: (BLASReal a) =&gt; Side -&gt; UpLo -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L595" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:symm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric matrix-matrix: C = α·A·B + β·C or C = α·B·A + β·C
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:hemm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">hemm :: (BLASComplex a) =&gt; Side -&gt; UpLo -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L599" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:hemm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian matrix-matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:syrk" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">syrk :: (BLASReal a) =&gt; UpLo -&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L603" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:syrk" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric rank-k update: C = α·A·Aᵀ + β·C
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:herk" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">herk :: (BLASComplex a) =&gt; UpLo -&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L607" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:herk" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian rank-k update: C = α·A·A^H + β·C
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:syr2k" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">syr2k :: (BLASReal a) =&gt; UpLo -&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L611" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:syr2k" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Symmetric rank-2k update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:her2k" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">her2k :: (BLASComplex a) =&gt; UpLo -&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L615" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:her2k" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Hermitian rank-2k update.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:trmm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">trmm :: (BLASNum a) =&gt; Side -&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L619" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:trmm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular matrix-matrix: B = α·op(A)·B or B = α·B·op(A)
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:trsm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">trsm :: (BLASNum a) =&gt; Side -&gt; UpLo -&gt; Transpose -&gt; Diag -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L623" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:trsm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Triangular solve: B = α·op(A)⁻¹·B or B = α·B·op(A)⁻¹
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:matmul" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">matmul :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L629" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:matmul" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Simple matrix multiply: C = A·B
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:@@" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">@@ :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L632" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:@@" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Infix matrix multiply.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:outer" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">outer :: (BLASNum a) =&gt; [a] -&gt; [a] -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L636" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:outer" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Outer product: A = x·yᵀ
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vdot" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vdot :: (BLASNum a) =&gt; [a] -&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L639" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vdot" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector dot product.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vnorm" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vnorm :: (BLASNum a) =&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L642" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vnorm" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector 2-norm.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vnorm1" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vnorm1 :: (BLASNum a) =&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L645" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vnorm1" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector 1-norm.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vnormInf" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vnormInf :: (BLASNum a) =&gt; [a] -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L648" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vnormInf" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector infinity norm.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vscale" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vscale :: (BLASNum a) =&gt; a -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L651" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vscale" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Scale vector.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vadd" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vadd :: (BLASNum a) =&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L654" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vadd" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector addition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vsub" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vsub :: (BLASNum a) =&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L657" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vsub" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Vector subtraction.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:vmul" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">vmul :: (BLASNum a) =&gt; [a] -&gt; [a] -&gt; [a]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L660" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:vmul" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Element-wise vector multiply.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:madd" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">madd :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L663" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:madd" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix addition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:msub" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">msub :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L666" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:msub" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix subtraction.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:mmul" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">mmul :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L669" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:mmul" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Element-wise matrix multiply.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:mscale" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">mscale :: (BLASNum a) =&gt; a -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L672" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:mscale" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Scale matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:trace" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">trace :: (BLASNum a) =&gt; (Matrix a) -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L675" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:trace" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix trace.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:det" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">det :: (BLASNum a) =&gt; (Matrix a) -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L678" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:det" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix determinant (via LU decomposition).
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:rank" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">rank :: (BLASNum a) =&gt; (Matrix a) -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L681" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:rank" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix rank.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:cond" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">cond :: (BLASNum a) =&gt; (Matrix a) -&gt; a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L684" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:cond" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Condition number.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:solve" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">solve :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L689" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:solve" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Solve linear system A·X = B.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:inv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">inv :: (BLASNum a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L692" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:inv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Matrix inverse.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:pinv" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">pinv :: (BLASNum a) =&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L695" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:pinv" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Moore-Penrose pseudo-inverse.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:lu" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">lu :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a, Matrix a, [Int])</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L702" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:lu" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    LU decomposition with partial pivoting.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:qr" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">qr :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a, Matrix a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L707" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:qr" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    QR decomposition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:cholesky" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">cholesky :: (BLASNum a) =&gt; UpLo -&gt; (Matrix a) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L713" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:cholesky" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Cholesky decomposition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:svd" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">svd :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a, [a], Matrix a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L718" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:svd" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Singular value decomposition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:eig" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">eig :: (BLASNum a) =&gt; (Matrix a) -&gt; ([a], Matrix a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L723" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:eig" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Eigenvalue decomposition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:schur" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">schur :: (BLASNum a) =&gt; (Matrix a) -&gt; (Matrix a, Matrix a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L728" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:schur" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Schur decomposition.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:thaw" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">thaw :: (BLASNum a) =&gt; (Matrix a) -&gt; ST s (MMatrix s a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L733" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:thaw" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Convert to mutable matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:freeze" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">freeze :: (BLASNum a) =&gt; (MMatrix s a) -&gt; ST s (Matrix a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L736" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:freeze" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Convert to immutable matrix.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:unsafeThaw" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">unsafeThaw :: (BLASNum a) =&gt; (Matrix a) -&gt; ST s (MMatrix s a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L739" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:unsafeThaw" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Unsafe thaw (no copy).
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:unsafeFreeze" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">unsafeFreeze :: (BLASNum a) =&gt; (MMatrix s a) -&gt; ST s (Matrix a)</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L742" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:unsafeFreeze" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Unsafe freeze (no copy).
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:create" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">create :: (BLASNum a) =&gt; (forall s. ST s (MMatrix s a)) -&gt; Matrix a</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L745" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:create" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Create matrix via mutable computation.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:gemmInPlace" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">gemmInPlace :: (BLASNum a) =&gt; Transpose -&gt; Transpose -&gt; a -&gt; (Matrix a) -&gt; (Matrix a) -&gt; a -&gt; (MMatrix s a) -&gt; ST s ()</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L750" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:gemmInPlace" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    In-place GEMM.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:scalInPlace" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">scalInPlace :: (BLASNum a) =&gt; a -&gt; (MMatrix s a) -&gt; ST s ()</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L755" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:scalInPlace" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    In-place scale.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:axpyInPlace" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">axpyInPlace :: (BLASNum a) =&gt; a -&gt; [a] -&gt; (MMatrix s a) -&gt; ST s ()</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L758" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:axpyInPlace" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    In-place axpy.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:copyInPlace" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">copyInPlace :: (BLASNum a) =&gt; (Matrix a) -&gt; (MMatrix s a) -&gt; ST s ()</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L761" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:copyInPlace" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    In-place copy.
-                </div>
-                
-                
-            </div>
-            
-        </div>
-    </div>
     
 
     
@@ -3083,9 +835,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance BLASNum Float</code>
+                    <code class="decl-name">instance BLASProvider OpenBLAS</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L780" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L130" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -3095,9 +847,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance BLASNum Double</code>
+                    <code class="decl-name">instance BLASProvider MKL</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L781" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L143" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -3107,9 +859,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance BLASReal Float</code>
+                    <code class="decl-name">instance BLASProvider Accelerate</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L782" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L156" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -3119,9 +871,9 @@
             
             <div class="decl instance">
                 <div class="decl-header">
-                    <code class="decl-name">instance BLASReal Double</code>
+                    <code class="decl-name">instance BLASProvider PureBHC</code>
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;BLAS.hs#L783" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;BLAS.hs#L169" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -3152,23 +904,23 @@
                 <a href="#types" class="toc-section-link">Types</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#t:BLASBackend">BLASBackend</a></li>
+                    <li><a href="#t:OpenBLAS">OpenBLAS</a></li>
                     
-                    <li><a href="#t:Matrix">Matrix</a></li>
+                    <li><a href="#t:MKL">MKL</a></li>
                     
-                    <li><a href="#t:MMatrix">MMatrix</a></li>
+                    <li><a href="#t:Accelerate">Accelerate</a></li>
                     
-                    <li><a href="#t:MatrixOrder">MatrixOrder</a></li>
+                    <li><a href="#t:PureBHC">PureBHC</a></li>
                     
                     <li><a href="#t:Transpose">Transpose</a></li>
+                    
+                    <li><a href="#t:Layout">Layout</a></li>
                     
                     <li><a href="#t:UpLo">UpLo</a></li>
                     
                     <li><a href="#t:Diag">Diag</a></li>
                     
                     <li><a href="#t:Side">Side</a></li>
-                    
-                    <li><a href="#t:ST">ST</a></li>
                     
                 </ul>
             </li>
@@ -3178,264 +930,11 @@
                 <a href="#classes" class="toc-section-link">Classes</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#c:BLASNum">BLASNum</a></li>
-                    
-                    <li><a href="#c:BLASReal">BLASReal</a></li>
-                    
-                    <li><a href="#c:BLASComplex">BLASComplex</a></li>
+                    <li><a href="#c:BLASProvider">BLASProvider</a></li>
                     
                 </ul>
             </li>
             
-            
-            <li class="toc-section">
-                <a href="#functions" class="toc-section-link">Functions</a>
-                <ul class="toc-items">
-                    
-                    <li><a href="#v:setBackend">setBackend</a></li>
-                    
-                    <li><a href="#v:getBackend">getBackend</a></li>
-                    
-                    <li><a href="#v:availableBackends">availableBackends</a></li>
-                    
-                    <li><a href="#v:matrix">matrix</a></li>
-                    
-                    <li><a href="#v:fromRows">fromRows</a></li>
-                    
-                    <li><a href="#v:fromCols">fromCols</a></li>
-                    
-                    <li><a href="#v:fromList">fromList</a></li>
-                    
-                    <li><a href="#v:zeros">zeros</a></li>
-                    
-                    <li><a href="#v:ones">ones</a></li>
-                    
-                    <li><a href="#v:identity">identity</a></li>
-                    
-                    <li><a href="#v:diagonal">diagonal</a></li>
-                    
-                    <li><a href="#v:fill">fill</a></li>
-                    
-                    <li><a href="#v:rows">rows</a></li>
-                    
-                    <li><a href="#v:cols">cols</a></li>
-                    
-                    <li><a href="#v:shape">shape</a></li>
-                    
-                    <li><a href="#v:size">size</a></li>
-                    
-                    <li><a href="#v:order">order</a></li>
-                    
-                    <li><a href="#v:isSquare">isSquare</a></li>
-                    
-                    <li><a href="#v:isSymmetric">isSymmetric</a></li>
-                    
-                    <li><a href="#v:isHermitian">isHermitian</a></li>
-                    
-                    <li><a href="#v:isUpperTriangular">isUpperTriangular</a></li>
-                    
-                    <li><a href="#v:isLowerTriangular">isLowerTriangular</a></li>
-                    
-                    <li><a href="#v:row">row</a></li>
-                    
-                    <li><a href="#v:col">col</a></li>
-                    
-                    <li><a href="#v:diag">diag</a></li>
-                    
-                    <li><a href="#v:slice">slice</a></li>
-                    
-                    <li><a href="#v:submatrix">submatrix</a></li>
-                    
-                    <li><a href="#v:transpose">transpose</a></li>
-                    
-                    <li><a href="#v:conjugateTranspose">conjugateTranspose</a></li>
-                    
-                    <li><a href="#v:reshape">reshape</a></li>
-                    
-                    <li><a href="#v:flatten">flatten</a></li>
-                    
-                    <li><a href="#v:asContiguous">asContiguous</a></li>
-                    
-                    <li><a href="#v:asRowMajor">asRowMajor</a></li>
-                    
-                    <li><a href="#v:asColMajor">asColMajor</a></li>
-                    
-                    <li><a href="#v:rotg">rotg</a></li>
-                    
-                    <li><a href="#v:rotmg">rotmg</a></li>
-                    
-                    <li><a href="#v:rot">rot</a></li>
-                    
-                    <li><a href="#v:rotm">rotm</a></li>
-                    
-                    <li><a href="#v:swap">swap</a></li>
-                    
-                    <li><a href="#v:scal">scal</a></li>
-                    
-                    <li><a href="#v:copy">copy</a></li>
-                    
-                    <li><a href="#v:axpy">axpy</a></li>
-                    
-                    <li><a href="#v:dot">dot</a></li>
-                    
-                    <li><a href="#v:dotu">dotu</a></li>
-                    
-                    <li><a href="#v:dotc">dotc</a></li>
-                    
-                    <li><a href="#v:sdot">sdot</a></li>
-                    
-                    <li><a href="#v:nrm2">nrm2</a></li>
-                    
-                    <li><a href="#v:asum">asum</a></li>
-                    
-                    <li><a href="#v:iamax">iamax</a></li>
-                    
-                    <li><a href="#v:gemv">gemv</a></li>
-                    
-                    <li><a href="#v:gbmv">gbmv</a></li>
-                    
-                    <li><a href="#v:hemv">hemv</a></li>
-                    
-                    <li><a href="#v:hbmv">hbmv</a></li>
-                    
-                    <li><a href="#v:hpmv">hpmv</a></li>
-                    
-                    <li><a href="#v:symv">symv</a></li>
-                    
-                    <li><a href="#v:sbmv">sbmv</a></li>
-                    
-                    <li><a href="#v:spmv">spmv</a></li>
-                    
-                    <li><a href="#v:trmv">trmv</a></li>
-                    
-                    <li><a href="#v:tbmv">tbmv</a></li>
-                    
-                    <li><a href="#v:tpmv">tpmv</a></li>
-                    
-                    <li><a href="#v:trsv">trsv</a></li>
-                    
-                    <li><a href="#v:tbsv">tbsv</a></li>
-                    
-                    <li><a href="#v:tpsv">tpsv</a></li>
-                    
-                    <li><a href="#v:ger">ger</a></li>
-                    
-                    <li><a href="#v:geru">geru</a></li>
-                    
-                    <li><a href="#v:gerc">gerc</a></li>
-                    
-                    <li><a href="#v:her">her</a></li>
-                    
-                    <li><a href="#v:hpr">hpr</a></li>
-                    
-                    <li><a href="#v:her2">her2</a></li>
-                    
-                    <li><a href="#v:hpr2">hpr2</a></li>
-                    
-                    <li><a href="#v:syr">syr</a></li>
-                    
-                    <li><a href="#v:spr">spr</a></li>
-                    
-                    <li><a href="#v:syr2">syr2</a></li>
-                    
-                    <li><a href="#v:spr2">spr2</a></li>
-                    
-                    <li><a href="#v:gemm">gemm</a></li>
-                    
-                    <li><a href="#v:gemmBatched">gemmBatched</a></li>
-                    
-                    <li><a href="#v:symm">symm</a></li>
-                    
-                    <li><a href="#v:hemm">hemm</a></li>
-                    
-                    <li><a href="#v:syrk">syrk</a></li>
-                    
-                    <li><a href="#v:herk">herk</a></li>
-                    
-                    <li><a href="#v:syr2k">syr2k</a></li>
-                    
-                    <li><a href="#v:her2k">her2k</a></li>
-                    
-                    <li><a href="#v:trmm">trmm</a></li>
-                    
-                    <li><a href="#v:trsm">trsm</a></li>
-                    
-                    <li><a href="#v:matmul">matmul</a></li>
-                    
-                    <li><a href="#v:@@">@@</a></li>
-                    
-                    <li><a href="#v:outer">outer</a></li>
-                    
-                    <li><a href="#v:vdot">vdot</a></li>
-                    
-                    <li><a href="#v:vnorm">vnorm</a></li>
-                    
-                    <li><a href="#v:vnorm1">vnorm1</a></li>
-                    
-                    <li><a href="#v:vnormInf">vnormInf</a></li>
-                    
-                    <li><a href="#v:vscale">vscale</a></li>
-                    
-                    <li><a href="#v:vadd">vadd</a></li>
-                    
-                    <li><a href="#v:vsub">vsub</a></li>
-                    
-                    <li><a href="#v:vmul">vmul</a></li>
-                    
-                    <li><a href="#v:madd">madd</a></li>
-                    
-                    <li><a href="#v:msub">msub</a></li>
-                    
-                    <li><a href="#v:mmul">mmul</a></li>
-                    
-                    <li><a href="#v:mscale">mscale</a></li>
-                    
-                    <li><a href="#v:trace">trace</a></li>
-                    
-                    <li><a href="#v:det">det</a></li>
-                    
-                    <li><a href="#v:rank">rank</a></li>
-                    
-                    <li><a href="#v:cond">cond</a></li>
-                    
-                    <li><a href="#v:solve">solve</a></li>
-                    
-                    <li><a href="#v:inv">inv</a></li>
-                    
-                    <li><a href="#v:pinv">pinv</a></li>
-                    
-                    <li><a href="#v:lu">lu</a></li>
-                    
-                    <li><a href="#v:qr">qr</a></li>
-                    
-                    <li><a href="#v:cholesky">cholesky</a></li>
-                    
-                    <li><a href="#v:svd">svd</a></li>
-                    
-                    <li><a href="#v:eig">eig</a></li>
-                    
-                    <li><a href="#v:schur">schur</a></li>
-                    
-                    <li><a href="#v:thaw">thaw</a></li>
-                    
-                    <li><a href="#v:freeze">freeze</a></li>
-                    
-                    <li><a href="#v:unsafeThaw">unsafeThaw</a></li>
-                    
-                    <li><a href="#v:unsafeFreeze">unsafeFreeze</a></li>
-                    
-                    <li><a href="#v:create">create</a></li>
-                    
-                    <li><a href="#v:gemmInPlace">gemmInPlace</a></li>
-                    
-                    <li><a href="#v:scalInPlace">scalInPlace</a></li>
-                    
-                    <li><a href="#v:axpyInPlace">axpyInPlace</a></li>
-                    
-                    <li><a href="#v:copyInPlace">copyInPlace</a></li>
-                    
-                </ul>
-            </li>
             
             
             <li class="toc-section">

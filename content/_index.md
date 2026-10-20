@@ -1,6 +1,7 @@
 +++
-title = "BHC Documentation"
-description = "Documentation for the Basel Haskell Compiler"
+title = "BHC docs"
+template = "section.html"
+sort_by = "weight"
 +++
 
-Welcome to the BHC documentation.
+The documentation for BHC, the Basel Haskell Compiler.

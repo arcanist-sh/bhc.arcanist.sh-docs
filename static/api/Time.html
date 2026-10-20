@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time - BHC Documentation</title>
-    <link rel="stylesheet" href="&#x2F;docs&#x2F;api/css/style.css">
-    <script defer src="&#x2F;docs&#x2F;api/js/main.js"></script>
+    <link rel="stylesheet" href="&#x2F;bhc&#x2F;api/css/style.css">
+    <script defer src="&#x2F;bhc&#x2F;api/js/main.js"></script>
 </head>
 <body>
     <nav class="sidebar">
         <div class="sidebar-header">
-            <a href="&#x2F;docs&#x2F;api/" class="logo">BHC</a>
+            <a href="&#x2F;bhc&#x2F;api/" class="logo">BHC</a>
             <div class="header-controls">
                 
                 <div class="version-select">
@@ -35,283 +35,383 @@
     <ul>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Process.html">Process</a>
+            <a href="&#x2F;bhc&#x2F;api/Text.html">Text</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/FilePath.html">FilePath</a>
+            <a href="&#x2F;bhc&#x2F;api/Numeric.html">Numeric</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Exit.html">Exit</a>
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Environment.html">Environment</a>
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Directory.html">Directory</a>
+            <a href="&#x2F;bhc&#x2F;api/FFI.html">FFI</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Prelude.html">Prelude</a>
+            <a href="&#x2F;bhc&#x2F;api/JSON.html">JSON</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Tensor.html">Tensor</a>
+            <a href="&#x2F;bhc&#x2F;api/Bytes.html">Bytes</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Einsum.html">Einsum</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Shaped.html">Shaped</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Matrix.html">Matrix</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Sparse.html">Sparse</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Vector.html">Vector</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/SIMD.html">SIMD</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Grad.html">Grad</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/BLAS.html">BLAS</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Tensor.html">Tensor</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Prelude.html">Prelude</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Numeric.html">Numeric</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/JSON.html">JSON</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Random.html">Random</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Vector.html">Vector</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/BLAS.html">BLAS</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Concurrency.html">Concurrency</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/FFI.html">FFI</a>
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
         </li>
         
         <li class="active">
-            <a href="&#x2F;docs&#x2F;api/Time.html">Time</a>
+            <a href="&#x2F;bhc&#x2F;api/Time.html">Time</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Bytes.html">Bytes</a>
+            <a href="&#x2F;bhc&#x2F;api/Random.html">Random</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Text.html">Text</a>
+            <a href="&#x2F;bhc&#x2F;api/Concurrency.html">Concurrency</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/STM.html">STM</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Writer.html">BHC.Control.Monad.Writer</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Scope.html">Scope</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Trans.html">BHC.Control.Monad.Trans</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Applicative.html">Applicative</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Reader.html">BHC.Control.Monad.Reader</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Arrow.html">Arrow</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-State.html">BHC.Control.Monad.State</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Monad.html">Monad</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Except.html">BHC.Control.Monad.Except</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Exception.html">Exception</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Identity.html">BHC.Control.Monad.Identity</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Category.html">Category</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-RWS.html">BHC.Control.Monad.RWS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Either.html">Either</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Cont.html">BHC.Control.Monad.Cont</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Function.html">Function</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Maybe.html">BHC.Control.Monad.Maybe</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Ord.html">Ord</a>
+            <a href="&#x2F;bhc&#x2F;api/Data-Functor-Identity.html">Data.Functor.Identity</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/String.html">String</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader-Class.html">Control.Monad.Reader.Class</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Char.html">Char</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer.html">Control.Monad.Writer</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Tuple.html">Tuple</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans.html">Control.Monad.Trans</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/List.html">List</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS-Strict.html">Control.Monad.RWS.Strict</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Maybe.html">Maybe</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader.html">Control.Monad.Reader</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/JSON.html">JSON</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State.html">Control.Monad.State</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Random.html">Random</a>
-        </li>
-        
-        <li class="active">
-            <a href="&#x2F;docs&#x2F;api/Time.html">Time</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Except.html">Control.Monad.Except</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Identity.html">Identity</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Identity.html">Control.Monad.Identity</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Except.html">Except</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-IO-Class.html">Control.Monad.IO.Class</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Writer.html">Writer</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Class.html">Control.Monad.State.Class</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/RWS.html">RWS</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Strict.html">Control.Monad.State.Strict</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Cont.html">Cont</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Class.html">Control.Monad.Writer.Class</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Reader.html">Reader</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Strict.html">Control.Monad.Writer.Strict</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/State.html">State</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS.html">Control.Monad.RWS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Trans.html">Trans</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer.html">Control.Monad.Trans.Writer</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Maybe.html">Maybe</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Class.html">Control.Monad.Trans.Class</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Map.html">Map</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-RWS-Strict.html">Control.Monad.Trans.RWS.Strict</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IntSet.html">IntSet</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Reader.html">Control.Monad.Trans.Reader</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Set.html">Set</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State.html">Control.Monad.Trans.State</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Sequence.html">Sequence</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Except.html">Control.Monad.Trans.Except</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IntMap.html">IntMap</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State-Strict.html">Control.Monad.Trans.State.Strict</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer-Strict.html">Control.Monad.Trans.Writer.Strict</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Maybe.html">Control.Monad.Trans.Maybe</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Error-Class.html">Control.Monad.Error.Class</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-JSON.html">BHC.Data.JSON</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Time.html">BHC.Data.Time</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/ByteString.html">ByteString</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Random.html">BHC.Data.Random</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Builder.html">Builder</a>
+            <a href="&#x2F;bhc&#x2F;api/Sparse.html">Sparse</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Char8.html">Char8</a>
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Text.html">Text</a>
+            <a href="&#x2F;bhc&#x2F;api/Grad.html">Grad</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Matrix.html">Matrix</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Shaped.html">Shaped</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Einsum.html">Einsum</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/SIMD.html">SIMD</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Map.html">BHC.Data.Map</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Set.html">BHC.Data.Set</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/IntSet.html">IntSet</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/IntMap.html">IntMap</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Sequence.html">BHC.Data.Sequence</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Process.html">BHC.System.Process</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Environment.html">BHC.System.Environment</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Exit.html">BHC.System.Exit</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Directory.html">BHC.System.Directory</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-FilePath.html">BHC.System.FilePath</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-IO.html">BHC.System.IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text.html">BHC.Data.Text</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Char8.html">BHC.Data.ByteString.Char8</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Builder.html">BHC.Data.ByteString.Builder</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Lazy.html">BHC.Data.ByteString.Lazy</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString.html">BHC.Data.ByteString</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy.html">BHC.Data.Text.Lazy</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Encoding.html">BHC.Data.Text.Encoding</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-Encoding.html">BHC.Data.Text.Lazy.Encoding</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-IO.html">BHC.Data.Text.Lazy.IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-IO.html">BHC.Data.Text.IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-Scope.html">BHC.Control.Concurrent.Scope</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-STM.html">BHC.Control.Concurrent.STM</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Ord.html">BHC.Data.Ord</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Function.html">BHC.Data.Function</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-String.html">BHC.Data.String</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/List.html">List</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Either.html">BHC.Data.Either</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Tuple.html">BHC.Data.Tuple</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Maybe.html">BHC.Data.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Char.html">BHC.Data.Char</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Category.html">Category</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Exception.html">BHC.Control.Exception</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Applicative.html">BHC.Control.Applicative</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad.html">BHC.Control.Monad</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Arrow.html">Arrow</a>
         </li>
         
     </ul>
@@ -327,9 +427,9 @@
         <div class="page-header__bar">
             <span class="page-header__label">Module</span>
             
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs" class="source-link" title="View source">
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs" class="source-link" title="View source">
                 <span class="source-icon">{ }</span>
-                <span class="source-path">stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs</span>
+                <span class="source-path">stdlib&#x2F;H26&#x2F;Time.hs</span>
             </a>
             
             
@@ -353,7 +453,7 @@
                     <code class="decl-name">newtype Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L95" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L191" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -363,10 +463,74 @@
                 <div class="constructors">
                     
                     <div class="constructor">
-                        <code>Duration { durationNanos :: Integer }</code>
+                        <code>Duration Int64</code>
                         
                     </div>
                     
+                </div>
+                
+                
+            </div>
+            
+            <div id="t:Nanoseconds" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type Nanoseconds = Int64</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L194" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Nanoseconds" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Type aliases for clarity.
+                </div>
+                
+            </div>
+            
+            <div id="t:Microseconds" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type Microseconds = Int64</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L195" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Microseconds" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="t:Milliseconds" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type Milliseconds = Int64</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L196" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Milliseconds" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="t:Seconds" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type Seconds = Double</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L197" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Seconds" class="anchor">#</a>
                 </div>
                 
                 
@@ -377,73 +541,93 @@
                     <code class="decl-name">data Instant</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L149" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L204" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#t:Instant" class="anchor">#</a>
                 </div>
                 
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>Instant { instantSecs :: !Integer, instantNanos :: !Int }</code>
-                        
-                    </div>
-                    
-                </div>
-                
                 
                 <div class="decl-doc">
-                    A point in time.
+                    Monotonic timestamp for measuring elapsed time.
                 </div>
                 
             </div>
             
-            <div id="t:Time" class="decl">
+            <div id="t:UTCTime" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data Time</code>
+                    <code class="decl-name">data UTCTime</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L215" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L207" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:Time" class="anchor">#</a>
-                </div>
-                
-                <div class="constructors">
-                    
-                    <div class="constructor">
-                        <code>Time { timeHour :: !Int, timeMinute :: !Int, timeSecond :: !Int, timeNano :: !Int }</code>
-                        
-                    </div>
-                    
+                    <a href="#t:UTCTime" class="anchor">#</a>
                 </div>
                 
                 
                 <div class="decl-doc">
-                    A time of day.
+                    UTC timestamp.
                 </div>
                 
             </div>
             
-            <div id="t:DateTime" class="decl">
+            <div id="t:LocalTime" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data DateTime</code>
+                    <code class="decl-name">data LocalTime</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L244" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L210" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#t:DateTime" class="anchor">#</a>
+                    <a href="#t:LocalTime" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Local time (without timezone).
+                </div>
+                
+            </div>
+            
+            <div id="t:TimeZone" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data TimeZone</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L213" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:TimeZone" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Timezone offset and name.
+                </div>
+                
+            </div>
+            
+            <div id="t:Day" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">newtype Day</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L216" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Day" class="anchor">#</a>
                 </div>
                 
                 <div class="constructors">
                     
                     <div class="constructor">
-                        <code>DateTime { dtDate :: !Date, dtTime :: !Time }</code>
+                        <code>Day Int32</code>
                         
                     </div>
                     
@@ -451,8 +635,204 @@
                 
                 
                 <div class="decl-doc">
-                    A date and time.
+                    Calendar day.
                 </div>
+                
+            </div>
+            
+            <div id="t:Year" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type Year = Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L219" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Year" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Calendar year.
+                </div>
+                
+            </div>
+            
+            <div id="t:Month" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type Month = Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L222" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:Month" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Calendar month (1-12).
+                </div>
+                
+            </div>
+            
+            <div id="t:DayOfMonth" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">type DayOfMonth = Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L225" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:DayOfMonth" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Day of month (1-31).
+                </div>
+                
+            </div>
+            
+            <div id="t:DayOfWeek" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data DayOfWeek</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L228" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:DayOfWeek" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Monday</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Tuesday</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Wednesday</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Thursday</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Friday</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Saturday</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Sunday</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Day of week.
+                </div>
+                
+            </div>
+            
+            <div id="t:TimeOfDay" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data TimeOfDay</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L239" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:TimeOfDay" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>TimeOfDay { todHour :: !Int, todMin :: !Int, todSec :: !Double }</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Time of day (hours, minutes, seconds).
+                </div>
+                
+            </div>
+            
+            <div id="t:MonotonicClock" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data MonotonicClock</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L412" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:MonotonicClock" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Monotonic clock source.
+                </div>
+                
+            </div>
+            
+            <div id="t:SystemClock" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data SystemClock</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L415" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:SystemClock" class="anchor">#</a>
+                </div>
+                
+                
+                <div class="decl-doc">
+                    System clock source.
+                </div>
+                
+            </div>
+            
+            <div id="t:TimeLocale" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data TimeLocale</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L424" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:TimeLocale" class="anchor">#</a>
+                </div>
+                
                 
             </div>
             
@@ -470,331 +850,647 @@
         </div>
         <div class="decl-section__content">
             
-            <div id="v:&lt;&gt;" class="decl">
+            <div id="v:nanoseconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">&lt;&gt; :: </code>
+                    <code class="decl-name">nanoseconds :: Int64 -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L99" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L246" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:&lt;&gt;" class="anchor">#</a>
+                    <a href="#v:nanoseconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from nanoseconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:+" class="decl">
+            <div id="v:microseconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">+ :: </code>
+                    <code class="decl-name">microseconds :: Int64 -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L105" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L249" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:+" class="anchor">#</a>
+                    <a href="#v:microseconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from microseconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:b" class="decl">
+            <div id="v:milliseconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">b :: </code>
+                    <code class="decl-name">milliseconds :: Int64 -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L106" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L252" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:b" class="anchor">#</a>
+                    <a href="#v:milliseconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from milliseconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:negate" class="decl">
+            <div id="v:seconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">negate :: </code>
+                    <code class="decl-name">seconds :: Double -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L108" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L255" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:negate" class="anchor">#</a>
+                    <a href="#v:seconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from seconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:abs" class="decl">
+            <div id="v:minutes" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">abs :: </code>
+                    <code class="decl-name">minutes :: Double -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L109" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L258" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:abs" class="anchor">#</a>
+                    <a href="#v:minutes" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from minutes.
                 </div>
                 
                 
             </div>
             
-            <div id="v:signum" class="decl">
+            <div id="v:hours" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">signum :: </code>
+                    <code class="decl-name">hours :: Double -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L110" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L261" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:signum" class="anchor">#</a>
+                    <a href="#v:hours" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from hours.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromInteger" class="decl">
+            <div id="v:days" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromInteger :: </code>
+                    <code class="decl-name">days :: Double -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L111" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L264" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromInteger" class="anchor">#</a>
+                    <a href="#v:days" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create duration from days.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromNanos" class="decl">
+            <div id="v:toNanoseconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromNanos :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toNanoseconds :: Duration -&gt; Int64</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L115" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L267" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromNanos" class="anchor">#</a>
+                    <a href="#v:toNanoseconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to nanoseconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromMicros" class="decl">
+            <div id="v:toMicroseconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromMicros :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toMicroseconds :: Duration -&gt; Int64</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L118" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L270" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromMicros" class="anchor">#</a>
+                    <a href="#v:toMicroseconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to microseconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromMillis" class="decl">
+            <div id="v:toMilliseconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromMillis :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toMilliseconds :: Duration -&gt; Int64</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L121" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L273" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromMillis" class="anchor">#</a>
+                    <a href="#v:toMilliseconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to milliseconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromSecs" class="decl">
+            <div id="v:toSeconds" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromSecs :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toSeconds :: Duration -&gt; Double</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L124" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L276" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromSecs" class="anchor">#</a>
+                    <a href="#v:toSeconds" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to fractional seconds.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromMins" class="decl">
+            <div id="v:toMinutes" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromMins :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toMinutes :: Duration -&gt; Double</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L127" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L279" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromMins" class="anchor">#</a>
+                    <a href="#v:toMinutes" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to fractional minutes.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromHours" class="decl">
+            <div id="v:toHours" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromHours :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toHours :: Duration -&gt; Double</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L130" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L282" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromHours" class="anchor">#</a>
+                    <a href="#v:toHours" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to fractional hours.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromDays" class="decl">
+            <div id="v:toDays" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromDays :: Integer -&gt; Duration</code>
+                    <code class="decl-name">toDays :: Duration -&gt; Double</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L133" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L285" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromDays" class="anchor">#</a>
+                    <a href="#v:toDays" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to fractional days.
                 </div>
                 
                 
             </div>
             
-            <div id="v:toNanos" class="decl">
+            <div id="v:addDuration" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">toNanos :: Duration -&gt; Integer</code>
+                    <code class="decl-name">addDuration :: Duration -&gt; Duration -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L137" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L288" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:toNanos" class="anchor">#</a>
+                    <a href="#v:addDuration" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Add two durations.
                 </div>
                 
                 
             </div>
             
-            <div id="v:toMicros" class="decl">
+            <div id="v:subtractDuration" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">toMicros :: Duration -&gt; Integer</code>
+                    <code class="decl-name">subtractDuration :: Duration -&gt; Duration -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L140" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L291" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:toMicros" class="anchor">#</a>
+                    <a href="#v:subtractDuration" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Subtract durations.
                 </div>
                 
                 
             </div>
             
-            <div id="v:toMillis" class="decl">
+            <div id="v:multiplyDuration" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">toMillis :: Duration -&gt; Integer</code>
+                    <code class="decl-name">multiplyDuration :: Duration -&gt; Double -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L143" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L294" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:toMillis" class="anchor">#</a>
+                    <a href="#v:multiplyDuration" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Multiply duration by scalar.
                 </div>
                 
                 
             </div>
             
-            <div id="v:toSecs" class="decl">
+            <div id="v:divideDuration" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">toSecs :: Duration -&gt; Integer</code>
+                    <code class="decl-name">divideDuration :: Duration -&gt; Double -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L146" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L297" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:toSecs" class="anchor">#</a>
+                    <a href="#v:divideDuration" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Divide duration by scalar.
                 </div>
                 
                 
             </div>
             
-            <div id="v:date" class="decl">
+            <div id="v:now" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">date :: Int -&gt; Int -&gt; Int -&gt; Date</code>
+                    <code class="decl-name">now :: IO Instant</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L176" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L302" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:date" class="anchor">#</a>
+                    <a href="#v:now" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Get current monotonic instant.
                 </div>
                 
                 
             </div>
             
-            <div id="v:year" class="decl">
+            <div id="v:elapsed" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">year :: Date -&gt; Int</code>
+                    <code class="decl-name">elapsed :: Instant -&gt; IO Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L182" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L305" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:year" class="anchor">#</a>
+                    <a href="#v:elapsed" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Get elapsed time since an instant.
                 </div>
                 
                 
             </div>
             
-            <div id="v:month" class="decl">
+            <div id="v:durationSince" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">month :: Date -&gt; Int</code>
+                    <code class="decl-name">durationSince :: Instant -&gt; Instant -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L185" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L308" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:month" class="anchor">#</a>
+                    <a href="#v:durationSince" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Duration since a past instant.
                 </div>
                 
                 
             </div>
             
-            <div id="v:day" class="decl">
+            <div id="v:durationBetween" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">day :: Date -&gt; Int</code>
+                    <code class="decl-name">durationBetween :: Instant -&gt; Instant -&gt; Duration</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L188" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L311" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:day" class="anchor">#</a>
+                    <a href="#v:durationBetween" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Duration between two instants.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getCurrentTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getCurrentTime :: IO UTCTime</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L314" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getCurrentTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Get current UTC time.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:utcToInstant" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">utcToInstant :: UTCTime -&gt; IO Instant</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L317" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:utcToInstant" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert UTC time to monotonic instant (approximate).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:diffUTCTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">diffUTCTime :: UTCTime -&gt; UTCTime -&gt; Duration</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L320" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:diffUTCTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Difference between UTC times.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:addUTCTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">addUTCTime :: Duration -&gt; UTCTime -&gt; UTCTime</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L323" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:addUTCTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Add duration to UTC time.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:utcToLocalTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">utcToLocalTime :: TimeZone -&gt; UTCTime -&gt; LocalTime</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L326" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:utcToLocalTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert UTC to local time.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:localTimeToUTC" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">localTimeToUTC :: TimeZone -&gt; LocalTime -&gt; UTCTime</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L329" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:localTimeToUTC" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert local time to UTC.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getCurrentTimeZone" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getCurrentTimeZone :: IO TimeZone</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L332" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getCurrentTimeZone" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Get current timezone.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getTimeZone" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getTimeZone :: UTCTime -&gt; IO TimeZone</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L335" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getTimeZone" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Get timezone for a specific time.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:fromGregorian" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">fromGregorian :: Year -&gt; Month -&gt; DayOfMonth -&gt; Day</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L338" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:fromGregorian" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create a day from year, month, day.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:toGregorian" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">toGregorian :: Day -&gt; (Year, Month, DayOfMonth)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L341" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:toGregorian" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Extract year, month, day from a Day.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:fromOrdinalDate" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">fromOrdinalDate :: Year -&gt; Int -&gt; Day</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L344" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:fromOrdinalDate" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create from ordinal date (year, day-of-year).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:toOrdinalDate" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">toOrdinalDate :: Day -&gt; (Year, Int)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L347" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:toOrdinalDate" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert to ordinal date.
                 </div>
                 
                 
@@ -802,44 +1498,18 @@
             
             <div id="v:dayOfWeek" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">dayOfWeek :: Date -&gt; Int</code>
+                    <code class="decl-name">dayOfWeek :: Day -&gt; DayOfWeek</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L191" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L350" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#v:dayOfWeek" class="anchor">#</a>
                 </div>
                 
-                
-            </div>
-            
-            <div id="v:dayOfYear" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">dayOfYear :: Date -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L198" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:dayOfYear" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:weekOfYear" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">weekOfYear :: Date -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L201" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:weekOfYear" class="anchor">#</a>
+                <div class="decl-doc">
+                    Get day of week.
                 </div>
                 
                 
@@ -847,14 +1517,18 @@
             
             <div id="v:isLeapYear" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">isLeapYear :: Int -&gt; Bool</code>
+                    <code class="decl-name">isLeapYear :: Year -&gt; Bool</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L204" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L353" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#v:isLeapYear" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Check if year is a leap year.
                 </div>
                 
                 
@@ -862,237 +1536,189 @@
             
             <div id="v:daysInMonth" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">daysInMonth :: Int -&gt; Int -&gt; Int</code>
+                    <code class="decl-name">daysInMonth :: Year -&gt; Month -&gt; Int</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L207" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L356" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#v:daysInMonth" class="anchor">#</a>
                 </div>
                 
+                <div class="decl-doc">
+                    Number of days in a month.
+                </div>
+                
                 
             </div>
             
-            <div id="v:time" class="decl">
+            <div id="v:addDays" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">time :: Int -&gt; Int -&gt; Int -&gt; Time</code>
+                    <code class="decl-name">addDays :: Int -&gt; Day -&gt; Day</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L225" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L359" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:time" class="anchor">#</a>
+                    <a href="#v:addDays" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Create a time.
+                    Add days to a date.
                 </div>
                 
                 
             </div>
             
-            <div id="v:hour" class="decl">
+            <div id="v:diffDays" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">hour :: Time -&gt; Int</code>
+                    <code class="decl-name">diffDays :: Day -&gt; Day -&gt; Int</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L232" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L362" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:hour" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:minute" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">minute :: Time -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L235" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:minute" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:second" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">second :: Time -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L238" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:second" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:nanosecond" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">nanosecond :: Time -&gt; Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L241" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:nanosecond" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:dateTime" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">dateTime :: Date -&gt; Time -&gt; DateTime</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L252" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:dateTime" class="anchor">#</a>
+                    <a href="#v:diffDays" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Create a datetime.
+                    Difference in days.
                 </div>
                 
                 
             </div>
             
-            <div id="v:getDate" class="decl">
+            <div id="v:addMonths" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">getDate :: DateTime -&gt; Date</code>
+                    <code class="decl-name">addMonths :: Int -&gt; Day -&gt; Day</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L255" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L365" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:getDate" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:getTime" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">getTime :: DateTime -&gt; Time</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L258" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:getTime" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:parseDateTime" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">parseDateTime :: String -&gt; Maybe DateTime</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L262" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:parseDateTime" class="anchor">#</a>
+                    <a href="#v:addMonths" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Parse an ISO 8601 datetime.
+                    Add months to a date.
                 </div>
                 
                 
             </div>
             
-            <div id="v:formatDateTime" class="decl">
+            <div id="v:addYears" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">formatDateTime :: DateTime -&gt; String</code>
+                    <code class="decl-name">addYears :: Int -&gt; Day -&gt; Day</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L271" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L368" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:formatDateTime" class="anchor">#</a>
+                    <a href="#v:addYears" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Format as ISO 8601.
+                    Add years to a date.
                 </div>
                 
                 
             </div>
             
-            <div id="v:parseDate" class="decl">
+            <div id="v:midnight" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">parseDate :: String -&gt; Maybe Date</code>
+                    <code class="decl-name">midnight :: TimeOfDay</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L275" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L371" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:parseDate" class="anchor">#</a>
+                    <a href="#v:midnight" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Parse a date (YYYY-MM-DD).
+                    Midnight (00:00:00).
                 </div>
                 
                 
             </div>
             
-            <div id="v:formatDate" class="decl">
+            <div id="v:midday" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">formatDate :: Date -&gt; String</code>
+                    <code class="decl-name">midday :: TimeOfDay</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L289" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L374" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:formatDate" class="anchor">#</a>
+                    <a href="#v:midday" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Format a date as YYYY-MM-DD.
+                    Midday (12:00:00).
                 </div>
                 
                 
             </div>
             
-            <div id="v:parseTime" class="decl">
+            <div id="v:makeTimeOfDay" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">parseTime :: String -&gt; Maybe Time</code>
+                    <code class="decl-name">makeTimeOfDay :: Int -&gt; Int -&gt; Double -&gt; TimeOfDay</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L294" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L377" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:parseTime" class="anchor">#</a>
+                    <a href="#v:makeTimeOfDay" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Parse a time (HH:MM:SS).
+                    Create time of day.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:timeOfDayToTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">timeOfDayToTime :: TimeOfDay -&gt; Duration</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L380" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:timeOfDayToTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert TimeOfDay to duration since midnight.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:timeToTimeOfDay" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">timeToTimeOfDay :: Duration -&gt; TimeOfDay</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L383" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:timeToTimeOfDay" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Convert duration since midnight to TimeOfDay.
                 </div>
                 
                 
@@ -1100,10 +1726,10 @@
             
             <div id="v:formatTime" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">formatTime :: Time -&gt; String</code>
+                    <code class="decl-name">formatTime :: String -&gt; UTCTime -&gt; String</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L314" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L386" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -1111,37 +1737,102 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Format a time as HH:MM:SS.
+                    Format time using strftime-style format string.
                 </div>
                 
                 
             </div>
             
-            <div id="v:pad2" class="decl">
+            <div id="v:parseTimeM" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">pad2 :: Int -&gt; String</code>
+                    <code class="decl-name">parseTimeM :: (Monad m) =&gt; Bool -&gt; String -&gt; String -&gt; m UTCTime</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L318" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L389" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:pad2" class="anchor">#</a>
+                    <a href="#v:parseTimeM" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Parse time from string.
                 </div>
                 
                 
             </div>
             
-            <div id="v:readMaybe" class="decl">
+            <div id="v:defaultTimeLocale" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">readMaybe :: (Read a) =&gt; String -&gt; Maybe a</code>
+                    <code class="decl-name">defaultTimeLocale :: TimeLocale</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L321" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L392" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:readMaybe" class="anchor">#</a>
+                    <a href="#v:defaultTimeLocale" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Default time locale for formatting.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:iso8601Format" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">iso8601Format :: String</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L395" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:iso8601Format" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    ISO 8601 format string.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:timeout" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">timeout :: Duration -&gt; (IO a) -&gt; IO (Maybe a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L400" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:timeout" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Run action with timeout.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:delay" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">delay :: Duration -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L403" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:delay" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Delay for specified duration.
                 </div>
                 
                 
@@ -1149,10 +1840,10 @@
             
             <div id="v:measure" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">measure :: (IO a) -&gt; IO (a, Duration)</code>
+                    <code class="decl-name">measure :: a -&gt; (a, Duration)</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L327" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L406" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -1160,7 +1851,64 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Measure the time taken by an action.
+                    Measure duration of pure computation.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:measureIO" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">measureIO :: (IO a) -&gt; IO (a, Duration)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L409" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:measureIO" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Measure duration of IO action.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getMonotonicTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getMonotonicTime :: IO Instant</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L418" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getMonotonicTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Read monotonic clock directly.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getSystemTime" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getSystemTime :: IO UTCTime</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;H26&#x2F;Time.hs#L421" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getSystemTime" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Read system clock directly.
                 </div>
                 
                 
@@ -1170,28 +1918,6 @@
     </div>
     
 
-    
-    <!-- Instances Section Frame -->
-    <div id="instances" class="decl-section">
-        <div class="decl-section__header">
-            <span class="decl-section__label">Instances</span>
-        </div>
-        <div class="decl-section__content">
-            
-            <div class="decl instance">
-                <div class="decl-header">
-                    <code class="decl-name">instance Monoid Duration</code>
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;bhc-utils&#x2F;hs&#x2F;BHC&#x2F;Data&#x2F;Time.hs#L101" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-            
-        </div>
-    </div>
     
 </article>
 
@@ -1215,11 +1941,39 @@
                     
                     <li><a href="#t:Duration">Duration</a></li>
                     
+                    <li><a href="#t:Nanoseconds">Nanoseconds</a></li>
+                    
+                    <li><a href="#t:Microseconds">Microseconds</a></li>
+                    
+                    <li><a href="#t:Milliseconds">Milliseconds</a></li>
+                    
+                    <li><a href="#t:Seconds">Seconds</a></li>
+                    
                     <li><a href="#t:Instant">Instant</a></li>
                     
-                    <li><a href="#t:Time">Time</a></li>
+                    <li><a href="#t:UTCTime">UTCTime</a></li>
                     
-                    <li><a href="#t:DateTime">DateTime</a></li>
+                    <li><a href="#t:LocalTime">LocalTime</a></li>
+                    
+                    <li><a href="#t:TimeZone">TimeZone</a></li>
+                    
+                    <li><a href="#t:Day">Day</a></li>
+                    
+                    <li><a href="#t:Year">Year</a></li>
+                    
+                    <li><a href="#t:Month">Month</a></li>
+                    
+                    <li><a href="#t:DayOfMonth">DayOfMonth</a></li>
+                    
+                    <li><a href="#t:DayOfWeek">DayOfWeek</a></li>
+                    
+                    <li><a href="#t:TimeOfDay">TimeOfDay</a></li>
+                    
+                    <li><a href="#t:MonotonicClock">MonotonicClock</a></li>
+                    
+                    <li><a href="#t:SystemClock">SystemClock</a></li>
+                    
+                    <li><a href="#t:TimeLocale">TimeLocale</a></li>
                     
                 </ul>
             </li>
@@ -1230,101 +1984,121 @@
                 <a href="#functions" class="toc-section-link">Functions</a>
                 <ul class="toc-items">
                     
-                    <li><a href="#v:&lt;&gt;">&lt;&gt;</a></li>
+                    <li><a href="#v:nanoseconds">nanoseconds</a></li>
                     
-                    <li><a href="#v:+">+</a></li>
+                    <li><a href="#v:microseconds">microseconds</a></li>
                     
-                    <li><a href="#v:b">b</a></li>
+                    <li><a href="#v:milliseconds">milliseconds</a></li>
                     
-                    <li><a href="#v:negate">negate</a></li>
+                    <li><a href="#v:seconds">seconds</a></li>
                     
-                    <li><a href="#v:abs">abs</a></li>
+                    <li><a href="#v:minutes">minutes</a></li>
                     
-                    <li><a href="#v:signum">signum</a></li>
+                    <li><a href="#v:hours">hours</a></li>
                     
-                    <li><a href="#v:fromInteger">fromInteger</a></li>
+                    <li><a href="#v:days">days</a></li>
                     
-                    <li><a href="#v:fromNanos">fromNanos</a></li>
+                    <li><a href="#v:toNanoseconds">toNanoseconds</a></li>
                     
-                    <li><a href="#v:fromMicros">fromMicros</a></li>
+                    <li><a href="#v:toMicroseconds">toMicroseconds</a></li>
                     
-                    <li><a href="#v:fromMillis">fromMillis</a></li>
+                    <li><a href="#v:toMilliseconds">toMilliseconds</a></li>
                     
-                    <li><a href="#v:fromSecs">fromSecs</a></li>
+                    <li><a href="#v:toSeconds">toSeconds</a></li>
                     
-                    <li><a href="#v:fromMins">fromMins</a></li>
+                    <li><a href="#v:toMinutes">toMinutes</a></li>
                     
-                    <li><a href="#v:fromHours">fromHours</a></li>
+                    <li><a href="#v:toHours">toHours</a></li>
                     
-                    <li><a href="#v:fromDays">fromDays</a></li>
+                    <li><a href="#v:toDays">toDays</a></li>
                     
-                    <li><a href="#v:toNanos">toNanos</a></li>
+                    <li><a href="#v:addDuration">addDuration</a></li>
                     
-                    <li><a href="#v:toMicros">toMicros</a></li>
+                    <li><a href="#v:subtractDuration">subtractDuration</a></li>
                     
-                    <li><a href="#v:toMillis">toMillis</a></li>
+                    <li><a href="#v:multiplyDuration">multiplyDuration</a></li>
                     
-                    <li><a href="#v:toSecs">toSecs</a></li>
+                    <li><a href="#v:divideDuration">divideDuration</a></li>
                     
-                    <li><a href="#v:date">date</a></li>
+                    <li><a href="#v:now">now</a></li>
                     
-                    <li><a href="#v:year">year</a></li>
+                    <li><a href="#v:elapsed">elapsed</a></li>
                     
-                    <li><a href="#v:month">month</a></li>
+                    <li><a href="#v:durationSince">durationSince</a></li>
                     
-                    <li><a href="#v:day">day</a></li>
+                    <li><a href="#v:durationBetween">durationBetween</a></li>
+                    
+                    <li><a href="#v:getCurrentTime">getCurrentTime</a></li>
+                    
+                    <li><a href="#v:utcToInstant">utcToInstant</a></li>
+                    
+                    <li><a href="#v:diffUTCTime">diffUTCTime</a></li>
+                    
+                    <li><a href="#v:addUTCTime">addUTCTime</a></li>
+                    
+                    <li><a href="#v:utcToLocalTime">utcToLocalTime</a></li>
+                    
+                    <li><a href="#v:localTimeToUTC">localTimeToUTC</a></li>
+                    
+                    <li><a href="#v:getCurrentTimeZone">getCurrentTimeZone</a></li>
+                    
+                    <li><a href="#v:getTimeZone">getTimeZone</a></li>
+                    
+                    <li><a href="#v:fromGregorian">fromGregorian</a></li>
+                    
+                    <li><a href="#v:toGregorian">toGregorian</a></li>
+                    
+                    <li><a href="#v:fromOrdinalDate">fromOrdinalDate</a></li>
+                    
+                    <li><a href="#v:toOrdinalDate">toOrdinalDate</a></li>
                     
                     <li><a href="#v:dayOfWeek">dayOfWeek</a></li>
-                    
-                    <li><a href="#v:dayOfYear">dayOfYear</a></li>
-                    
-                    <li><a href="#v:weekOfYear">weekOfYear</a></li>
                     
                     <li><a href="#v:isLeapYear">isLeapYear</a></li>
                     
                     <li><a href="#v:daysInMonth">daysInMonth</a></li>
                     
-                    <li><a href="#v:time">time</a></li>
+                    <li><a href="#v:addDays">addDays</a></li>
                     
-                    <li><a href="#v:hour">hour</a></li>
+                    <li><a href="#v:diffDays">diffDays</a></li>
                     
-                    <li><a href="#v:minute">minute</a></li>
+                    <li><a href="#v:addMonths">addMonths</a></li>
                     
-                    <li><a href="#v:second">second</a></li>
+                    <li><a href="#v:addYears">addYears</a></li>
                     
-                    <li><a href="#v:nanosecond">nanosecond</a></li>
+                    <li><a href="#v:midnight">midnight</a></li>
                     
-                    <li><a href="#v:dateTime">dateTime</a></li>
+                    <li><a href="#v:midday">midday</a></li>
                     
-                    <li><a href="#v:getDate">getDate</a></li>
+                    <li><a href="#v:makeTimeOfDay">makeTimeOfDay</a></li>
                     
-                    <li><a href="#v:getTime">getTime</a></li>
+                    <li><a href="#v:timeOfDayToTime">timeOfDayToTime</a></li>
                     
-                    <li><a href="#v:parseDateTime">parseDateTime</a></li>
-                    
-                    <li><a href="#v:formatDateTime">formatDateTime</a></li>
-                    
-                    <li><a href="#v:parseDate">parseDate</a></li>
-                    
-                    <li><a href="#v:formatDate">formatDate</a></li>
-                    
-                    <li><a href="#v:parseTime">parseTime</a></li>
+                    <li><a href="#v:timeToTimeOfDay">timeToTimeOfDay</a></li>
                     
                     <li><a href="#v:formatTime">formatTime</a></li>
                     
-                    <li><a href="#v:pad2">pad2</a></li>
+                    <li><a href="#v:parseTimeM">parseTimeM</a></li>
                     
-                    <li><a href="#v:readMaybe">readMaybe</a></li>
+                    <li><a href="#v:defaultTimeLocale">defaultTimeLocale</a></li>
+                    
+                    <li><a href="#v:iso8601Format">iso8601Format</a></li>
+                    
+                    <li><a href="#v:timeout">timeout</a></li>
+                    
+                    <li><a href="#v:delay">delay</a></li>
                     
                     <li><a href="#v:measure">measure</a></li>
+                    
+                    <li><a href="#v:measureIO">measureIO</a></li>
+                    
+                    <li><a href="#v:getMonotonicTime">getMonotonicTime</a></li>
+                    
+                    <li><a href="#v:getSystemTime">getSystemTime</a></li>
                     
                 </ul>
             </li>
             
-            
-            <li class="toc-section">
-                <a href="#instances" class="toc-section-link">Instances</a>
-            </li>
             
         </ul>
     </nav>

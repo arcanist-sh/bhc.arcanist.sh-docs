@@ -10,33 +10,54 @@ Abstract syntax tree definitions for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate defines the abstract syntax tree that represents parsed Haskell source code. It preserves the full syntactic structure for error reporting and source transformations.
+This crate (a single `lib.rs`) defines the tree produced by `bhc-parser`. It keeps the surface syntax close to the source (parentheses, infix applications, qualified names, record syntax) so that diagnostics can point at what the user wrote. Nodes are ordinary owned values (`Box`, `Vec`); names are `bhc_intern::Ident`s.
 
 ## Key Types
 
 | Type | Description |
 |------|-------------|
-| `Module` | A complete module |
-| `Decl` | Top-level declarations |
+| `Module` | Doc comment, pragmas, optional `ModuleName`, export list, imports, declarations, span |
+| `ImportDecl`, `ImportSpec`, `Export` | Import and export lists |
+| `Pragma`, `PragmaKind`, `Extension` | Pragmas, including `LANGUAGE` extensions |
+| `Decl` | Top-level and local declarations |
 | `Expr` | Expressions |
 | `Pat` | Patterns |
 | `Type` | Type syntax |
+| `ExprId`, `PatId`, `TypeId`, `DeclId` | Index types declared with `bhc_index::define_index!` |
+
+`Decl` covers type signatures, function bindings (`FunBind` with `Clause`s and guarded `Rhs`), `data`/`newtype`/`type`, GADT constructors, classes with associated types and functional dependencies, instances, `foreign` declarations, fixity, standalone deriving, pattern synonyms, type and data families and their instances, and `Splice` for top-level Template Haskell declaration splices.
 
 ## Expression Types
 
+Every variant carries its `Span` as the last field:
+
 ```rust
 pub enum Expr {
-    Lit(Literal),           // 42, "hello"
-    Var(Name),              // x, foo
-    App(Box<Expr>, Box<Expr>),  // f x
-    Lam(Vec<Pat>, Box<Expr>),   // \x -> e
-    Let(Vec<Bind>, Box<Expr>),  // let x = e in e'
-    Case(Box<Expr>, Vec<Alt>),  // case e of { ... }
-    If(Box<Expr>, Box<Expr>, Box<Expr>),
-    Do(Vec<Stmt>),          // do { ... }
-    List(Vec<Expr>),        // [1, 2, 3]
-    Tuple(Vec<Expr>),       // (a, b, c)
-    // ... more variants
+    Var(Ident, Span),                       // x
+    QualVar(ModuleName, Ident, Span),       // M.x
+    Con(Ident, Span),                       // Just
+    QualCon(ModuleName, Ident, Span),
+    Lit(Lit, Span),                         // 42, 'c', "hello"
+    App(Box<Expr>, Box<Expr>, Span),        // f x
+    Lam(Vec<Pat>, Box<Expr>, Span),         // \x -> e
+    Let(Vec<Decl>, Box<Expr>, Span),
+    If(Box<Expr>, Box<Expr>, Box<Expr>, Span),
+    Case(Box<Expr>, Vec<Alt>, Span),
+    Do(Vec<Stmt>, Span),
+    Tuple(Vec<Expr>, Span),
+    List(Vec<Expr>, Span),
+    ArithSeq(ArithSeq, Span),               // [a..b]
+    ListComp(Box<Expr>, Vec<Stmt>, Span),
+    RecordCon(Ident, Vec<FieldBind>, bool, Span),
+    RecordUpd(Box<Expr>, Vec<FieldBind>, Span),
+    Infix(Box<Expr>, Ident, Box<Expr>, Span),
+    Neg(Box<Expr>, Span),
+    Paren(Box<Expr>, Span),
+    Ann(Box<Expr>, Type, Span),             // e :: T
+    TypeApp(Box<Expr>, Type, Span),         // f @Int
+    Lazy(Box<Expr>, Span),                  // H26 lazy { ... }
+    Wildcard(Span),
+    // ... plus QualRecordCon
 }
 ```
 
@@ -44,24 +65,24 @@ pub enum Expr {
 
 ```rust
 pub enum Pat {
-    Var(Name),              // x
-    Lit(Literal),           // 42
-    Con(Name, Vec<Pat>),    // Just x
-    Tuple(Vec<Pat>),        // (a, b)
-    List(Vec<Pat>),         // [x, y]
-    Wild,                   // _
-    As(Name, Box<Pat>),     // x@(Just y)
-    // ... more variants
+    Wildcard(Span),                         // _
+    Var(Ident, Span),                       // x
+    Lit(Lit, Span),                         // 42
+    Con(Ident, Vec<Pat>, Span),             // Just x
+    Infix(Box<Pat>, Ident, Box<Pat>, Span), // x : xs
+    Tuple(Vec<Pat>, Span),
+    List(Vec<Pat>, Span),
+    Record(Ident, Vec<FieldPat>, bool, Span),
+    As(Ident, Box<Pat>, Span),              // x@(Just y)
+    Lazy(Box<Pat>, Span),                   // ~p
+    Bang(Box<Pat>, Span),                   // !p
+    View(Box<Expr>, Box<Pat>, Span),        // (f -> p)
+    // ... plus QualCon, QualRecord, Paren, Ann
 }
 ```
+
+`Type` has variables, constructors, application, functions, tuples, lists, `forall`, constrained types, promoted lists and type-level naturals, strictness/laziness annotations and infix type operators.
 
 ## Span Preservation
 
-Every AST node carries its source span for error reporting:
-
-```rust
-pub struct Expr {
-    pub kind: ExprKind,
-    pub span: Span,
-}
-```
+Spans are stored inline in each variant rather than in a wrapper struct. `Expr::span()`, `Pat::span()` and `Type::span()` return them.

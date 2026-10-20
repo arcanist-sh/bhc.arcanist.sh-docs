@@ -10,58 +10,67 @@ Loop Intermediate Representation for the Basel Haskell Compiler.
 
 ## Overview
 
-Loop IR makes iteration structure explicit, enabling SIMD vectorization and parallelization. It's the final IR before code generation for numeric workloads.
+Loop IR makes iteration structure explicit: loops with bounds and steps, SSA values, memory references with access patterns, and per-loop metadata for vectorization and parallelization. It is produced from fused Tensor IR kernels when compiling with the Numeric profile or `--tensor-fusion`.
 
 ## Pipeline Position
 
 ```
-Tensor IR  →  [Lower]  →  Loop IR  →  [Codegen]  →  LLVM IR
+Tensor IR kernels  →  [lower_kernels]  →  Loop IR  →  [VectorizePass / ParallelPass]  →  kernel report
+                                                    →  [bhc_wasm::lower::lower_loop_ir]  →  WASM functions
 ```
+
+The WASM backend lowers Loop IR kernels into WASM functions. `bhc-codegen` contains an LLVM lowering (`llvm::loop_lower`), but the native driver path does not call it: native executables are built from Core IR, so Loop IR currently has no effect on native output.
+
+## Modules
+
+| Module | Contents |
+|--------|----------|
+| `lib.rs` | IR types (`LoopIR`, `Loop`, `Stmt`, `Value`, `Op`, `MemRef`, `LoopType`, `TargetArch`) |
+| `lower` | `lower_kernel`, `lower_kernels`, `LowerConfig`, `LowerError` (Tensor IR `Kernel` → `LoopIR`) |
+| `vectorize` | `VectorizePass`, `VectorizeConfig`, `VectorizeReport`, `SimdIntrinsic` |
+| `parallel` | `ParallelPass`, `ParallelConfig`, `ParallelStrategy` (`Static`, `Dynamic`, `Guided`), `ParFor`, `ParMap`, `ParReduce`, `Range` |
 
 ## Key Types
 
 ```rust
-pub enum LoopIR {
-    Loop {
-        var: LoopVar,
-        lo: Bound,
-        hi: Bound,
-        body: Box<LoopIR>,
-    },
-    Parallel {
-        var: LoopVar,
-        lo: Bound,
-        hi: Bound,
-        chunk: ChunkSize,
-        body: Box<LoopIR>,
-    },
-    Vectorized {
-        var: LoopVar,
-        width: VectorWidth,
-        body: Box<LoopIR>,
-    },
-    // ...
+pub struct LoopIR {
+    pub name: Symbol,
+    pub params: Vec<Param>,
+    pub return_ty: LoopType,
+    pub body: Body,
+    pub allocs: Vec<Alloc>,
+    pub loop_info: Vec<LoopMetadata>,
+}
+
+pub struct Loop {
+    pub id: LoopId,
+    pub var: ValueId,
+    pub lower: Value,   // inclusive
+    pub upper: Value,   // exclusive
+    pub step: Value,
+    pub body: Body,
+    pub attrs: LoopAttrs,
+}
+
+pub enum Stmt {
+    Assign(ValueId, Op),
+    Loop(Loop),
+    If(IfStmt),
+    Store(MemRef, Value),
+    Call(Option<ValueId>, Symbol, Vec<Value>),
+    Return(Option<Value>),
+    Barrier(BarrierKind),
+    Comment(String),
 }
 ```
 
-## Optimizations
+`LoopAttrs` is a bitflag set (`PARALLEL`, `VECTORIZE`, `UNROLL`, `REDUCTION`, `INDEPENDENT`, `TILED`, `TILE_INNER`). `LoopMetadata` records trip count (`Static`, `Dynamic`, `Bounded`), vector width, parallel chunk size, unroll factor and inter-loop dependencies. SIMD types include `LoopType::VEC4F32`, `VEC8F32`, `VEC2F64` and `VEC4F64`.
 
-| Optimization | Description |
-|--------------|-------------|
-| Vectorization | Convert scalar to SIMD |
-| Parallelization | Multi-thread outer loops |
-| Tiling | Cache-friendly blocking |
-| Unrolling | Reduce loop overhead |
+## Passes
 
-## Example
+| Pass | What it does |
+|------|--------------|
+| `VectorizePass` | Decides per loop whether it is vectorizable for the `TargetArch` (SSE, SSE2, AVX, AVX2, NEON, Generic) and at what width |
+| `ParallelPass` | Decides which loops can run in parallel and with which strategy; the driver uses deterministic settings |
 
-```
--- Tensor IR
-sum (map (*2) xs)
-
--- Loop IR
-parallel i in 0..n/8:
-  vectorized j in 0..8:
-    acc[i*8+j] = xs[i*8+j] * 2
-reduce acc with (+)
-```
+In the driver both passes run as analyses whose results go into the kernel report (`--kernel-report`). Tiling and unrolling exist only as attributes and metadata fields; there is no pass that performs them.

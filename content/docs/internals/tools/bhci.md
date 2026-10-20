@@ -10,7 +10,7 @@ Interactive Read-Eval-Print Loop for the Basel Haskell Compiler.
 
 ## Overview
 
-`bhci` provides an interactive environment for exploring Haskell code, testing expressions, and debugging.
+`bhci` evaluates Haskell expressions interactively. Each input is parsed, type checked, lowered to Core and run by BHC's Core interpreter, the same evaluator behind `bhc run` and the [playground](@/docs/internals/tools/bhc-playground.md). It does not use the native code generator, so its coverage of the standard library is narrower than compiled code.
 
 ## Starting the REPL
 
@@ -18,66 +18,73 @@ Interactive Read-Eval-Print Loop for the Basel Haskell Compiler.
 # Start REPL
 bhci
 
-# Load a file
+# Load a file on startup
 bhci Main.hs
 
-# With package
-bhci -package containers
+# Choose a profile
+bhci --profile=numeric
+
+# Resolve imports from a package database
+bhci --package-db build/db --package-id containers
 ```
+
+`bhc repl` starts the same REPL.
 
 ## REPL Commands
 
 | Command | Description |
 |---------|-------------|
-| `:load FILE` | Load a module |
-| `:reload` | Reload current modules |
-| `:type EXPR` | Show type of expression |
-| `:info NAME` | Show info about name |
-| `:browse MODULE` | List module exports |
-| `:quit` | Exit REPL |
+| `:load FILE` (`:l`) | Load a module |
+| `:reload` (`:r`) | Reload the loaded modules |
+| `:type EXPR` (`:t`) | Show the type of an expression |
+| `:kind TYPE` (`:k`) | Show the kind of a type |
+| `:info NAME` (`:i`) | Show the type and origin of a value |
+| `:browse [MODULE]` | List bindings in scope |
+| `:show [bindings\|imports\|modules\|packages]` | Show REPL state |
+| `:module [+/-] MOD` | Add or remove modules from scope |
+| `:set +t` / `:set +s` | Show types / timing after each evaluation |
+| `:set profile NAME` | Change the profile |
+| `:cd DIR` | Change working directory |
+| `:!CMD` | Run a shell command |
+| `:quit` (`:q`) | Exit REPL |
+
+`import` statements and `let name = expr` bindings can be entered directly.
 
 ## Interactive Session
 
 ```
-bhci> :load Example.hs
-[1 of 1] Compiling Example
-
-bhci> :type map
-map :: (a -> b) -> [a] -> [b]
-
-bhci> map (+1) [1,2,3]
+bhci:001> map (+1) [1,2,3]
 [2,3,4]
-
-bhci> :info Functor
-class Functor f where
-  fmap :: (a -> b) -> f a -> f b
-  (<$) :: a -> f b -> f a
-  ...
-```
-
-## Debugging
-
-```
-bhci> :set -fbreak-on-error
-bhci> :trace factorial 5
-Stopped at factorial.hs:3:5
-  3 | factorial n = n * factorial (n - 1)
-                    ^^^^^^^^^^^^^^^^^^^^^^^
-bhci> :print n
-n = 5
-bhci> :step
+  :: [Int]
+bhci:002> let y = 21
+y :: Int = 21
+bhci:003> y * 2
+42
+  :: Int
+bhci:004> :kind Maybe
+Maybe :: * -> *
+bhci:005> :load Square.hs
+[1 of 1] Compiling Square.hs...
+Ok, 2 definitions loaded from module Main.
+bhci:006> square 9
+81
+  :: Int
 ```
 
 ## Multi-line Input
 
 ```
-bhci> :{
-bhci| let fibonacci n =
-bhci|       case n of
-bhci|         0 -> 0
-bhci|         1 -> 1
-bhci|         _ -> fibonacci (n-1) + fibonacci (n-2)
-bhci| :}
-bhci> fibonacci 10
-55
+bhci:001> :{
+bhci:002| let z = 5
+bhci:003| :}
+z :: Int = 5
 ```
+
+## Current Limitations
+
+- `let` at the prompt binds a single name (`let f = \x -> x + 1`); the function form `let f x = ...` is not accepted yet. Define functions in a file and `:load` it.
+- `:info` does not describe type classes yet.
+- Some library functions are not evaluated by the interpreter yet; `sort [3,1,2]`, for example, prints `<<primop: Sort (partial)>>` instead of `[1,2,3]`. Compiled code handles them.
+- Inferred types are printed with internal type-variable names (`map :: ((t560 -> t561) -> ...)`).
+- Output from `IO` actions, including a loaded module's `main`, is currently printed twice.
+- There is no debugger (`:trace`, `:step`, breakpoints).

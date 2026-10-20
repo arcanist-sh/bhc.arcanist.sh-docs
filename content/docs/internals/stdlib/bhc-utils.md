@@ -6,77 +6,39 @@ weight = 9
 
 # bhc-utils
 
-Utility functions and common patterns for the Basel Haskell Compiler.
+Time, random-number and JSON primitives for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate provides miscellaneous utility functions, debugging tools, and common patterns.
+This crate provides Rust implementations of date and time handling, a random-number generator and a JSON parser, with a small C interface. The intended Haskell API is in `hs/BHC/Data/{Time, Random, JSON}.hs`.
 
-## Debugging
+**Status:** the Rust code is implemented and unit-tested, but it is not yet connected to compiled Haskell: `libbhc_utils.a` is not on the native link line and generated code calls none of its functions. In compiled programs today, `Data.Time.Clock.getCurrentTime` returns without a real time value (`print` shows a pointer) and `System.Random.randomRIO` aborts as a stub.
 
-```haskell
-import Debug.Trace
+## Rust modules
 
--- Print and return
-trace :: String -> a -> a
-traceShow :: Show a => a -> b -> b
-traceShowId :: Show a => a -> a
+| Module | Contents |
+|--------|----------|
+| `time` | `Duration`, `Instant`, `Date`, `Time`, `DateTime`; `sleep`, `measure` |
+| `random` | `Rng` (seedable), `random_u64`, `random_f64`, `random_bool`, `weighted_choice`, `Normal` distribution |
+| `json` | `Json` value type, parser, `JsonError` |
 
--- Monadic tracing
-traceM :: Applicative f => String -> f ()
-traceShowM :: (Show a, Applicative f) => a -> f ()
-```
+## C interface
 
-## Unsafe Operations
+| Area | Functions |
+|------|-----------|
+| Time | `bhc_time_now`, `bhc_sleep_millis` |
+| Random | `bhc_rng_new`, `bhc_rng_from_seed`, `bhc_rng_next_u64`, `bhc_rng_range`, `bhc_rng_free` |
+| JSON | `bhc_json_parse`, `bhc_json_free` |
 
-```haskell
-import System.IO.Unsafe
+## Other utility modules
 
--- Escape hatch (use with caution)
-unsafePerformIO :: IO a -> a
-unsafeInterleaveIO :: IO a -> IO a
-unsafeDupablePerformIO :: IO a -> a
-```
+`Debug.Trace`, `System.IO.Unsafe`, `Data.Function`, `Data.Bifunctor`, `Data.Coerce` and `GHC.Generics` are not part of this crate; like the rest of the base library they are built into the compiler. Their state on 2026-10-20, checked against GHC 9.8.2:
 
-## Data.Function
-
-```haskell
--- Function utilities
-(&) :: a -> (a -> b) -> b      -- flip ($)
-on :: (b -> b -> c) -> (a -> b) -> a -> a -> c
-fix :: (a -> a) -> a           -- fixed point
-```
-
-## Data.Bifunctor
-
-```haskell
-class Bifunctor p where
-    bimap :: (a -> b) -> (c -> d) -> p a c -> p b d
-    first :: (a -> b) -> p a c -> p b c
-    second :: (b -> c) -> p a b -> p a c
-
--- Works with (,) and Either
-bimap (+1) (*2) (1, 2)    -- (2, 4)
-first show (Left 42)       -- Left "42"
-```
-
-## Data.Coerce
-
-```haskell
--- Safe coercion between newtypes
-coerce :: Coercible a b => a -> b
-
--- Example
-newtype Age = Age Int
-coerce (42 :: Int) :: Age    -- Age 42
-```
-
-## GHC.Generics
-
-```haskell
--- Generic programming support
-class Generic a where
-    type Rep a :: Type -> Type
-    from :: a -> Rep a x
-    to :: Rep a x -> a
-```
+| Module | Works | Gaps |
+|--------|-------|------|
+| `Data.Function` | `(&)` | ``(+) `on` length`` prints nothing; `print (fix f 5)` prints a pointer |
+| `Data.Bifunctor` | `first` | `bimap` is a stub that aborts |
+| `Debug.Trace` | | `trace` is a stub that aborts |
+| `System.IO.Unsafe` | | `unsafePerformIO` is a stub that aborts |
+| `Data.Coerce` | | `coerce` is a stub that aborts |
+| `GHC.Generics` | The import is accepted | |

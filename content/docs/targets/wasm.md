@@ -4,20 +4,22 @@ description = "Compiling to WebAssembly with WASI"
 weight = 2
 +++
 
-BHC can compile Haskell to WebAssembly using the WASI interface.
+BHC compiles Haskell to WebAssembly modules that use the WASI interface (`wasi_snapshot_preview1`). On BHC's differential suite, 236 of 243 programs produce output byte-identical to the native backend.
 
 ## Target
 
 ```bash
-bhc --target=wasm32-wasi Main.hs -o main.wasm
+bhc --target wasm32-wasi Main.hs -o main.wasm
 ```
 
-## Requirements
+`--target wasm` is accepted as a shorthand. Other spellings, including `wasi` on its own, do not select the WebAssembly backend and produce a native executable instead.
 
-WASM compilation works best with the [edge profile](@/docs/profiles/edge.md):
+## Profiles
+
+The [edge profile](@/docs/profiles/edge.md) gives the module a smaller linear memory: 256 KB initial and 4 MB maximum, against 1 MB and 16 MB by default.
 
 ```bash
-bhc --profile=edge --target=wasm32-wasi Main.hs -o main.wasm
+bhc --profile=edge --target wasm32-wasi Main.hs -o main.wasm
 ```
 
 ## Running WASM Modules
@@ -28,76 +30,41 @@ bhc --profile=edge --target=wasm32-wasi Main.hs -o main.wasm
 wasmtime main.wasm
 ```
 
-### With wasmer
+Any runtime that implements `wasi_snapshot_preview1` should work; wasmtime is the one BHC is tested against.
+
+### File access
+
+`readFile` reads host files through WASI. A path is resolved against the first directory preopened by the runtime, so grant one with `--dir`:
 
 ```bash
-wasmer run main.wasm
+wasmtime --dir . main.wasm
 ```
 
-### In the Browser
+Without a preopen, the program cannot see host files. `writeFile` and `appendFile` are always visible to later reads in the same program; writing their contents through to the host filesystem is still being completed.
 
-For browser usage, you'll need a JavaScript wrapper:
+### In the browser
 
-```javascript
-const { WASI } = require('@aspect-build/aspect-wasi');
-const fs = require('fs');
+The module imports WASI functions, so a browser host needs a WASI shim (any library that implements `wasi_snapshot_preview1`) passed in as the `wasi_snapshot_preview1` import object. BHC does not ship such a shim.
 
-const wasi = new WASI({
-    args: ['main.wasm'],
-    env: process.env,
-});
+The [online playground](https://arcanist.sh/bhc/playground/) is a separate build: it runs BHC's interpreter compiled to WebAssembly, not a module produced by `--target wasm32-wasi`.
 
-const wasmBuffer = fs.readFileSync('main.wasm');
-WebAssembly.instantiate(wasmBuffer, {
-    wasi_snapshot_preview1: wasi.wasiImport,
-}).then(({ instance }) => {
-    wasi.start(instance);
-});
-```
+## Exports
 
-## Exporting Functions
-
-To export functions for the WASM host:
-
-```haskell
-module Handler where
-
-foreign export ccall add :: Int -> Int -> Int
-foreign export ccall multiply :: Int -> Int -> Int
-
-add :: Int -> Int -> Int
-add x y = x + y
-
-multiply :: Int -> Int -> Int
-multiply x y = x * y
-```
-
-Compile:
-
-```bash
-bhc --profile=edge --target=wasm32-wasi Handler.hs -o handler.wasm
-```
+A compiled module exports `_start`, its linear `memory`, and a set of runtime helper functions. `foreign export` declarations are not supported for the WebAssembly target yet: a module without `main` fails to compile.
 
 ## Limitations
 
-WASM builds have some limitations compared to native builds:
-
-- No threading (single-threaded only)
-- Limited filesystem access (WASI sandbox)
-- No network access in standard WASI
-- Smaller maximum memory
+- Single-threaded only
+- File access only through a `--dir` preopen
+- The `Handle` API (`openFile`, `hGetLine`, `hClose`, ...) and `System.Directory` are not available yet
+- `getArgs` does not see the arguments passed by the runtime yet
+- No network access
+- Linear memory is capped at 16 MB (4 MB with the edge profile; 32 MB with the numeric profile)
 
 ## Binary Size
 
-Tips for reducing WASM binary size:
+WebAssembly output is small: a hello-world module is under 4 KB. Standard tools such as Binaryen's `wasm-opt` work on the output:
 
 ```bash
-# Use edge profile
-bhc --profile=edge --target=wasm32-wasi Main.hs -o main.wasm
-
-# Strip debug info
-wasm-strip main.wasm
-
-# Optimize with wasm-opt
 wasm-opt -O3 main.wasm -o main-opt.wasm
 ```

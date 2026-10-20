@@ -4,14 +4,14 @@ description = "General-purpose compilation profile"
 weight = 1
 +++
 
-The **default** profile is the standard compilation mode for BHC. It focuses on correctness and GHC compatibility.
+The **default** profile is the standard compilation mode for BHC. It uses ordinary lazy Haskell semantics and is the profile the test suites and the GHC differential harness run against.
 
 ## When to Use
 
 Use the default profile when:
 
 - Building general-purpose applications
-- Maximum GHC compatibility is required
+- You want the best-tested path through the compiler
 - You don't have specific performance requirements
 - Testing or prototyping
 
@@ -31,10 +31,11 @@ bhc --profile=default Main.hs -o main
 
 ## Characteristics
 
-- **Evaluation**: Lazy by default (standard Haskell semantics)
-- **GC**: Standard generational garbage collector
-- **Concurrency**: Green threads with cooperative scheduling
-- **FFI**: Full C FFI support
+- **Evaluation**: Lazy (standard Haskell semantics); infinite lists such as `takeWhile (< 10) [1..]` work
+- **Optimisation**: Core simplifier, demand analysis with worker/wrapper, and dictionary specialisation
+- **Memory**: Compiled programs allocate without collecting. A garbage collector exists as a tested runtime module but is not yet connected to compiled code, so long-running programs grow in memory.
+- **Concurrency**: `forkIO` is not implemented in native code yet; programs are single-threaded
+- **FFI**: `foreign import ccall` works for numeric types such as `Int` and `Double`
 
 ## Example
 
@@ -59,4 +60,11 @@ Compile and run:
 ```bash
 bhc Main.hs -o main
 ./main
+```
+
+Output:
+
+```
+Sorted list:
+[1,1,2,3,4,5,6,9]
 ```

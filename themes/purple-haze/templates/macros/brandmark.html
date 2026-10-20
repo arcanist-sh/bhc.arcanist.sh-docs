@@ -1,0 +1,11 @@
+{# Brandmark for arcanist: Panchang 800 "arcanist" with a Martian Mono ".sh" key (partials/arcanist-wordmark.html) #}
+
+{# Standard version: inherits color from parent #}
+{% macro logo() %}
+<span class="brandmark">{% include "partials/arcanist-wordmark.html" %}</span>
+{% endmacro %}
+
+{# Kept for templates that still call it; the wordmark no longer takes a gradient #}
+{% macro logo_gradient() %}
+<span class="brandmark">{% include "partials/arcanist-wordmark.html" %}</span>
+{% endmacro %}

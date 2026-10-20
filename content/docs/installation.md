@@ -1,52 +1,86 @@
 +++
 title = "Installation"
-description = "How to install the Basel Haskell Compiler"
+description = "Install BHC, the Basel Haskell Compiler, with the install script, from a release archive, or through hx."
 weight = 1
 +++
 
-## System Requirements
+BHC is one compiler binary plus the runtime and standard libraries it links into your programs. Releases are built for two platforms:
 
-BHC runs on the following platforms:
+| Platform | Release archive |
+|---|---|
+| macOS on Apple silicon | `bhc-aarch64-darwin.tar.gz` |
+| Linux on x86_64 | `bhc-x86_64-linux.tar.gz` |
 
-- **Linux** (x86_64, aarch64)
-- **macOS** (x86_64, Apple Silicon)
-- **Windows** (x86_64)
+Native compilation also needs a system C toolchain for linking (the Xcode Command Line Tools on macOS, `cc` from your distribution on Linux).
 
-## Install via Script
-
-The recommended way to install BHC is using the install script:
+## Install script
 
 ```bash
 curl -fsSL https://arcanist.sh/bhc/install.sh | sh
 ```
 
-This will download the latest release and add `bhc` to your PATH.
+The script downloads the latest release for your platform and installs it to `~/.bhc`: the compiler in `~/.bhc/bin` and the runtime libraries in `~/.bhc/lib`. Set `BHC_INSTALL_DIR` to install somewhere else.
 
-## Install via Cargo
-
-If you have Rust installed, you can install BHC via Cargo:
+It then prints the two lines to add to your shell profile, so that your shell finds `bhc` and the linker finds the runtime:
 
 ```bash
-cargo install bhc
+export PATH="$HOME/.bhc/bin:$PATH"
+export LIBRARY_PATH="$HOME/.bhc/lib:$LIBRARY_PATH"
 ```
 
-## Verify Installation
+## From a release archive
 
-After installation, verify that BHC is correctly installed:
+Every [GitHub release](https://github.com/arcanist-sh/bhc/releases) carries the archives and a `SHA256SUMS.txt`; compare the output of `shasum -a 256 bhc-aarch64-darwin.tar.gz` (or `sha256sum` on Linux) with the line for your archive. Unpack the archive for your platform anywhere you like, then put its `bin` directory on `PATH` and its `lib` directory on `LIBRARY_PATH`, as above.
+
+## With hx
+
+[hx](https://arcanist.sh/hx/) installs and manages BHC toolchains next to GHC:
+
+```bash
+hx toolchain install --bhc 0.2.22    # or --bhc latest
+```
+
+Then build a project with BHC, once or for good:
+
+```bash
+hx build --backend bhc
+```
+
+```toml
+# hx.toml
+[compiler]
+backend = "bhc"
+```
+
+See [Using BHC with hx](@/docs/quickstart.md#build-a-project-with-hx) for the BHC settings hx understands.
+
+## Check the installation
 
 ```bash
 bhc --version
 ```
 
-You should see output like:
+prints the installed version, for example `bhc 0.2.22`.
 
+## Troubleshooting
+
+**`bhc: command not found`.** The `bin` directory is not on your `PATH`. Add the `export PATH=…` line above to `~/.zshrc` or `~/.bashrc` and open a new shell.
+
+**`library 'bhc_rts' not found`, or other link errors.** The linker cannot find the runtime libraries. Add the `export LIBRARY_PATH=…` line above.
+
+**Unsupported platform.** Intel Macs, Linux on arm64 and Windows have no release archive yet. On those machines you can build BHC from [source](https://github.com/arcanist-sh/bhc) with a Rust toolchain and LLVM.
+
+## Uninstall
+
+```bash
+curl -fsSL https://arcanist.sh/bhc/install.sh | sh -s -- --uninstall
 ```
-bhc 0.1.0 (alpha)
-```
 
-## Next Steps
+asks for confirmation, removes `~/.bhc`, and offers to remove the lines the installer added to your shell profile.
 
-- Read the [Quick Start](@/docs/quickstart.md) guide to compile your first program
-- Learn about [Runtime Profiles](@/docs/profiles/_index.md) to optimize for your use case
-- Explore [Compilation Targets](@/docs/targets/_index.md) for WASM and native builds
-- Browse the [API Reference](https://docs.arcanist.sh/bhc/docs/api/) for Prelude and standard library docs
+## Next steps
+
+- Compile your first program with the [Quick Start](@/docs/quickstart.md)
+- Choose a [runtime profile](@/docs/profiles/_index.md)
+- Build for [WebAssembly](@/docs/targets/wasm.md)
+- Browse the [API reference](https://docs.arcanist.sh/bhc/api/) for the Prelude and standard library

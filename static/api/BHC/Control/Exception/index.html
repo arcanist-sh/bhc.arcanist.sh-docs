@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHC.Control.Exception - BHC Documentation</title>
+    <link rel="stylesheet" href="&#x2F;bhc&#x2F;api/css/style.css">
+    <script defer src="&#x2F;bhc&#x2F;api/js/main.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <a href="&#x2F;bhc&#x2F;api/" class="logo">BHC</a>
+            <div class="header-controls">
+                
+                <div class="version-select">
+                    <select id="version-select" aria-label="Select version">
+                        <option value="main" selected>main</option>
+                        
+                    </select>
+                </div>
+                
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="icon-sun">☀</span>
+                    <span class="icon-moon">☾</span>
+                </button>
+            </div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search (/)..." aria-label="Search">
+        </div>
+        
+<nav class="nav-tree">
+    <h3>Modules</h3>
+    <ul>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Text.html">Text</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Numeric.html">Numeric</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/FFI.html">FFI</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/JSON.html">JSON</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Bytes.html">Bytes</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Time.html">Time</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Random.html">Random</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Concurrency.html">Concurrency</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Writer.html">BHC.Control.Monad.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Trans.html">BHC.Control.Monad.Trans</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Reader.html">BHC.Control.Monad.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-State.html">BHC.Control.Monad.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Except.html">BHC.Control.Monad.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Identity.html">BHC.Control.Monad.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-RWS.html">BHC.Control.Monad.RWS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Cont.html">BHC.Control.Monad.Cont</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Maybe.html">BHC.Control.Monad.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Data-Functor-Identity.html">Data.Functor.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader-Class.html">Control.Monad.Reader.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer.html">Control.Monad.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans.html">Control.Monad.Trans</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS-Strict.html">Control.Monad.RWS.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader.html">Control.Monad.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State.html">Control.Monad.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Except.html">Control.Monad.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Identity.html">Control.Monad.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-IO-Class.html">Control.Monad.IO.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Class.html">Control.Monad.State.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Strict.html">Control.Monad.State.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Class.html">Control.Monad.Writer.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Strict.html">Control.Monad.Writer.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS.html">Control.Monad.RWS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer.html">Control.Monad.Trans.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Class.html">Control.Monad.Trans.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-RWS-Strict.html">Control.Monad.Trans.RWS.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Reader.html">Control.Monad.Trans.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State.html">Control.Monad.Trans.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Except.html">Control.Monad.Trans.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State-Strict.html">Control.Monad.Trans.State.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer-Strict.html">Control.Monad.Trans.Writer.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Maybe.html">Control.Monad.Trans.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Error-Class.html">Control.Monad.Error.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-JSON.html">BHC.Data.JSON</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Time.html">BHC.Data.Time</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Random.html">BHC.Data.Random</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Sparse.html">Sparse</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Grad.html">Grad</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Matrix.html">Matrix</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Shaped.html">Shaped</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Einsum.html">Einsum</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/SIMD.html">SIMD</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Map.html">BHC.Data.Map</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Set.html">BHC.Data.Set</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/IntSet.html">IntSet</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/IntMap.html">IntMap</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Sequence.html">BHC.Data.Sequence</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Process.html">BHC.System.Process</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Environment.html">BHC.System.Environment</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Exit.html">BHC.System.Exit</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Directory.html">BHC.System.Directory</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-FilePath.html">BHC.System.FilePath</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-IO.html">BHC.System.IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text.html">BHC.Data.Text</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Char8.html">BHC.Data.ByteString.Char8</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Builder.html">BHC.Data.ByteString.Builder</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Lazy.html">BHC.Data.ByteString.Lazy</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString.html">BHC.Data.ByteString</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy.html">BHC.Data.Text.Lazy</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Encoding.html">BHC.Data.Text.Encoding</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-Encoding.html">BHC.Data.Text.Lazy.Encoding</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-IO.html">BHC.Data.Text.Lazy.IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-IO.html">BHC.Data.Text.IO</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-Scope.html">BHC.Control.Concurrent.Scope</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-STM.html">BHC.Control.Concurrent.STM</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Ord.html">BHC.Data.Ord</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Function.html">BHC.Data.Function</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-String.html">BHC.Data.String</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/List.html">List</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Either.html">BHC.Data.Either</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Tuple.html">BHC.Data.Tuple</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Maybe.html">BHC.Data.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Char.html">BHC.Data.Char</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Category.html">Category</a>
+        </li>
+        
+        <li class="active">
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Exception.html">BHC.Control.Exception</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Applicative.html">BHC.Control.Applicative</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad.html">BHC.Control.Monad</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Arrow.html">Arrow</a>
+        </li>
+        
+    </ul>
+</nav>
+
+    </nav>
+
+    <main class="content">
+        
+<article class="module-page">
+    <!-- Module Header Frame -->
+    <div class="page-header">
+        <div class="page-header__bar">
+            <span class="page-header__label">Module</span>
+            
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs" class="source-link" title="View source">
+                <span class="source-icon">{ }</span>
+                <span class="source-path">stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs</span>
+            </a>
+            
+            
+        </div>
+        <div class="page-header__content">
+            <h1>BHC.Control.Exception</h1>
+            
+        </div>
+    </div>
+
+    
+    <!-- Types Section Frame -->
+    <div id="types" class="decl-section">
+        <div class="decl-section__header">
+            <span class="decl-section__label">Types</span>
+        </div>
+        <div class="decl-section__content">
+            
+            <div id="t:SomeException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data SomeException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L67" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:SomeException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>SomeException String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    The root exception type. All exceptions can be converted
+                </div>
+                
+            </div>
+            
+            <div id="t:IOException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data IOException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L94" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:IOException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>IOException String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    An exception from the I/O subsystem.
+                </div>
+                
+            </div>
+            
+            <div id="t:ErrorCall" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data ErrorCall</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L100" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:ErrorCall" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>ErrorCall String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    An exception from calling <a href="#error">error</a>.
+                </div>
+                
+            </div>
+            
+            <div id="t:ArithException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data ArithException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L106" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:ArithException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Overflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Underflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>LossOfPrecision</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>DivideByZero</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Denormal</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>RatioZeroDenominator</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Arithmetic exceptions (division by zero, overflow, etc.).
+                </div>
+                
+            </div>
+            
+            <div id="t:AssertionFailed" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data AssertionFailed</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L118" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:AssertionFailed" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>AssertionFailed String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    An assertion failure.
+                </div>
+                
+            </div>
+            
+            <div id="t:AsyncException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data AsyncException</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L124" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:AsyncException" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>StackOverflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>HeapOverflow</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>ThreadKilled</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>UserInterrupt</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Asynchronous exceptions.
+                </div>
+                
+            </div>
+            
+            <div id="t:MaskingState" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">data MaskingState</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L134" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#t:MaskingState" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Unmasked</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>MaskedInterruptible</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>MaskedUninterruptible</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    Masking state for asynchronous exceptions.
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    
+    <!-- Type Classes Section Frame -->
+    <div id="classes" class="decl-section">
+        <div class="decl-section__header">
+            <span class="decl-section__label">Type Classes</span>
+        </div>
+        <div class="decl-section__content">
+            
+            <div id="c:Exception" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">class Show e => Exception e</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L72" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#c:Exception" class="anchor">#</a>
+                </div>
+                
+                <div class="class-methods">
+                    <h4>Methods</h4>
+                    
+                    <div class="method">
+                        <code>toException :: e -&gt; SomeException</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>fromException :: SomeException -&gt; Maybe e</code>
+                        
+                    </div>
+                    
+                    <div class="method">
+                        <code>displayException :: e -&gt; String</code>
+                        
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="decl-doc">
+                    The <a href="#Exception">Exception</a> typeclass. Types that can be thrown and
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    
+    <!-- Functions Section Frame -->
+    <div id="functions" class="decl-section">
+        <div class="decl-section__header">
+            <span class="decl-section__label">Functions</span>
+        </div>
+        <div class="decl-section__content">
+            
+            <div id="v:throw" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">throw :: (Exception e) =&gt; e -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L159" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:throw" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Throw an exception. Can be called from pure code.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:throwIO" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">throwIO :: (Exception e) =&gt; e -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L163" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:throwIO" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Throw an exception in the IO monad.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:catch" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">catch :: (Exception e) =&gt; (IO a) -&gt; (e -&gt; IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L173" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:catch" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Catch an exception of a particular type.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:catchJust" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">catchJust :: (Exception e) =&gt; (e -&gt; Maybe b) -&gt; (IO a) -&gt; (b -&gt; IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L185" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:catchJust" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Catch an exception with a selector function.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:handle" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">handle :: (Exception e) =&gt; (e -&gt; IO a) -&gt; (IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L193" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:handle" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    A version of <a href="#catch">catch</a> with the arguments swapped.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:handleJust" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">handleJust :: (Exception e) =&gt; (e -&gt; Maybe b) -&gt; (b -&gt; IO a) -&gt; (IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L201" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:handleJust" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    A version of <a href="#catchJust">catchJust</a> with the arguments swapped.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:try" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">try :: (Exception e) =&gt; (IO a) -&gt; IO (Either e a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L205" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:try" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Try running an action, returning either the exception or the result.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tryJust" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tryJust :: (Exception e) =&gt; (e -&gt; Maybe b) -&gt; (IO a) -&gt; IO (Either b a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L212" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tryJust" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    A version of <a href="#try">try</a> with a selector function.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:mapException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">mapException :: (Exception e1, Exception e2) =&gt; (e1 -&gt; e2) -&gt; a -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L227" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:mapException" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Map one exception type to another.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:bracket" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">bracket :: (IO a) -&gt; (a -&gt; IO b) -&gt; (a -&gt; IO c) -&gt; IO c</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L250" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:bracket" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Acquire a resource, perform an action, then release
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:bracket_" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">bracket_ :: (IO a) -&gt; (IO b) -&gt; (IO c) -&gt; IO c</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L258" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:bracket_" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Like <a href="#bracket">bracket</a>, but discards the resource.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:bracketOnError" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">bracketOnError :: (IO a) -&gt; (a -&gt; IO b) -&gt; (a -&gt; IO c) -&gt; IO c</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L263" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:bracketOnError" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Like <a href="#bracket">bracket</a>, but only releases the resource on exception.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:finally" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">finally :: (IO a) -&gt; (IO b) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L274" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:finally" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Perform an action then a cleanup, even if an exception
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:onException" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">onException :: (IO a) -&gt; (IO b) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L282" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:onException" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Perform an action, and if an exception is raised, run
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:evaluate" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">evaluate :: a -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L300" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:evaluate" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Force a value to Weak Head Normal Form.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:mask" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">mask :: (((IO a) -&gt; IO a) -&gt; IO b) -&gt; IO b</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L311" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:mask" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Mask asynchronous exceptions during the execution of an action.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:mask_" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">mask_ :: (IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L315" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:mask_" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Like <a href="#mask">mask</a>, but does not pass a restore action.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:uninterruptibleMask" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">uninterruptibleMask :: (((IO a) -&gt; IO a) -&gt; IO b) -&gt; IO b</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L321" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:uninterruptibleMask" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Like <a href="#mask">mask</a>, but cannot be interrupted.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:uninterruptibleMask_" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">uninterruptibleMask_ :: (IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L325" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:uninterruptibleMask_" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Like <a href="#uninterruptibleMask">uninterruptibleMask</a>, but does not pass a restore action.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:getMaskingState" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">getMaskingState :: IO MaskingState</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L331" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:getMaskingState" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Get the current masking state.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:throwTo" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">throwTo :: (Exception e) =&gt; Int -&gt; e -&gt; IO ()</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L337" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:throwTo" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Throw an exception to another thread.
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    
+    <!-- Instances Section Frame -->
+    <div id="instances" class="decl-section">
+        <div class="decl-section__header">
+            <span class="decl-section__label">Instances</span>
+        </div>
+        <div class="decl-section__content">
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception SomeException</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L85" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception IOException</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L97" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception ErrorCall</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L103" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception ArithException</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L115" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception AssertionFailed</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L121" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="decl instance">
+                <div class="decl-header">
+                    <code class="decl-name">instance Exception AsyncException</code>
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-base&#x2F;hs&#x2F;BHC&#x2F;Control&#x2F;Exception.hs#L131" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</article>
+
+    </main>
+
+    
+<!-- Right sidebar: On this page -->
+<aside class="toc-sidebar" id="toc-sidebar">
+    <div class="toc-header">
+        <span class="toc-label">On this page</span>
+        <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+            <span class="toc-toggle-icon">▼</span>
+        </button>
+    </div>
+    <nav class="toc-content" id="toc-content">
+        <ul class="toc-list">
+            
+            <li class="toc-section">
+                <a href="#types" class="toc-section-link">Types</a>
+                <ul class="toc-items">
+                    
+                    <li><a href="#t:SomeException">SomeException</a></li>
+                    
+                    <li><a href="#t:IOException">IOException</a></li>
+                    
+                    <li><a href="#t:ErrorCall">ErrorCall</a></li>
+                    
+                    <li><a href="#t:ArithException">ArithException</a></li>
+                    
+                    <li><a href="#t:AssertionFailed">AssertionFailed</a></li>
+                    
+                    <li><a href="#t:AsyncException">AsyncException</a></li>
+                    
+                    <li><a href="#t:MaskingState">MaskingState</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="toc-section">
+                <a href="#classes" class="toc-section-link">Classes</a>
+                <ul class="toc-items">
+                    
+                    <li><a href="#c:Exception">Exception</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="toc-section">
+                <a href="#functions" class="toc-section-link">Functions</a>
+                <ul class="toc-items">
+                    
+                    <li><a href="#v:throw">throw</a></li>
+                    
+                    <li><a href="#v:throwIO">throwIO</a></li>
+                    
+                    <li><a href="#v:catch">catch</a></li>
+                    
+                    <li><a href="#v:catchJust">catchJust</a></li>
+                    
+                    <li><a href="#v:handle">handle</a></li>
+                    
+                    <li><a href="#v:handleJust">handleJust</a></li>
+                    
+                    <li><a href="#v:try">try</a></li>
+                    
+                    <li><a href="#v:tryJust">tryJust</a></li>
+                    
+                    <li><a href="#v:mapException">mapException</a></li>
+                    
+                    <li><a href="#v:bracket">bracket</a></li>
+                    
+                    <li><a href="#v:bracket_">bracket_</a></li>
+                    
+                    <li><a href="#v:bracketOnError">bracketOnError</a></li>
+                    
+                    <li><a href="#v:finally">finally</a></li>
+                    
+                    <li><a href="#v:onException">onException</a></li>
+                    
+                    <li><a href="#v:evaluate">evaluate</a></li>
+                    
+                    <li><a href="#v:mask">mask</a></li>
+                    
+                    <li><a href="#v:mask_">mask_</a></li>
+                    
+                    <li><a href="#v:uninterruptibleMask">uninterruptibleMask</a></li>
+                    
+                    <li><a href="#v:uninterruptibleMask_">uninterruptibleMask_</a></li>
+                    
+                    <li><a href="#v:getMaskingState">getMaskingState</a></li>
+                    
+                    <li><a href="#v:throwTo">throwTo</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="toc-section">
+                <a href="#instances" class="toc-section-link">Instances</a>
+            </li>
+            
+        </ul>
+    </nav>
+</aside>
+
+
+    <div class="search-modal" id="search-modal" hidden>
+        <div class="search-modal-content">
+            <div class="search-modal__header">
+                <span class="search-modal__dot"></span>
+                <span class="search-modal__dot"></span>
+                <span class="search-modal__dot"></span>
+                <span class="search-modal__title">Search</span>
+            </div>
+            <input type="text" id="search-input" placeholder="Type to search...">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+</body>
+</html>

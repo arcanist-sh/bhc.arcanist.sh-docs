@@ -7,16 +7,18 @@ sort_by = "weight"
 
 # Tools
 
-BHC provides several command-line tools for compilation, interactive development, and debugging.
+BHC provides several command-line tools for compilation, interactive exploration, and inspecting compiler output.
 
 ## Tool Reference
 
 | Tool | Description |
 |------|-------------|
 | [bhc](@/docs/internals/tools/bhc.md) | Main compiler driver |
-| [bhci](@/docs/internals/tools/bhci.md) | Interactive REPL |
-| [bhi](@/docs/internals/tools/bhi.md) | IR and kernel inspector |
+| [bhci](@/docs/internals/tools/bhci.md) | Interactive REPL (Core interpreter) |
+| [bhi](@/docs/internals/tools/bhi.md) | IR and report inspector |
 | [bhc-playground](@/docs/internals/tools/bhc-playground.md) | Browser-based interpreter |
+
+The source tree also contains a language server, `bhc-lsp`; it builds, but it has not been verified against an editor yet.
 
 ## Quick Reference
 
@@ -30,10 +32,10 @@ bhc Main.hs -o main
 bhc check Main.hs
 
 # Compile with profile
-bhc --profile=numeric Main.hs
+bhc --profile=numeric Main.hs -o main
 
 # Target WebAssembly
-bhc --target=wasi Main.hs
+bhc --target wasm32-wasi Main.hs -o main.wasm
 ```
 
 ### bhci - REPL
@@ -42,27 +44,30 @@ bhc --target=wasi Main.hs
 # Start REPL
 bhci
 
-# With profile
-bhci --profile=numeric
+# Load a file on startup
+bhci Main.hs
 ```
 
 ```
-bhci:001> let double x = x * 2
-bhci:002> double 21
+bhci> let y = 21
+y :: Int = 21
+bhci> y * 2
 42
-bhci:003> :type double
-double :: Num a => a -> a
+  :: Int
+bhci> map (+1) [1,2,3]
+[2,3,4]
+  :: [Int]
 ```
 
 ### bhi - Inspector
 
 ```bash
-# Inspect IR
-bhi ir program.core
+# Show the Core IR of a source file
+bhi ir Main.hs
 
-# View kernel report
+# Show per-phase compile statistics
+bhi stats Main.hs
+
+# View a kernel report (JSON)
 bhi kernel report.json --failures-only
-
-# Analyze memory
-bhi memory alloc.log
 ```

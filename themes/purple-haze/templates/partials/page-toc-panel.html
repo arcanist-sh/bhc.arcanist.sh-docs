@@ -1,0 +1,44 @@
+{#- "On this page" as a right rail beside the page (docs mode, wide screens), styled like the article rail on
+    arcanist.sh: mono label, small muted links, the section in view in the accent. Supports pages and sections. -#}
+{% set toc_items = page.toc | default(value=[]) %}
+{% if not toc_items and section %}
+    {% set toc_items = section.toc | default(value=[]) %}
+{% endif %}
+
+{% if toc_items | length > 1 %}
+<aside id="page-toc-panel" class="page-toc-panel" aria-label="On this page">
+    <nav class="page-toc-panel__nav" aria-labelledby="page-toc-title">
+        <span id="page-toc-title" class="page-toc-panel__title">On this page</span>
+        <ol class="page-toc-panel__list">
+            {% for item in toc_items %}
+            <li><a href="#{{ item.id }}" class="page-toc-panel__link">{{ item.title }}</a>
+                {% if item.children %}
+                <ol class="page-toc-panel__list page-toc-panel__list--nested">
+                    {% for child in item.children %}
+                    <li><a href="#{{ child.id }}" class="page-toc-panel__link">{{ child.title }}</a></li>
+                    {% endfor %}
+                </ol>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ol>
+    </nav>
+</aside>
+<script>
+(function () {
+    // Mark the heading currently in view; the last heading above the reading line wins.
+    var links = Array.prototype.slice.call(document.querySelectorAll('.page-toc-panel__link'));
+    var targets = links.map(function (a) { return document.getElementById(decodeURIComponent(a.hash.slice(1))); });
+    if (!links.length) return;
+    var ticking = false;
+    function update() {
+        ticking = false;
+        var line = 64 + 96, current = 0;
+        targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= line) current = i; });
+        links.forEach(function (a, i) { if (i === current) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+})();
+</script>
+{% endif %}

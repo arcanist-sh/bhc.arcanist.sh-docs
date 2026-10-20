@@ -10,37 +10,45 @@ Source location tracking for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate provides types for tracking source locations throughout the compilation pipeline. It enables accurate error messages with source context.
+This crate provides the types used to record where things come from in the source, from lexing through code generation. Its only dependency is `serde`. Spans are byte ranges; line and column numbers are computed on demand from a `SourceFile`.
 
 ## Key Types
 
 | Type | Description |
 |------|-------------|
-| `Span` | A range in source code (start to end) |
-| `Pos` | A single position (line, column, offset) |
+| `BytePos` | A byte offset into a source file (`u32`) |
+| `Span` | Half-open byte range `[lo, hi)`; `Span::DUMMY` for generated code |
+| `Spanned<T>` | A value paired with its span (`node`, `span`) |
 | `FileId` | Identifier for a source file |
-| `SourceMap` | Maps FileIds to source content |
+| `FullSpan` | A `Span` together with its `FileId` |
+| `LineCol` | 1-indexed line and column |
+| `SourceFile` | File name, source text and precomputed line starts |
+| `SpanLines` | The lines a span covers (`is_multiline`) |
+
+The source map that holds all files for diagnostics rendering is `bhc_diagnostics::SourceMap`, not part of this crate.
 
 ## Usage
 
 ```rust
-use bhc_span::{Span, Pos, FileId};
+use bhc_span::{BytePos, FileId, SourceFile, Span};
 
-// Create a span
-let start = Pos::new(1, 1, 0);
-let end = Pos::new(1, 10, 9);
-let span = Span::new(file_id, start, end);
+let file = SourceFile::new(FileId::new(0), "Main.hs".into(), src);
+let span = Span::new(BytePos::new(0), BytePos::new(9));
 
 // Combine spans
-let combined = span1.merge(span2);
+let covering = span1.merge(span2); // min lo, max hi
+let through = span1.to(span2);     // span1.lo .. span2.hi
 
-// Get source text
-let text = source_map.span_to_snippet(span);
+// Source text and position
+let text = file.source_text(span);
+let pos = file.lookup_line_col(span.lo);
 ```
+
+Other `Span` methods: `from_raw`, `is_dummy`, `len`, `is_empty`, `shrink_to_lo`, `shrink_to_hi`, `contains`. `SourceFile` also offers `lookup_line`, `num_lines`, `line_content`, `line_start` and `span_lines`.
 
 ## Features
 
-- Zero-copy span representation
-- Efficient span merging
-- Source snippet extraction
-- Line/column computation
+- `Span` is two `u32`s, `Copy`, and hashable, so it is cheap to store on every AST and HIR node
+- The type checker keys the inferred type of each expression by its `Span`; later phases look types up by span
+- Line and column lookup uses binary search over line starts
+- The position and span types (`BytePos`, `Span`, `FileId`, `FullSpan`, `LineCol`) implement `Serialize`/`Deserialize`

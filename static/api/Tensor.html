@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tensor - BHC Documentation</title>
-    <link rel="stylesheet" href="&#x2F;docs&#x2F;api/css/style.css">
-    <script defer src="&#x2F;docs&#x2F;api/js/main.js"></script>
+    <link rel="stylesheet" href="&#x2F;bhc&#x2F;api/css/style.css">
+    <script defer src="&#x2F;bhc&#x2F;api/js/main.js"></script>
 </head>
 <body>
     <nav class="sidebar">
         <div class="sidebar-header">
-            <a href="&#x2F;docs&#x2F;api/" class="logo">BHC</a>
+            <a href="&#x2F;bhc&#x2F;api/" class="logo">BHC</a>
             <div class="header-controls">
                 
                 <div class="version-select">
@@ -35,283 +35,383 @@
     <ul>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Process.html">Process</a>
+            <a href="&#x2F;bhc&#x2F;api/Text.html">Text</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/FilePath.html">FilePath</a>
+            <a href="&#x2F;bhc&#x2F;api/Numeric.html">Numeric</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Exit.html">Exit</a>
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Environment.html">Environment</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Directory.html">Directory</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Prelude.html">Prelude</a>
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
         </li>
         
         <li class="active">
-            <a href="&#x2F;docs&#x2F;api/Tensor.html">Tensor</a>
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Einsum.html">Einsum</a>
+            <a href="&#x2F;bhc&#x2F;api/FFI.html">FFI</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Shaped.html">Shaped</a>
+            <a href="&#x2F;bhc&#x2F;api/JSON.html">JSON</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Matrix.html">Matrix</a>
+            <a href="&#x2F;bhc&#x2F;api/Bytes.html">Bytes</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Sparse.html">Sparse</a>
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Vector.html">Vector</a>
+            <a href="&#x2F;bhc&#x2F;api/Time.html">Time</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/SIMD.html">SIMD</a>
+            <a href="&#x2F;bhc&#x2F;api/Random.html">Random</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Grad.html">Grad</a>
+            <a href="&#x2F;bhc&#x2F;api/Concurrency.html">Concurrency</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/BLAS.html">BLAS</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Writer.html">BHC.Control.Monad.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Trans.html">BHC.Control.Monad.Trans</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Reader.html">BHC.Control.Monad.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-State.html">BHC.Control.Monad.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Except.html">BHC.Control.Monad.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Identity.html">BHC.Control.Monad.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-RWS.html">BHC.Control.Monad.RWS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Cont.html">BHC.Control.Monad.Cont</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad-Maybe.html">BHC.Control.Monad.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Data-Functor-Identity.html">Data.Functor.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader-Class.html">Control.Monad.Reader.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer.html">Control.Monad.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans.html">Control.Monad.Trans</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS-Strict.html">Control.Monad.RWS.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Reader.html">Control.Monad.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State.html">Control.Monad.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Except.html">Control.Monad.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Identity.html">Control.Monad.Identity</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-IO-Class.html">Control.Monad.IO.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Class.html">Control.Monad.State.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-State-Strict.html">Control.Monad.State.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Class.html">Control.Monad.Writer.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Writer-Strict.html">Control.Monad.Writer.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-RWS.html">Control.Monad.RWS</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer.html">Control.Monad.Trans.Writer</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Class.html">Control.Monad.Trans.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-RWS-Strict.html">Control.Monad.Trans.RWS.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Reader.html">Control.Monad.Trans.Reader</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State.html">Control.Monad.Trans.State</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Except.html">Control.Monad.Trans.Except</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-State-Strict.html">Control.Monad.Trans.State.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Writer-Strict.html">Control.Monad.Trans.Writer.Strict</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Trans-Maybe.html">Control.Monad.Trans.Maybe</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Control-Monad-Error-Class.html">Control.Monad.Error.Class</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-JSON.html">BHC.Data.JSON</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Time.html">BHC.Data.Time</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Random.html">BHC.Data.Random</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/Sparse.html">Sparse</a>
+        </li>
+        
+        <li >
+            <a href="&#x2F;bhc&#x2F;api/BLAS.html">BLAS</a>
         </li>
         
         <li class="active">
-            <a href="&#x2F;docs&#x2F;api/Tensor.html">Tensor</a>
+            <a href="&#x2F;bhc&#x2F;api/Tensor.html">Tensor</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Prelude.html">Prelude</a>
+            <a href="&#x2F;bhc&#x2F;api/Grad.html">Grad</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Numeric.html">Numeric</a>
+            <a href="&#x2F;bhc&#x2F;api/Vector.html">Vector</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/JSON.html">JSON</a>
+            <a href="&#x2F;bhc&#x2F;api/Matrix.html">Matrix</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Random.html">Random</a>
+            <a href="&#x2F;bhc&#x2F;api/Shaped.html">Shaped</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Vector.html">Vector</a>
+            <a href="&#x2F;bhc&#x2F;api/Einsum.html">Einsum</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/BLAS.html">BLAS</a>
+            <a href="&#x2F;bhc&#x2F;api/SIMD.html">SIMD</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Concurrency.html">Concurrency</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Map.html">BHC.Data.Map</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/FFI.html">FFI</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Set.html">BHC.Data.Set</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Time.html">Time</a>
+            <a href="&#x2F;bhc&#x2F;api/IntSet.html">IntSet</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Bytes.html">Bytes</a>
+            <a href="&#x2F;bhc&#x2F;api/IntMap.html">IntMap</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Text.html">Text</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Sequence.html">BHC.Data.Sequence</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/STM.html">STM</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Process.html">BHC.System.Process</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Scope.html">Scope</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Environment.html">BHC.System.Environment</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Applicative.html">Applicative</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Exit.html">BHC.System.Exit</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Arrow.html">Arrow</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-Directory.html">BHC.System.Directory</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Monad.html">Monad</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-FilePath.html">BHC.System.FilePath</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Exception.html">Exception</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-System-IO.html">BHC.System.IO</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Category.html">Category</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text.html">BHC.Data.Text</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Either.html">Either</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Char8.html">BHC.Data.ByteString.Char8</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Function.html">Function</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Builder.html">BHC.Data.ByteString.Builder</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Ord.html">Ord</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString-Lazy.html">BHC.Data.ByteString.Lazy</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/String.html">String</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-ByteString.html">BHC.Data.ByteString</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Char.html">Char</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy.html">BHC.Data.Text.Lazy</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Tuple.html">Tuple</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Encoding.html">BHC.Data.Text.Encoding</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/List.html">List</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-Encoding.html">BHC.Data.Text.Lazy.Encoding</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Maybe.html">Maybe</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-Lazy-IO.html">BHC.Data.Text.Lazy.IO</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/JSON.html">JSON</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Text-IO.html">BHC.Data.Text.IO</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Random.html">Random</a>
+            <a href="&#x2F;bhc&#x2F;api/Prelude.html">Prelude</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Time.html">Time</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-Scope.html">BHC.Control.Concurrent.Scope</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Identity.html">Identity</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Concurrent-STM.html">BHC.Control.Concurrent.STM</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Except.html">Except</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Ord.html">BHC.Data.Ord</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Writer.html">Writer</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Function.html">BHC.Data.Function</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/RWS.html">RWS</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-String.html">BHC.Data.String</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Cont.html">Cont</a>
+            <a href="&#x2F;bhc&#x2F;api/List.html">List</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Reader.html">Reader</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Either.html">BHC.Data.Either</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/State.html">State</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Tuple.html">BHC.Data.Tuple</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Trans.html">Trans</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Maybe.html">BHC.Data.Maybe</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Maybe.html">Maybe</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Data-Char.html">BHC.Data.Char</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Map.html">Map</a>
+            <a href="&#x2F;bhc&#x2F;api/Category.html">Category</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IntSet.html">IntSet</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Exception.html">BHC.Control.Exception</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Set.html">Set</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Applicative.html">BHC.Control.Applicative</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/Sequence.html">Sequence</a>
+            <a href="&#x2F;bhc&#x2F;api/BHC-Control-Monad.html">BHC.Control.Monad</a>
         </li>
         
         <li >
-            <a href="&#x2F;docs&#x2F;api/IntMap.html">IntMap</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/IO.html">IO</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Encoding.html">Encoding</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/ByteString.html">ByteString</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Builder.html">Builder</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Char8.html">Char8</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Lazy.html">Lazy</a>
-        </li>
-        
-        <li >
-            <a href="&#x2F;docs&#x2F;api/Text.html">Text</a>
+            <a href="&#x2F;bhc&#x2F;api/Arrow.html">Arrow</a>
         </li>
         
     </ul>
@@ -327,9 +427,9 @@
         <div class="page-header__bar">
             <span class="page-header__label">Module</span>
             
-            <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs" class="source-link" title="View source">
+            <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs" class="source-link" title="View source">
                 <span class="source-icon">{ }</span>
-                <span class="source-path">stdlib&#x2F;H26&#x2F;Tensor.hs</span>
+                <span class="source-path">stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs</span>
             </a>
             
             
@@ -350,14 +450,23 @@
             
             <div id="t:Tensor" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">data Tensor</code>
+                    <code class="decl-name">data Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L145" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L106" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#t:Tensor" class="anchor">#</a>
+                </div>
+                
+                <div class="constructors">
+                    
+                    <div class="constructor">
+                        <code>Tensor { tensorData :: !(VU.Vector a), tensorShape :: ![Int], tensorStride :: ![Int], tensorOffset :: !Int }</code>
+                        
+                    </div>
+                    
                 </div>
                 
                 
@@ -368,7 +477,7 @@
                     <code class="decl-name">data DType</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L148" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L114" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -378,56 +487,56 @@
                 <div class="constructors">
                     
                     <div class="constructor">
-                        <code>F32</code>
-                        
-                        <p class="con-doc">32-bit float</p>
+                        <code>Float16</code>
                         
                     </div>
                     
                     <div class="constructor">
-                        <code>F64</code>
-                        
-                        <p class="con-doc">64-bit float</p>
+                        <code>Float32</code>
                         
                     </div>
                     
                     <div class="constructor">
-                        <code>I32</code>
-                        
-                        <p class="con-doc">32-bit signed integer</p>
+                        <code>Float64</code>
                         
                     </div>
                     
                     <div class="constructor">
-                        <code>I64</code>
-                        
-                        <p class="con-doc">64-bit signed integer</p>
+                        <code>Int8</code>
                         
                     </div>
                     
                     <div class="constructor">
-                        <code>U32</code>
-                        
-                        <p class="con-doc">32-bit unsigned integer</p>
+                        <code>Int16</code>
                         
                     </div>
                     
                     <div class="constructor">
-                        <code>U64</code>
+                        <code>Int32</code>
                         
-                        <p class="con-doc">64-bit unsigned integer</p>
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>Int64</code>
+                        
+                    </div>
+                    
+                    <div class="constructor">
+                        <code>UInt8</code>
                         
                     </div>
                     
                     <div class="constructor">
                         <code>Bool</code>
                         
-                        <p class="con-doc">Boolean</p>
-                        
                     </div>
                     
                 </div>
                 
+                
+                <div class="decl-doc">
+                    Data type enumeration.
+                </div>
                 
             </div>
             
@@ -436,7 +545,7 @@
                     <code class="decl-name">type Shape = [Int]</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L158" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L127" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -445,87 +554,8 @@
                 
                 
                 <div class="decl-doc">
-                    Shape is a list of dimension sizes.
+                    Shape type (list of dimensions).
                 </div>
-                
-            </div>
-            
-            <div id="t:Stride" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">type Stride = [Int]</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L161" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:Stride" class="anchor">#</a>
-                </div>
-                
-                
-                <div class="decl-doc">
-                    Strides in bytes for each dimension.
-                </div>
-                
-            </div>
-            
-            <div id="t:F32" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">type F32 = Float</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L164" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:F32" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="t:F64" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">type F64 = Double</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L165" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:F64" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="t:I32" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">type I32 = Int</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L166" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:I32" class="anchor">#</a>
-                </div>
-                
-                
-            </div>
-            
-            <div id="t:I64" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">type I64 = Integer</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L167" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#t:I64" class="anchor">#</a>
-                </div>
-                
                 
             </div>
             
@@ -545,10 +575,10 @@
             
             <div id="v:zeros" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">zeros :: Shape -&gt; Tensor F32</code>
+                    <code class="decl-name">zeros :: (Num a, Unbox a) =&gt; Shape -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L172" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L141" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -556,7 +586,7 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Create a tensor filled with zeros.
+                    <em>O(n)</em>. Create a tensor filled with zeros.
                 </div>
                 
                 
@@ -564,10 +594,10 @@
             
             <div id="v:ones" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">ones :: Shape -&gt; Tensor F32</code>
+                    <code class="decl-name">ones :: (Num a, Unbox a) =&gt; Shape -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L175" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L156" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -575,7 +605,26 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Create a tensor filled with ones.
+                    <em>O(n)</em>. Create a tensor filled with ones.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:full" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">full :: (Unbox a) =&gt; Shape -&gt; a -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L168" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:full" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Create a tensor filled with a constant value.
                 </div>
                 
                 
@@ -583,10 +632,10 @@
             
             <div id="v:fromList" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromList :: Shape -&gt; [a] -&gt; Tensor a</code>
+                    <code class="decl-name">fromList :: (Unbox a) =&gt; [[a]] -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L180" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L180" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -594,45 +643,140 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Create a tensor from a list.
+                    <em>O(n)</em>. Create a 2D tensor from a nested list.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fromUArray" class="decl">
+            <div id="v:fromListFlat" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fromUArray :: Shape -&gt; (UArray a) -&gt; Tensor a</code>
+                    <code class="decl-name">fromListFlat :: (Unbox a) =&gt; Shape -&gt; [a] -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L183" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L195" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fromUArray" class="anchor">#</a>
+                    <a href="#v:fromListFlat" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Create a tensor from an unboxed array.
+                    <em>O(n)</em>. Create a tensor from a flat list with specified shape.
                 </div>
                 
                 
             </div>
             
-            <div id="v:generate" class="decl">
+            <div id="v:arange" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">generate :: Shape -&gt; (Int -&gt; a) -&gt; Tensor a</code>
+                    <code class="decl-name">arange :: (Num a, Ord a, Unbox a) =&gt; a -&gt; a -&gt; a -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L186" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L215" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:generate" class="anchor">#</a>
+                    <a href="#v:arange" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Generate a tensor using a function.
+                    <em>O(n)</em>. Create a 1D tensor with values in the range [start, end) with given step.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:linspace" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">linspace :: (Fractional a, Unbox a) =&gt; a -&gt; a -&gt; Int -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L233" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:linspace" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Create a 1D tensor with @n@ evenly spaced values from @start@ to @end@ (inclusive).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:eye" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">eye :: (Num a, Unbox a) =&gt; Int -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L254" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:eye" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n²)</em>. Create an n×n identity matrix.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:diag" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">diag :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L263" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:diag" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create diagonal matrix from vector.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:rand" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">rand :: Shape -&gt; IO (Tensor Float)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L275" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:rand" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create tensor with uniform random values in [0, 1).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:randn" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">randn :: Shape -&gt; IO (Tensor Float)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L287" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:randn" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Create tensor with standard normal random values.
                 </div>
                 
                 
@@ -643,7 +787,7 @@
                     <code class="decl-name">shape :: (Tensor a) -&gt; Shape</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L189" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L313" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -651,7 +795,7 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Get the shape of a tensor.
+                    <em>O(1)</em>. Get the shape of a tensor (list of dimensions).
                 </div>
                 
                 
@@ -662,7 +806,7 @@
                     <code class="decl-name">rank :: (Tensor a) -&gt; Int</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L192" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L323" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -670,7 +814,7 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Get the rank (number of dimensions).
+                    <em>O(1)</em>. Get the rank (number of dimensions) of a tensor.
                 </div>
                 
                 
@@ -681,7 +825,7 @@
                     <code class="decl-name">size :: (Tensor a) -&gt; Int</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L195" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L330" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -689,64 +833,7 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Get the total number of elements.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:dtype" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">dtype :: (Tensor a) -&gt; DType</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L198" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:dtype" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Get the element type.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:strides" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">strides :: (Tensor a) -&gt; Stride</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L201" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:strides" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Get the strides.
-                </div>
-                
-                
-            </div>
-            
-            <div id="v:isContiguous" class="decl">
-                <div class="decl-header">
-                    <code class="decl-name">isContiguous :: (Tensor a) -&gt; Bool</code>
-                    
-                    
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L204" class="source-link-small" title="View source">
-                        <span class="source-icon-small">{ }</span>
-                    </a>
-                    
-                    <a href="#v:isContiguous" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Check if the tensor is contiguous in memory.
+                    <em>O(1)</em>. Get the total number of elements in a tensor.
                 </div>
                 
                 
@@ -754,10 +841,10 @@
             
             <div id="v:reshape" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">reshape :: Shape -&gt; (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">reshape :: (Unbox a) =&gt; Shape -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L209" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L343" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -765,7 +852,178 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Reshape a tensor (view, no copy if possible).
+                    <em>O(n)</em>. Reshape a tensor to a new shape.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:flatten" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">flatten :: (Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L355" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:flatten" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Flatten a tensor to a 1D tensor.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:squeeze" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">squeeze :: (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L362" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:squeeze" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(1)</em>. Remove all dimensions of size 1.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:unsqueeze" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">unsqueeze :: Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L377" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:unsqueeze" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(1)</em>. Add a dimension of size 1 at the specified position.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:transpose" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">transpose :: (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L391" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:transpose" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(1)</em>. Transpose a 2D tensor (swap rows and columns).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:permute" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">permute :: [Int] -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L402" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:permute" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(1)</em>. Permute the dimensions of a tensor.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:broadcast" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">broadcast :: (Unbox a) =&gt; Shape -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L409" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:broadcast" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Broadcast tensor to larger shape.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:expand" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">expand :: (Unbox a) =&gt; Shape -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L427" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:expand" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Expand tensor (alias for broadcast).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:!" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">! :: (Unbox a) =&gt; (Tensor a) -&gt; [Int] -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L438" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:!" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Index into tensor.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:index" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">index :: (Unbox a) =&gt; (Tensor a) -&gt; [Int] -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L442" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:index" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Index into tensor (function form).
                 </div>
                 
                 
@@ -776,7 +1034,7 @@
                     <code class="decl-name">slice :: [(Int, Int)] -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L212" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L453" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -784,273 +1042,929 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Slice a tensor (view, no copy).
+                    Slice tensor along dimensions.
                 </div>
                 
                 
             </div>
             
-            <div id="v:transpose" class="decl">
+            <div id="v:narrow" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">transpose :: [Int] -&gt; (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">narrow :: Int -&gt; Int -&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L217" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L462" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:transpose" class="anchor">#</a>
+                    <a href="#v:narrow" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Transpose a tensor (view, no copy).
+                    Narrow tensor along one dimension.
                 </div>
                 
                 
             </div>
             
-            <div id="v:view" class="decl">
+            <div id="v:gather" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">view :: Shape -&gt; Stride -&gt; (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">gather :: (Unbox a, Unbox Int) =&gt; Int -&gt; (Tensor Int) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L220" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L473" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:view" class="anchor">#</a>
+                    <a href="#v:gather" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Create a view with explicit shape and strides.
+                    Gather elements along axis using indices.
                 </div>
                 
                 
             </div>
             
-            <div id="v:map" class="decl">
+            <div id="v:scatter" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">map :: (a -&gt; b) -&gt; (Tensor a) -&gt; Tensor b</code>
+                    <code class="decl-name">scatter :: (Unbox a, Unbox Int) =&gt; Int -&gt; (Tensor Int) -&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L225" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L490" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:map" class="anchor">#</a>
+                    <a href="#v:scatter" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Map a function over tensor elements.
+                    Scatter values into tensor at indices.
                 </div>
                 
                 
             </div>
             
-            <div id="v:zipWith" class="decl">
+            <div id="v:masked" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">zipWith :: (a -&gt; b -&gt; c) -&gt; (Tensor a) -&gt; (Tensor b) -&gt; Tensor c</code>
+                    <code class="decl-name">masked :: (Unbox a) =&gt; (Tensor Bool) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L230" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L507" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:zipWith" class="anchor">#</a>
+                    <a href="#v:masked" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Zip two tensors with a function.
+                    Select elements using boolean mask.
                 </div>
                 
                 
             </div>
             
-            <div id="v:zipWith3" class="decl">
+            <div id="v:tMap" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">zipWith3 :: (a -&gt; b -&gt; c -&gt; d) -&gt; (Tensor a) -&gt; (Tensor b) -&gt; (Tensor c) -&gt; Tensor d</code>
+                    <code class="decl-name">tMap :: (Unbox a, Unbox b) =&gt; (a -&gt; b) -&gt; (Tensor a) -&gt; Tensor b</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L233" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L536" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:zipWith3" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Zip three tensors with a function.
+                    <a href="#v:tMap" class="anchor">#</a>
                 </div>
                 
                 
             </div>
             
-            <div id="v:sum" class="decl">
+            <div id="v:tZipWith" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">sum :: (Num a) =&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">tZipWith :: (Unbox a, Unbox b, Unbox c) =&gt; (a -&gt; b -&gt; c) -&gt; (Tensor a) -&gt; (Tensor b) -&gt; Tensor c</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L238" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L559" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:sum" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Sum all elements.
+                    <a href="#v:tZipWith" class="anchor">#</a>
                 </div>
                 
                 
             </div>
             
-            <div id="v:product" class="decl">
+            <div id="v:tAdd" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">product :: (Num a) =&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">tAdd :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L241" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L573" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:product" class="anchor">#</a>
+                    <a href="#v:tAdd" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Product of all elements.
+                    <em>O(n)</em>. Element-wise addition.
                 </div>
                 
                 
             </div>
             
-            <div id="v:mean" class="decl">
+            <div id="v:tSub" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">mean :: (Fractional a) =&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">tSub :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L244" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L577" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:mean" class="anchor">#</a>
+                    <a href="#v:tSub" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Mean of all elements.
+                    <em>O(n)</em>. Element-wise subtraction.
                 </div>
                 
                 
             </div>
             
-            <div id="v:max" class="decl">
+            <div id="v:tMul" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">max :: (Ord a) =&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">tMul :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L247" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L581" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:max" class="anchor">#</a>
+                    <a href="#v:tMul" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Maximum element.
+                    <em>O(n)</em>. Element-wise multiplication (Hadamard product).
                 </div>
                 
                 
             </div>
             
-            <div id="v:min" class="decl">
+            <div id="v:tDiv" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">min :: (Ord a) =&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">tDiv :: (Fractional a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L250" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L585" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:min" class="anchor">#</a>
+                    <a href="#v:tDiv" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Minimum element.
+                    <em>O(n)</em>. Element-wise division.
                 </div>
                 
                 
             </div>
             
-            <div id="v:argmax" class="decl">
+            <div id="v:tNeg" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">argmax :: (Ord a) =&gt; (Tensor a) -&gt; Int</code>
+                    <code class="decl-name">tNeg :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L253" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L589" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:argmax" class="anchor">#</a>
+                    <a href="#v:tNeg" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Index of maximum element.
+                    <em>O(n)</em>. Negate all elements.
                 </div>
                 
                 
             </div>
             
-            <div id="v:argmin" class="decl">
+            <div id="v:tAbs" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">argmin :: (Ord a) =&gt; (Tensor a) -&gt; Int</code>
+                    <code class="decl-name">tAbs :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L256" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L593" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:argmin" class="anchor">#</a>
+                    <a href="#v:tAbs" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Index of minimum element.
+                    <em>O(n)</em>. Absolute value of all elements.
                 </div>
                 
                 
             </div>
             
-            <div id="v:fold" class="decl">
+            <div id="v:tSign" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">fold :: (b -&gt; a -&gt; b) -&gt; b -&gt; (Tensor a) -&gt; b</code>
+                    <code class="decl-name">tSign :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L259" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L597" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:fold" class="anchor">#</a>
+                    <a href="#v:tSign" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Fold over tensor elements.
+                    <em>O(n)</em>. Sign of each element (-1, 0, or 1).
                 </div>
                 
                 
             </div>
             
-            <div id="v:foldl&#x27;" class="decl">
+            <div id="v:tSqrt" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">foldl&#x27; :: (b -&gt; a -&gt; b) -&gt; b -&gt; (Tensor a) -&gt; b</code>
+                    <code class="decl-name">tSqrt :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L262" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L601" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:foldl&#x27;" class="anchor">#</a>
+                    <a href="#v:tSqrt" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Strict left fold.
+                    <em>O(n)</em>. Square root of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tExp" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tExp :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L605" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tExp" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Exponential (e^x) of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tLog" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tLog :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L609" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tLog" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Natural logarithm of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tPow" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tPow :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L613" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tPow" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise power.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tSin" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tSin :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L617" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tSin" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Sine of all elements (radians).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tCos" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tCos :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L621" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tCos" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Cosine of all elements (radians).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tTan" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tTan :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L625" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tTan" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Tangent of all elements (radians).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tSinh" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tSinh :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L629" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tSinh" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Hyperbolic sine of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tCosh" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tCosh :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L633" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tCosh" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Hyperbolic cosine of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tTanh" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tTanh :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L639" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tTanh" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Hyperbolic tangent of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tFloor" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tFloor :: (RealFrac a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L643" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tFloor" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Floor of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tCeil" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tCeil :: (RealFrac a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L647" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tCeil" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Ceiling of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tRound" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tRound :: (RealFrac a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L651" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tRound" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Round all elements to nearest integer.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tMin" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tMin :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L655" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tMin" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise minimum of two tensors.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tMax" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tMax :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L659" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tMax" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise maximum of two tensors.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tClamp" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tClamp :: (Ord a, Unbox a) =&gt; a -&gt; a -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L666" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tClamp" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Clamp all values to the range [lo, hi].
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tSum" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tSum :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L689" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tSum" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tProduct" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tProduct :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L699" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tProduct" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tMean" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tMean :: (Fractional a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L708" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tMean" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Arithmetic mean of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tVar" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tVar :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L720" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tVar" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Population variance of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tStd" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tStd :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L732" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tStd" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Population standard deviation of all elements.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tMin&#x27;" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tMin&#x27; :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L741" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tMin&#x27;" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Minimum element of the tensor.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tMax&#x27;" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tMax&#x27; :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L750" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tMax&#x27;" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Maximum element of the tensor.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tArgmin" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tArgmin :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L759" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tArgmin" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Index of the minimum element (flat index).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tArgmax" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tArgmax :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L768" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tArgmax" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Index of the maximum element (flat index).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tAny" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tAny :: (Tensor Bool) -&gt; Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L777" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tAny" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. True if any element is True.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tAll" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tAll :: (Tensor Bool) -&gt; Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L786" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tAll" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. True if all elements are True.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tFoldl&#x27;" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tFoldl&#x27; :: (Unbox a) =&gt; (b -&gt; a -&gt; b) -&gt; b -&gt; (Tensor a) -&gt; b</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L790" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tFoldl&#x27;" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:sumAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">sumAxis :: (Num a, Unbox a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L809" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:sumAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Sum along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:productAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">productAxis :: (Num a, Unbox a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L818" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:productAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Product along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:meanAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">meanAxis :: (Fractional a, Unbox a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L827" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:meanAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Mean along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:minAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">minAxis :: (Ord a, Unbox a, Bounded a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L837" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:minAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Minimum along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:maxAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">maxAxis :: (Ord a, Unbox a, Bounded a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L844" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:maxAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Maximum along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:argminAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">argminAxis :: (Ord a, Unbox a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L853" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:argminAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Index of minimum along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:argmaxAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">argmaxAxis :: (Ord a, Unbox a) =&gt; Int -&gt; (Tensor a) -&gt; Tensor Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L862" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:argmaxAxis" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Index of maximum along a specified axis.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:reduceAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">reduceAxis :: (Unbox a) =&gt; (a -&gt; a -&gt; a) -&gt; a -&gt; Int -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L866" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:reduceAxis" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:argReduceAxis" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">argReduceAxis :: (Unbox a) =&gt; (a -&gt; a -&gt; Bool) -&gt; Int -&gt; (Tensor a) -&gt; Tensor Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L886" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:argReduceAxis" class="anchor">#</a>
                 </div>
                 
                 
@@ -1058,10 +1972,10 @@
             
             <div id="v:dot" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">dot :: (Num a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">dot :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L265" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L933" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -1069,7 +1983,7 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Dot product of two 1D tensors.
+                    <em>O(n)</em>. Dot product (inner product) of two 1D tensors.
                 </div>
                 
                 
@@ -1077,10 +1991,10 @@
             
             <div id="v:matmul" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">matmul :: (Num a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">matmul :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L268" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L952" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -1088,7 +2002,22 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Matrix multiplication.
+                    <em>O(n·m·k)</em>. Matrix multiplication.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:val" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">val :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L962" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:val" class="anchor">#</a>
                 </div>
                 
                 
@@ -1096,18 +2025,71 @@
             
             <div id="v:outer" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">outer :: (Num a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">outer :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L271" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L984" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#v:outer" class="anchor">#</a>
                 </div>
                 
+                
+            </div>
+            
+            <div id="v:inner" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">inner :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1003" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:inner" class="anchor">#</a>
+                </div>
+                
                 <div class="decl-doc">
-                    Outer product of two 1D tensors.
+                    Generalized inner product.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:norm" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">norm :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1020" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:norm" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. L2 (Frobenius) norm.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:normalize" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">normalize :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1031" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:normalize" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Normalize tensor to unit norm.
                 </div>
                 
                 
@@ -1115,10 +2097,10 @@
             
             <div id="v:trace" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">trace :: (Num a) =&gt; (Tensor a) -&gt; a</code>
+                    <code class="decl-name">trace :: (Num a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L274" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1039" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
@@ -1126,83 +2108,627 @@
                 </div>
                 
                 <div class="decl-doc">
-                    Trace of a matrix.
+                    <em>O(n)</em>. Matrix trace (sum of diagonal elements).
                 </div>
                 
                 
             </div>
             
-            <div id="v:diag" class="decl">
+            <div id="v:k" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">diag :: (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">k :: </code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L277" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1044" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:diag" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Diagonal of a matrix.
+                    <a href="#v:k" class="anchor">#</a>
                 </div>
                 
                 
             </div>
             
-            <div id="v:parMap" class="decl">
+            <div id="v:det" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">parMap :: (a -&gt; b) -&gt; (Tensor a) -&gt; Tensor b</code>
+                    <code class="decl-name">det :: (Floating a, Unbox a) =&gt; (Tensor a) -&gt; a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L280" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1057" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:parMap" class="anchor">#</a>
-                </div>
-                
-                <div class="decl-doc">
-                    Parallel map.
+                    <a href="#v:det" class="anchor">#</a>
                 </div>
                 
                 
             </div>
             
-            <div id="v:parReduce" class="decl">
+            <div id="v:inv" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">parReduce :: (Monoid m) =&gt; (a -&gt; m) -&gt; (Tensor a) -&gt; m</code>
+                    <code class="decl-name">inv :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L283" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1083" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:parReduce" class="anchor">#</a>
+                    <a href="#v:inv" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Parallel reduction.
+                    <em>O(n³)</em>. Matrix inverse using Gauss-Jordan elimination.
                 </div>
                 
                 
             </div>
             
-            <div id="v:parFor" class="decl">
+            <div id="v:solve" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">parFor :: (Int, Int) -&gt; (Int -&gt; ()) -&gt; ()</code>
+                    <code class="decl-name">solve :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L286" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1130" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:parFor" class="anchor">#</a>
+                    <a href="#v:solve" class="anchor">#</a>
                 </div>
                 
                 <div class="decl-doc">
-                    Parallel for loop.
+                    <em>O(n³)</em>. Solve linear system Ax = b.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:lstsq" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">lstsq :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1143" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:lstsq" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n²m)</em>. Least squares solution.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:eig" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">eig :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a, Tensor a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1158" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:eig" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Eigenvalue decomposition using power iteration.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:svd" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">svd :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a, Tensor a, Tensor a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1190" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:svd" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    Singular value decomposition.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:k" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">k :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1196" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:k" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:ata" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">ata :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1198" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:ata" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:s" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">s :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1201" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:s" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:v" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">v :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1203" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:v" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:sVal" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">sVal :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1205" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:sVal" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:sInv" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">sInv :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1206" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:sInv" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:u" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">u :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1207" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:u" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:qr" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">qr :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a, Tensor a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1222" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:qr" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:k" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">k :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1227" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:k" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:col" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">col :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1233" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:col" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:rij" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">rij :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1240" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:rij" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:normVal" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">normVal :: </code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1248" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:normVal" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:cholesky" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">cholesky :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1276" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:cholesky" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:luDecomp" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">luDecomp :: (Floating a, Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a, Tensor a, a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1308" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:luDecomp" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tEq" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tEq :: (Eq a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1349" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tEq" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise equality comparison.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tNe" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tNe :: (Eq a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1356" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tNe" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise inequality comparison.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tLt" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tLt :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1363" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tLt" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise less-than comparison.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tLe" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tLe :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1370" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tLe" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise less-than-or-equal comparison.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tGt" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tGt :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1377" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tGt" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise greater-than comparison.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tGe" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tGe :: (Ord a, Unbox a) =&gt; (Tensor a) -&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1384" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tGe" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Element-wise greater-than-or-equal comparison.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tIsNan" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tIsNan :: (RealFloat a, Unbox a) =&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1391" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tIsNan" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Check each element for NaN (Not a Number).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tIsInf" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tIsInf :: (RealFloat a, Unbox a) =&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1398" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tIsInf" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Check each element for infinity.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:tIsFinite" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">tIsFinite :: (RealFloat a, Unbox a) =&gt; (Tensor a) -&gt; Tensor Bool</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1407" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:tIsFinite" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Check each element for finiteness.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:cast" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">cast :: (Unbox a, Unbox b) =&gt; (a -&gt; b) -&gt; (Tensor a) -&gt; Tensor b</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1420" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:cast" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Cast tensor elements using a conversion function.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:asType" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">asType :: (Unbox a, Unbox b, RealFrac a, Num b) =&gt; DType -&gt; (Tensor a) -&gt; Tensor b</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1429" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:asType" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Cast tensor to a specific data type.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:clone" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">clone :: (Unbox a) =&gt; (Tensor a) -&gt; IO (Tensor a)</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1441" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:clone" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Create a deep copy of the tensor with new memory.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:contiguous" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">contiguous :: (Unbox a) =&gt; (Tensor a) -&gt; Tensor a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1450" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:contiguous" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Ensure tensor data is contiguous in memory.
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:toList" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">toList :: (Unbox a) =&gt; (Tensor a) -&gt; [a]</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1470" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:toList" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Convert tensor to a flat list (row-major order).
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:toLists" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">toLists :: (Unbox a) =&gt; (Tensor a) -&gt; [[a]]</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1478" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:toLists" class="anchor">#</a>
+                </div>
+                
+                <div class="decl-doc">
+                    <em>O(n)</em>. Convert a 2D tensor to nested lists.
                 </div>
                 
                 
@@ -1210,37 +2736,123 @@
             
             <div id="v:materialize" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">materialize :: (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">materialize :: (Unbox a) =&gt; (Tensor a) -&gt; IO (Tensor a)</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L289" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1493" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
                     <a href="#v:materialize" class="anchor">#</a>
                 </div>
                 
+                
+            </div>
+            
+            <div id="v:withTensorArena" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">withTensorArena :: (IO a) -&gt; IO a</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1506" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:withTensorArena" class="anchor">#</a>
+                </div>
+                
                 <div class="decl-doc">
-                    Force materialization (no fusion).
+                    Execute tensor operations within an arena scope.
                 </div>
                 
                 
             </div>
             
-            <div id="v:forceEval" class="decl">
+            <div id="v:product" class="decl">
                 <div class="decl-header">
-                    <code class="decl-name">forceEval :: (Tensor a) -&gt; Tensor a</code>
+                    <code class="decl-name">product :: [Int] -&gt; Int</code>
                     
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;raskell-io&#x2F;bhc&#x2F;blob&#x2F;66cd7ab0db3006c593c885ee8e84ed9cf681d25b&#x2F;stdlib&#x2F;H26&#x2F;Tensor.hs#L292" class="source-link-small" title="View source">
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1513" class="source-link-small" title="View source">
                         <span class="source-icon-small">{ }</span>
                     </a>
                     
-                    <a href="#v:forceEval" class="anchor">#</a>
+                    <a href="#v:product" class="anchor">#</a>
                 </div>
                 
-                <div class="decl-doc">
-                    Force evaluation of tensor elements.
+                
+            </div>
+            
+            <div id="v:computeStrides" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">computeStrides :: Shape -&gt; [Int]</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1516" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:computeStrides" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:insertAt" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">insertAt :: Int -&gt; a -&gt; [a] -&gt; [a]</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1520" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:insertAt" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:permuteList" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">permuteList :: [Int] -&gt; [a] -&gt; [a]</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1525" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:permuteList" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:unflattenIndex" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">unflattenIndex :: Shape -&gt; Int -&gt; [Int]</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1529" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:unflattenIndex" class="anchor">#</a>
+                </div>
+                
+                
+            </div>
+            
+            <div id="v:flattenIndex" class="decl">
+                <div class="decl-header">
+                    <code class="decl-name">flattenIndex :: Shape -&gt; [Int] -&gt; Int</code>
+                    
+                    
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;arcanist-sh&#x2F;bhc&#x2F;blob&#x2F;76ae66e0a42727e6cb3756342a5ed466fc07b76d&#x2F;stdlib&#x2F;bhc-numeric&#x2F;hs&#x2F;BHC&#x2F;Numeric&#x2F;Tensor.hs#L1538" class="source-link-small" title="View source">
+                        <span class="source-icon-small">{ }</span>
+                    </a>
+                    
+                    <a href="#v:flattenIndex" class="anchor">#</a>
                 </div>
                 
                 
@@ -1277,16 +2889,6 @@
                     
                     <li><a href="#t:Shape">Shape</a></li>
                     
-                    <li><a href="#t:Stride">Stride</a></li>
-                    
-                    <li><a href="#t:F32">F32</a></li>
-                    
-                    <li><a href="#t:F64">F64</a></li>
-                    
-                    <li><a href="#t:I32">I32</a></li>
-                    
-                    <li><a href="#t:I64">I64</a></li>
-                    
                 </ul>
             </li>
             
@@ -1300,11 +2902,23 @@
                     
                     <li><a href="#v:ones">ones</a></li>
                     
+                    <li><a href="#v:full">full</a></li>
+                    
                     <li><a href="#v:fromList">fromList</a></li>
                     
-                    <li><a href="#v:fromUArray">fromUArray</a></li>
+                    <li><a href="#v:fromListFlat">fromListFlat</a></li>
                     
-                    <li><a href="#v:generate">generate</a></li>
+                    <li><a href="#v:arange">arange</a></li>
+                    
+                    <li><a href="#v:linspace">linspace</a></li>
+                    
+                    <li><a href="#v:eye">eye</a></li>
+                    
+                    <li><a href="#v:diag">diag</a></li>
+                    
+                    <li><a href="#v:rand">rand</a></li>
+                    
+                    <li><a href="#v:randn">randn</a></li>
                     
                     <li><a href="#v:shape">shape</a></li>
                     
@@ -1312,63 +2926,231 @@
                     
                     <li><a href="#v:size">size</a></li>
                     
-                    <li><a href="#v:dtype">dtype</a></li>
-                    
-                    <li><a href="#v:strides">strides</a></li>
-                    
-                    <li><a href="#v:isContiguous">isContiguous</a></li>
-                    
                     <li><a href="#v:reshape">reshape</a></li>
                     
-                    <li><a href="#v:slice">slice</a></li>
+                    <li><a href="#v:flatten">flatten</a></li>
+                    
+                    <li><a href="#v:squeeze">squeeze</a></li>
+                    
+                    <li><a href="#v:unsqueeze">unsqueeze</a></li>
                     
                     <li><a href="#v:transpose">transpose</a></li>
                     
-                    <li><a href="#v:view">view</a></li>
+                    <li><a href="#v:permute">permute</a></li>
                     
-                    <li><a href="#v:map">map</a></li>
+                    <li><a href="#v:broadcast">broadcast</a></li>
                     
-                    <li><a href="#v:zipWith">zipWith</a></li>
+                    <li><a href="#v:expand">expand</a></li>
                     
-                    <li><a href="#v:zipWith3">zipWith3</a></li>
+                    <li><a href="#v:!">!</a></li>
                     
-                    <li><a href="#v:sum">sum</a></li>
+                    <li><a href="#v:index">index</a></li>
                     
-                    <li><a href="#v:product">product</a></li>
+                    <li><a href="#v:slice">slice</a></li>
                     
-                    <li><a href="#v:mean">mean</a></li>
+                    <li><a href="#v:narrow">narrow</a></li>
                     
-                    <li><a href="#v:max">max</a></li>
+                    <li><a href="#v:gather">gather</a></li>
                     
-                    <li><a href="#v:min">min</a></li>
+                    <li><a href="#v:scatter">scatter</a></li>
                     
-                    <li><a href="#v:argmax">argmax</a></li>
+                    <li><a href="#v:masked">masked</a></li>
                     
-                    <li><a href="#v:argmin">argmin</a></li>
+                    <li><a href="#v:tMap">tMap</a></li>
                     
-                    <li><a href="#v:fold">fold</a></li>
+                    <li><a href="#v:tZipWith">tZipWith</a></li>
                     
-                    <li><a href="#v:foldl&#x27;">foldl&#x27;</a></li>
+                    <li><a href="#v:tAdd">tAdd</a></li>
+                    
+                    <li><a href="#v:tSub">tSub</a></li>
+                    
+                    <li><a href="#v:tMul">tMul</a></li>
+                    
+                    <li><a href="#v:tDiv">tDiv</a></li>
+                    
+                    <li><a href="#v:tNeg">tNeg</a></li>
+                    
+                    <li><a href="#v:tAbs">tAbs</a></li>
+                    
+                    <li><a href="#v:tSign">tSign</a></li>
+                    
+                    <li><a href="#v:tSqrt">tSqrt</a></li>
+                    
+                    <li><a href="#v:tExp">tExp</a></li>
+                    
+                    <li><a href="#v:tLog">tLog</a></li>
+                    
+                    <li><a href="#v:tPow">tPow</a></li>
+                    
+                    <li><a href="#v:tSin">tSin</a></li>
+                    
+                    <li><a href="#v:tCos">tCos</a></li>
+                    
+                    <li><a href="#v:tTan">tTan</a></li>
+                    
+                    <li><a href="#v:tSinh">tSinh</a></li>
+                    
+                    <li><a href="#v:tCosh">tCosh</a></li>
+                    
+                    <li><a href="#v:tTanh">tTanh</a></li>
+                    
+                    <li><a href="#v:tFloor">tFloor</a></li>
+                    
+                    <li><a href="#v:tCeil">tCeil</a></li>
+                    
+                    <li><a href="#v:tRound">tRound</a></li>
+                    
+                    <li><a href="#v:tMin">tMin</a></li>
+                    
+                    <li><a href="#v:tMax">tMax</a></li>
+                    
+                    <li><a href="#v:tClamp">tClamp</a></li>
+                    
+                    <li><a href="#v:tSum">tSum</a></li>
+                    
+                    <li><a href="#v:tProduct">tProduct</a></li>
+                    
+                    <li><a href="#v:tMean">tMean</a></li>
+                    
+                    <li><a href="#v:tVar">tVar</a></li>
+                    
+                    <li><a href="#v:tStd">tStd</a></li>
+                    
+                    <li><a href="#v:tMin&#x27;">tMin&#x27;</a></li>
+                    
+                    <li><a href="#v:tMax&#x27;">tMax&#x27;</a></li>
+                    
+                    <li><a href="#v:tArgmin">tArgmin</a></li>
+                    
+                    <li><a href="#v:tArgmax">tArgmax</a></li>
+                    
+                    <li><a href="#v:tAny">tAny</a></li>
+                    
+                    <li><a href="#v:tAll">tAll</a></li>
+                    
+                    <li><a href="#v:tFoldl&#x27;">tFoldl&#x27;</a></li>
+                    
+                    <li><a href="#v:sumAxis">sumAxis</a></li>
+                    
+                    <li><a href="#v:productAxis">productAxis</a></li>
+                    
+                    <li><a href="#v:meanAxis">meanAxis</a></li>
+                    
+                    <li><a href="#v:minAxis">minAxis</a></li>
+                    
+                    <li><a href="#v:maxAxis">maxAxis</a></li>
+                    
+                    <li><a href="#v:argminAxis">argminAxis</a></li>
+                    
+                    <li><a href="#v:argmaxAxis">argmaxAxis</a></li>
+                    
+                    <li><a href="#v:reduceAxis">reduceAxis</a></li>
+                    
+                    <li><a href="#v:argReduceAxis">argReduceAxis</a></li>
                     
                     <li><a href="#v:dot">dot</a></li>
                     
                     <li><a href="#v:matmul">matmul</a></li>
                     
+                    <li><a href="#v:val">val</a></li>
+                    
                     <li><a href="#v:outer">outer</a></li>
+                    
+                    <li><a href="#v:inner">inner</a></li>
+                    
+                    <li><a href="#v:norm">norm</a></li>
+                    
+                    <li><a href="#v:normalize">normalize</a></li>
                     
                     <li><a href="#v:trace">trace</a></li>
                     
-                    <li><a href="#v:diag">diag</a></li>
+                    <li><a href="#v:k">k</a></li>
                     
-                    <li><a href="#v:parMap">parMap</a></li>
+                    <li><a href="#v:det">det</a></li>
                     
-                    <li><a href="#v:parReduce">parReduce</a></li>
+                    <li><a href="#v:inv">inv</a></li>
                     
-                    <li><a href="#v:parFor">parFor</a></li>
+                    <li><a href="#v:solve">solve</a></li>
+                    
+                    <li><a href="#v:lstsq">lstsq</a></li>
+                    
+                    <li><a href="#v:eig">eig</a></li>
+                    
+                    <li><a href="#v:svd">svd</a></li>
+                    
+                    <li><a href="#v:k">k</a></li>
+                    
+                    <li><a href="#v:ata">ata</a></li>
+                    
+                    <li><a href="#v:s">s</a></li>
+                    
+                    <li><a href="#v:v">v</a></li>
+                    
+                    <li><a href="#v:sVal">sVal</a></li>
+                    
+                    <li><a href="#v:sInv">sInv</a></li>
+                    
+                    <li><a href="#v:u">u</a></li>
+                    
+                    <li><a href="#v:qr">qr</a></li>
+                    
+                    <li><a href="#v:k">k</a></li>
+                    
+                    <li><a href="#v:col">col</a></li>
+                    
+                    <li><a href="#v:rij">rij</a></li>
+                    
+                    <li><a href="#v:normVal">normVal</a></li>
+                    
+                    <li><a href="#v:cholesky">cholesky</a></li>
+                    
+                    <li><a href="#v:luDecomp">luDecomp</a></li>
+                    
+                    <li><a href="#v:tEq">tEq</a></li>
+                    
+                    <li><a href="#v:tNe">tNe</a></li>
+                    
+                    <li><a href="#v:tLt">tLt</a></li>
+                    
+                    <li><a href="#v:tLe">tLe</a></li>
+                    
+                    <li><a href="#v:tGt">tGt</a></li>
+                    
+                    <li><a href="#v:tGe">tGe</a></li>
+                    
+                    <li><a href="#v:tIsNan">tIsNan</a></li>
+                    
+                    <li><a href="#v:tIsInf">tIsInf</a></li>
+                    
+                    <li><a href="#v:tIsFinite">tIsFinite</a></li>
+                    
+                    <li><a href="#v:cast">cast</a></li>
+                    
+                    <li><a href="#v:asType">asType</a></li>
+                    
+                    <li><a href="#v:clone">clone</a></li>
+                    
+                    <li><a href="#v:contiguous">contiguous</a></li>
+                    
+                    <li><a href="#v:toList">toList</a></li>
+                    
+                    <li><a href="#v:toLists">toLists</a></li>
                     
                     <li><a href="#v:materialize">materialize</a></li>
                     
-                    <li><a href="#v:forceEval">forceEval</a></li>
+                    <li><a href="#v:withTensorArena">withTensorArena</a></li>
+                    
+                    <li><a href="#v:product">product</a></li>
+                    
+                    <li><a href="#v:computeStrides">computeStrides</a></li>
+                    
+                    <li><a href="#v:insertAt">insertAt</a></li>
+                    
+                    <li><a href="#v:permuteList">permuteList</a></li>
+                    
+                    <li><a href="#v:unflattenIndex">unflattenIndex</a></li>
+                    
+                    <li><a href="#v:flattenIndex">flattenIndex</a></li>
                     
                 </ul>
             </li>

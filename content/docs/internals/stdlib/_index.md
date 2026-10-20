@@ -7,66 +7,59 @@ sort_by = "weight"
 
 # Standard Library Crates
 
-The BHC standard library provides Rust-side support for Haskell's standard library. The high-level APIs are implemented in Haskell, while these Rust crates provide FFI primitives and performance-critical operations.
+The `stdlib/` directory of the compiler repository holds nine `bhc-*` crates. Each has a Rust `src/` directory and most have an `hs/` directory of Haskell sources. This section describes what each crate contains and which parts of it a compiled program actually uses today.
 
-For function signatures, type documentation, and usage examples, see the [API Reference](https://docs.arcanist.sh/bhc/docs/api/).
+For function signatures, type documentation, and usage examples, see the [API Reference](https://docs.arcanist.sh/bhc/api/).
 
-## Architecture
+## How programs get the standard library
+
+The standard modules a program imports (`Prelude`, `Data.List`, `Data.Map`, `Data.Text`, `Control.Monad.State`, `System.IO`, and so on) are **built into the compiler**. Their names and types are defined in tables in `bhc-lower` and `bhc-typeck`, and `bhc-codegen` lowers each use either to inline code or to a call to a C function exported by a Rust crate. The `hs/` sources are not compiled into programs.
 
 ```
-┌─────────────────────────────────────────────────┐
-│              Haskell Standard Library            │
-│  (Prelude, Data.*, Control.*, System.*)         │
-├─────────────────────────────────────────────────┤
-│                    FFI Boundary                  │
-├─────────────────────────────────────────────────┤
-│              Rust Support Crates                 │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐        │
-│  │ prelude  │ │  base    │ │containers│        │
-│  └──────────┘ └──────────┘ └──────────┘        │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐        │
-│  │ numeric  │ │  text    │ │transformers│       │
-│  └──────────┘ └──────────┘ └──────────┘        │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐        │
-│  │concurrent│ │ system   │ │  utils   │        │
-│  └──────────┘ └──────────┘ └──────────┘        │
-└─────────────────────────────────────────────────┘
+import Data.Map (insert)  ──►  bhc-lower / bhc-typeck builtin tables
+                                         │
+                                         ▼
+                               bhc-codegen (LLVM)
+                                 │             │
+                          inline code    call bhc_map_insert(...)
+                                                │
+                              libbhc_containers.a (Rust)
 ```
+
+The native link step adds four static libraries to every program:
+
+| Library | Provides |
+|---------|----------|
+| `libbhc_rts.a` | Runtime, `Integer`, `Double` math, `show`, exceptions, `IORef`, handles, file, directory and environment IO, exit |
+| `libbhc_base.a` | `Data.Char` predicates and conversions; list (`sort`, `nub`, `group`, `transpose`, ...) and string (`lines`, `words`) helpers |
+| `libbhc_text.a` | `Data.Text`, `Data.ByteString` and related modules |
+| `libbhc_containers.a` | `Data.Map`, `Data.Set`, `Data.IntMap`, `Data.IntSet`, `Data.Sequence` |
+
+When the compiler knows a name but has no implementation for it, the program still compiles: the use becomes a stub (sometimes with a compile-time `stub function ... used` warning), and running it aborts with `stub: <name> not implemented`.
 
 ## Crate Reference
 
-### Core Libraries
+| Crate | Rust side | Used by compiled programs |
+|-------|-----------|---------------------------|
+| [bhc-prelude](@/docs/internals/stdlib/bhc-prelude.md) | Empty | No; the Prelude is built into the compiler |
+| [bhc-base](@/docs/internals/stdlib/bhc-base.md) | Char, list and string primitives | Yes (`libbhc_base.a`) |
+| [bhc-containers](@/docs/internals/stdlib/bhc-containers.md) | Map, Set, IntMap, IntSet, Seq | Yes (`libbhc_containers.a`) |
+| [bhc-numeric](@/docs/internals/stdlib/bhc-numeric.md) | SIMD, BLAS, matrices, decompositions, sparse, tensors | No |
+| [bhc-text](@/docs/internals/stdlib/bhc-text.md) | Text, ByteString, builders, lazy variants | Yes (`libbhc_text.a`) |
+| [bhc-transformers](@/docs/internals/stdlib/bhc-transformers.md) | Empty | No; transformers are built in (or compiled from `hs/` under an experimental flag) |
+| [bhc-concurrent](@/docs/internals/stdlib/bhc-concurrent.md) | STM, scopes, tasks, channels | No |
+| [bhc-system](@/docs/internals/stdlib/bhc-system.md) | IO, environment, file paths, directories, process, exit | No; the equivalent functions live in `bhc-rts` |
+| [bhc-utils](@/docs/internals/stdlib/bhc-utils.md) | Time, random, JSON | No |
 
-| Crate | Description |
-|-------|-------------|
-| [bhc-prelude](@/docs/internals/stdlib/bhc-prelude.md) | Minimal Prelude support |
-| [bhc-base](@/docs/internals/stdlib/bhc-base.md) | Character and base primitives |
-| [bhc-containers](@/docs/internals/stdlib/bhc-containers.md) | Container data structures |
+Every crate builds as a `staticlib`, `cdylib` and `rlib`, so the unlinked ones are ready to be wired in.
 
-### Performance-Critical Libraries
+## The `hs/` sources
 
-| Crate | Description |
-|-------|-------------|
-| [bhc-numeric](@/docs/internals/stdlib/bhc-numeric.md) | SIMD, BLAS, tensor primitives |
-| [bhc-text](@/docs/internals/stdlib/bhc-text.md) | SIMD-accelerated text processing |
+The `hs/` directories contain Haskell modules under a `BHC.` prefix (`BHC.Prelude`, `BHC.Data.Map`, `BHC.Numeric.Tensor`, ...) that describe the intended library and the FFI calls it would make. The compiler does not load them when building ordinary programs. The one exception is `stdlib/bhc-transformers/hs`, which also carries modules under the standard names (`Control.Monad.State`, ...): with the experimental `BHC_IO_MODEL=closure` setting, the driver adds that directory to the module search path and compiles the transformers from source.
 
-### Abstractions
+`stdlib/H26/` holds further draft `H26.*` modules (`H26.Prelude`, `H26.Tensor`, `H26.Concurrency`, ...), which the compiler also does not use yet.
 
-| Crate | Description |
-|-------|-------------|
-| [bhc-transformers](@/docs/internals/stdlib/bhc-transformers.md) | Monad transformers |
-| [bhc-concurrent](@/docs/internals/stdlib/bhc-concurrent.md) | Concurrency and STM |
+## Design Principles
 
-### System Libraries
-
-| Crate | Description |
-|-------|-------------|
-| [bhc-system](@/docs/internals/stdlib/bhc-system.md) | System and IO primitives |
-| [bhc-utils](@/docs/internals/stdlib/bhc-utils.md) | Time, random, JSON utilities |
-
-## Design Philosophy
-
-- **Minimal Rust**: Most logic is in Haskell; Rust only for FFI and performance
-- **Zero-Copy**: Views and slices preferred over copying
-- **Profile-Aware**: Behavior adapts to the active runtime profile
-- **Fusion-Friendly**: Operations designed to compose and fuse
+- **Rust where it pays**: data-structure cores, Unicode, text and numeric kernels in Rust; everything else expressed in Haskell or generated by the compiler.
+- **One representation per type**: for example, `Data.Sequence` uses the same cons-cell layout as lists, so a `Seq` works anywhere generic `Foldable` code expects a list.

@@ -10,39 +10,48 @@ Type-safe index types for the Basel Haskell Compiler.
 
 ## Overview
 
-This crate provides strongly-typed index types that prevent mixing up different kinds of IDs. A `VarId` cannot be accidentally used where a `TypeId` is expected.
+This crate provides strongly-typed index newtypes so that, for example, an expression index cannot be used where a type index is expected, plus a vector that can only be indexed by its own index type.
 
-## Key Types
+## Key Items
 
-| Type | Description |
+| Item | Description |
 |------|-------------|
-| `Idx<T>` | Generic index type with phantom type |
-| `IndexVec<I, T>` | Vector indexed by `Idx<I>` |
+| `Idx` | Trait for index types: `fn new(usize) -> Self` and `fn index(self) -> usize` |
+| `define_index!` | Macro that declares `u32` newtype indices implementing `Idx` |
+| `IndexVec<I, T>` | `Vec<T>` indexed by `I: Idx` |
+| `IndexMap<I, T>` | Alias for `IndexVec<I, Option<T>>` |
 
 ## Usage
 
 ```rust
-use bhc_index::{Idx, IndexVec, define_index};
+use bhc_index::{define_index, IndexVec};
 
-// Define custom index types
-define_index!(VarId);
-define_index!(TypeId);
+define_index! {
+    /// Index into the expression arena.
+    pub struct ExprId;
 
-// Create indices
-let var: VarId = VarId::new(0);
-let ty: TypeId = TypeId::new(0);
+    /// Index into the type arena.
+    pub struct TypeId;
+}
 
-// Type-safe - this won't compile:
-// let wrong: VarId = ty;
+let e = ExprId::new(0);            // inherent const fn new(u32)
+let t = TypeId::from_usize(0);
+// let wrong: ExprId = t;          // does not compile
 
-// Indexed vectors
-let mut vars: IndexVec<VarId, String> = IndexVec::new();
-let id = vars.push("x".to_string());
-assert_eq!(vars[id], "x");
+let mut exprs: IndexVec<ExprId, String> = IndexVec::new();
+let id = exprs.push("x".to_string());
+assert_eq!(exprs[id], "x");
+
+for (id, e) in exprs.iter_enumerated() { /* ... */ }
+let next = exprs.next_index();
 ```
+
+Each generated type is `#[repr(transparent)]` over `u32`, derives `Copy`, `Eq`, `Ord` and `Hash`, has `as_u32`/`as_usize`, `From` conversions to and from `u32`/`usize`, and serializes as a plain integer. The macro expansion refers to `serde::Serialize`, so the defining crate needs `serde` as a dependency.
+
+`IndexVec` also offers `with_capacity`, `from_vec`, `get`/`get_mut`, `iter`/`iter_mut`, `indices`, and `raw`/`raw_mut`/`into_raw` for access to the underlying `Vec`.
 
 ## Benefits
 
 - Compile-time prevention of ID mixups
-- Zero runtime overhead (newtypes)
-- Convenient indexed collections
+- No runtime overhead (newtypes over `u32`)
+- Indexed collections that serialize transparently
