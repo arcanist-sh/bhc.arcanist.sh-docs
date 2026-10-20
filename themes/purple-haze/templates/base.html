@@ -237,6 +237,15 @@
     {% endif %}
 
     {# ===== RSS Feed ===== #}
+    {#- Agent-readable alternates: the docs hub writes a Markdown copy of every page (scripts/llms_docs.py),
+        at the page URL with ".md" instead of the trailing slash, plus llms.txt for each docs site. -#}
+    {%- set cp = current_path | default(value="/") %}
+    {%- if cp == "/" %}{% set md_path = "/index.md" %}{% else %}{% set md_stem = cp | trim_end_matches(pat="/") %}{% set md_path = md_stem ~ ".md" %}{% endif %}
+    <link rel="alternate" type="text/markdown" title="This page (Markdown)" href="{{ config.base_url | safe }}{{ md_path | safe }}">
+    <link rel="alternate" type="text/markdown" title="llms.txt" href="{{ get_url(path='llms.txt') | safe }}">
+    <link rel="alternate" type="text/markdown" title="llms-full.txt (every page as Markdown)" href="{{ get_url(path='llms-full.txt') | safe }}">
+    <link rel="api-catalog" href="https://docs.arcanist.sh/.well-known/api-catalog">
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
     {% if config.generate_feeds %}
     <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ get_url(path='rss.xml') | safe }}">
     {% endif %}
